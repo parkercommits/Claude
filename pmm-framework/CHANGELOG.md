@@ -77,6 +77,17 @@ Refined against MKT1 measurement, customer marketing, and review practices.
 - **Step 12:** traffic-light review (red / yellow / green) as the decision step; big bet and momentum-plan review; quarterly Context Document update (ICP tiers, levers, advantages, ecosystem, perceptions, positioning flag).
 - Updated checklist, document structure, mistakes, templates, upstream connections, and MKT1 references.
 
+### Changed — `pmm-director`, README, and plugin manifest
+Consistency pass so the orchestrator matches the refined phases.
+
+- **Phase table** lists the key outputs each phase hands on.
+- **Working drafts, finalized later:** positioning and perceptions are drafted in Strategize and finalized in Define.
+- **Job hunt sequence** is now Discover → light Strategize (Workstream 1) → Define, ending with a homepage hero audit.
+- **Living Context Document**, retitled `[Company] — PMM Context`: each phase adds a section with "Last verified" dates; Grow writes back quarterly.
+- **New "When sources disagree" rules:** evidence beats frameworks; PMA sets the structure; MKT1 sets operating practice inside each step; follow choices the skills have already made; flag unresolved conflicts rather than blending; future sources follow the same pattern.
+- **Common requests routing** table.
+- README and plugin description updated to reflect the MKT1 refinements and current version.
+
 ## [0.1.0] — 2026-06-04
 
 Initial release: `pmm-director`, `pmm-discover`, `pmm-strategize`, `pmm-define`, `pmm-get-set`, `pmm-grow`.

@@ -1,9 +1,16 @@
 {
   "name": "pmm-framework",
   "version": "0.2.0",
-  "description": "A full-stack Product Marketing Director agent built on the PMA 5-phase framework (Discover, Strategize, Define, Get Set, Grow). Grounded in PMA best practices, MKT1 audience-first methodology, and SVPG/Loved. Supports both active PMM work and job-hunt mode for interview preparation.",
+  "description": "A full-stack Product Marketing Director agent built on the PMA 5-phase framework (Discover, Strategize, Define, Get Set, Grow), refined with MKT1 operating practices: ICP tiers, ecosystem mapping, positioning by product type and comparator, perceptions, marketing advantages, growth engines, GACCS launch briefs, and traffic-light reviews. Grounded in PMA best practices, MKT1 audience-first methodology, and SVPG/Loved. Supports both active PMM work and job-hunt mode for interview preparation.",
   "author": {
     "name": "Parker Lyons"
   },
-  "keywords": ["product-marketing", "gtm", "positioning", "messaging", "launch", "pmm"]
+  "keywords": [
+    "product-marketing",
+    "gtm",
+    "positioning",
+    "messaging",
+    "launch",
+    "pmm"
+  ]
 }

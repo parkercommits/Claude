@@ -451,7 +451,7 @@ The final step of Discover is not "here's what we learned." It's "here's what we
 ### Step 6 — Create the Context Document
 
 Compile all outputs into a single document titled:
-`[Company] — PMM Context | Discover Phase`
+`[Company] — PMM Context`
 
 **If Google Drive is connected:**
 Create a Google Doc with this title. Structure with clear headers per section. Share the link.
