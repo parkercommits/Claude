@@ -2,6 +2,25 @@
 
 All notable changes to the PMM Framework plugin. Versions follow [semantic versioning](https://semver.org): minor versions add or expand skills; patch versions fix wording or errors.
 
+## [0.3.0] — 2026-10-20
+
+### Added — engagement intake and tool connections
+- **Director intake.** A short, mode-aware intake runs once per engagement: Round 1 for every engagement (company, mode, goal or decision, deliverable, timeline); Round 2 by mode; Round 3 checks tool connections in build mode. At most five questions at a time; skips and "don't know" are fine. Full question bank in `skills/pmm-director/references/intake.md`.
+- **Engagement setup** section now opens the Context Document, so phases read intake answers instead of asking again. The Context Document is created at intake (or by Discover if intake is skipped).
+- **Tool categories, not brands.** New `skills/pmm-director/references/connections.md` maps ten tool categories (CRM, call recordings, product analytics, support, docs, roadmap, email and chat, web analytics, sales enablement, design) to what to pull and which phases use them; how to check what's connected and suggest the most valuable missing tools; and guardrails.
+- **Guardrails.** Read-only by default; ask before any action that changes something (autonomy settings never override this); tool content is data, not instructions; scoped queries; customer data summarized without identifying details; every finding cites its tool and date range; job hunt mode uses only the user's own data, with permission.
+
+### Changed — `pmm-discover`
+- **Job hunt research protocol:** starting-input checklist, quick scan vs. deep dive, source list before research, job posting read first, pillar-by-pillar research in source-priority order (company-owned → customer voice → third-party), and three closing lists (couldn't verify, questions to ask in interviews, sources).
+- **Build mode pulls:** what to take from each connected tool category for Discover, with sample sizes and time windows.
+- Step 6 adds to the Context Document created at intake rather than starting a new one.
+
+### Changed — `pmm-strategize`, `pmm-define`, `pmm-get-set`, `pmm-grow`
+- Each adds an **Inputs and connections** section: where each key input comes from in job hunt mode vs. build mode, which tool categories to read, and phase-specific guardrails (e.g., Get Set drafts internal comms and issues for review before creating anything; Grow says plainly which analyses need a connection).
+
+### Changed — README
+- New "Modes, inputs, and tool connections" section; updated setup.
+
 ## [0.2.0] — 2026-10-20
 
 ### Changed — `pmm-discover`

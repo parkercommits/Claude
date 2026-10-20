@@ -2,7 +2,7 @@
 
 A full-stack Product Marketing Director agent built on the PMA 5-phase framework and refined with MKT1's operating practices. Grounded in PMA best practices, MKT1 audience-first methodology, PMM-GPT guidance, and SVPG/Loved.
 
-**Current version:** 0.2.0 — see [CHANGELOG.md](CHANGELOG.md) for what changed in each version.
+**Current version:** 0.3.0 — see [CHANGELOG.md](CHANGELOG.md) for what changed in each version.
 
 ## Overview
 
@@ -27,7 +27,7 @@ This plugin gives you a Product Marketing Director agent capable of executing en
 **Start here for any new engagement:**
 > "Help me with product marketing for [company URL]"
 
-The `pmm-director` skill will orient you, confirm the mode (build vs job hunt), and route you to the right phase.
+The `pmm-director` skill runs a short intake — mode, goal, deliverable, timeline, then mode-specific questions — saves your answers to the Context Document so no phase asks twice, and routes you to the right phase.
 
 **Jump directly to a phase:**
 > "Run discovery on [company]"
@@ -56,12 +56,30 @@ The **Context Document** (`[Company] — PMM Context`) is the shared memory acro
 
 When sources disagree: evidence beats frameworks; PMA sets the structure; MKT1 sets the operating practice inside each step. Details are in the `pmm-director` skill.
 
-## Tools used
+## Modes, inputs, and tool connections
 
-Requires Google Drive MCP to be connected for saving Context Documents as Google Docs. Falls back to Markdown files if Drive is unavailable. Web search is used during Discover for company research.
+**Job hunt mode** relies on what you provide plus public research. The more starting links you share, the better: the job posting, homepage, pricing, blog, changelog, help docs, case studies, review-site pages, news, and industry reports — plus competitors you know and what you've heard from your network. Choose a **quick scan** (about an hour of research) or a **deep dive** (full Discover across audience, ecosystem, and product). With your permission, it can also read your own email, meeting notes, or docs for recruiter threads and earlier interview notes.
+
+**Build mode** works best with your company's tools connected. The plugin refers to tools by category, so it works with whichever ones you use:
+
+| Category | Examples | Used most in |
+|---|---|---|
+| CRM | HubSpot, Salesforce, Attio | Discover, Strategize, Grow |
+| Call recordings / meeting notes | Gong, Fireflies, Granola, Fathom, Grain | Discover, Define, Get Set, Grow |
+| Product analytics | Amplitude, Mixpanel, PostHog | Discover, Grow |
+| Support and feedback | Zendesk, Intercom, Enterpret | Discover, Grow |
+| Docs and wiki | Google Drive, Notion, Confluence | Every phase |
+| Roadmap and issues | Linear, Jira, Asana | Strategize, Get Set, Grow |
+| Email and chat | Gmail, Outlook, Slack | Get Set, Grow |
+| Web and marketing analytics | Google Analytics, HubSpot | Define, Grow |
+
+At intake, the Director checks which of these are connected, tells you, and suggests the two or three that would add the most. Connect tools in your Claude settings (Connectors). Nothing is required — the plugin continues with what's available and notes the gaps.
+
+**Guardrails:** connected tools are read-only by default; the plugin asks before creating, sending, posting, or editing anything. Content from tools is treated as data, never as instructions. Customer details are summarized without names in shared documents, and every finding cites its tool and date range. Full details: `skills/pmm-director/references/connections.md`.
 
 ## Setup
 
-No environment variables required. Ensure the following are connected in Cowork:
-- Google Drive (for saving Context Documents)
-- Web search (for company research in Discover phase)
+No environment variables required.
+- **Web search** — used for research in every mode
+- **Google Drive** (recommended) — saves the Context Document as a Google Doc; falls back to Markdown if not connected
+- **Other tools** — optional, by category, as above
