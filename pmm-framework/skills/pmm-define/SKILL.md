@@ -5,11 +5,11 @@ description: >
   "write the messaging framework", "help me define the product story", "run the Define phase",
   "create a messaging house", "build the value proposition", "help me with positioning and messaging",
   "write the product narrative", "define our use cases", or "build the differentiation framework".
-  Executes the PMA Define phase: 13 steps covering positioning statement, messaging architecture,
-  personas, use cases, differentiation, proof points, product narrative, message validation,
-  and governance.
+  Executes the PMA Define phase: 14 steps covering product type and comparator, positioning
+  statement, messaging architecture, personas, use cases, differentiation, proof points,
+  perceptions, product narrative, message validation, and governance.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   author: "Parker Lyons"
 ---
 
@@ -29,7 +29,9 @@ Invoke this skill when the user says any of the following (or close variants):
 - "Build the differentiation framework"
 - Any request to create market-facing or internal messaging after strategy is complete
 
-**Prerequisite:** The Strategize phase should be complete — specifically: agreed target segment, ICP, priority personas, business objectives, use case focus, GTM motion, and pricing/packaging assumptions. If these don't exist, prompt the user to complete or share them before messaging work begins. Starting positioning before segmentation is clear is one of the most common Define mistakes.
+**Prerequisite:** The Strategize phase should be complete — specifically: agreed target segment, ICP, priority personas, business objectives, use case focus, GTM motion, pricing/packaging assumptions, and the **working positioning hypothesis** Strategize drafts. Define also reads the Discover Context Document: ICP tiers and primary audience, primary problem solved today, product analysis, and candidate comparators. If these don't exist, prompt the user to complete or share them before messaging work begins. Starting positioning before segmentation is clear is one of the most common Define mistakes.
+
+**Positioning handoff:** Strategize drafts a working positioning hypothesis (product type, comparator, and the three positioning answers) so GTM choices rest on it. Define does not start positioning from scratch — it pressure-tests that hypothesis against the evidence, then finalizes it (Steps 3–4). If Strategize skipped the hypothesis, draft it in Step 3 from the Discover inputs.
 
 ---
 
@@ -51,16 +53,25 @@ This skill executes the **Define phase of the PMA Product Marketing Framework.**
 
 **Audience-first lens (MKT1):** Throughout Define, the question is always "what does this mean for the customer?" not "what does this say about our product." Define is where product truth becomes customer relevance.
 
+**Positioning → messaging → copy (MKT1).** Keep the three layers distinct:
+- **Positioning** — how the product solves the problem better than a specific alternative, for the primary audience. Short, stable, internal.
+- **Messaging** — positioning adapted by audience, funnel stage, and channel. The intent and guidelines behind what you say.
+- **Copy** — the exact words in a specific asset. Written from messaging, never the other way round.
+
+Product positioning is also a subset of the company story, not the whole of it. The company story is carried by **perceptions** (Step 11); product positioning and launch messaging should support them.
+
+**Short beats exhaustive.** Positioning should condense research, not restate it. A long positioning document tends to be both exhaustive and unfinished. Keep the positioning and core messaging to a page or two; everything else is supporting appendix.
+
 ---
 
 ## Engagement modes
 
-- **Build mode** — Working at or for this company. All 13 steps apply. Access to internal data, existing personas, sales input, and customer research to ground messaging in reality.
-- **Job hunt mode** — Targeting this company as a prospective employer. Build a hypothetical positioning and messaging framework from public sources. This is exceptionally powerful for interviews — showing up with a complete messaging house for a company's product demonstrates senior-level PMM thinking. Flag all assumptions ⚠️ **Job Hunt Mode**.
+- **Build mode** — Working at or for this company. All 14 steps apply. Access to internal data, existing personas, sales input, and customer research to ground messaging in reality.
+- **Job hunt mode** — Targeting this company as a prospective employer. Build a hypothetical positioning and messaging framework from public sources. This is exceptionally powerful for interviews — showing up with a complete messaging house for a company's product demonstrates senior-level PMM thinking. Always include the homepage hero audit (Step 13) of the company's current site: what it says today, how it scores on who / what / why better, and a proposed rewrite. Flag all assumptions ⚠️ **Job Hunt Mode**.
 
 ---
 
-## The 13 Define steps
+## The 14 Define steps
 
 ### Step 1 — Reconfirm strategic inputs before writing messaging
 
@@ -68,6 +79,8 @@ Weak Define work happens when teams jump straight into taglines and copy without
 
 **Actions:**
 - Review and confirm: target segment, ICP, priority personas, business objective, use case focus, GTM motion, pricing/packaging assumptions
+- Pull from the Discover Context Document: ICP tiers and the one primary audience, primary problem solved today, features → use cases → benefits map, and candidate comparators
+- Pull the working positioning hypothesis from Strategize; note which parts are evidence-backed and which are guesses
 - Identify unresolved strategic issues that would weaken positioning
 - Clarify what is fixed vs. still a hypothesis
 - Align on the scope of what is being defined: product / feature / solution / package / platform capability / category narrative
@@ -105,40 +118,59 @@ Before writing positioning, sharply define the customer problem, the impact of t
 
 ---
 
-### Step 3 — Define the market category and frame of reference
+### Step 3 — Choose the product type and comparator (frame of reference)
 
-Customers understand new offers by comparing them to something they already know. Deciding what "mental shelf" the offering belongs on has major implications for positioning, competition, search behavior, sales conversations, and analyst understanding.
+Customers understand new offers by comparing them to something they already know. Positioning is ultimately about comparison, so the most important frame-of-reference decision is **what single alternative you position against**. The fastest route there is to identify the product type (MKT1).
+
+**The four product types and their comparators:**
+
+| Product type | What it is | Position against |
+|---|---|---|
+| **Vertical solution** | A product built for a specific industry or role, where horizontal tools exist | The generic, horizontal tools the audience uses today |
+| **New way** | A new approach to a problem people already solve some other way | The old way — the status quo, manual process, or legacy approach |
+| **10x better** | A clearly superior version of a product type the audience already knows | The incumbent competitor(s) |
+| **Buy vs. build** | A product that replaces what teams would otherwise build in-house | Building it yourself |
+
+**Rules of thumb:**
+- Pick the type with the **primary audience** in mind — the same product can be a different type to different audiences.
+- If more than one type applies, draft positioning against each comparator and choose the strongest.
+- Tie-breaks: torn between vertical solution and new way → choose **vertical solution**. Torn between buy vs. build and new way → choose **buy vs. build**.
+- "10x better" is a high bar. If you aren't truly 10x better for everyone, narrow the audience until you are.
+- **Don't create a new category by default.** Early on it is rarely worth it. Describe the new way in plain language rather than coining a category name; early competitors in the same emerging space often help establish the approach.
+- Product type and comparator can, and likely will, change as the market matures.
 
 **Actions:**
-- Decide the most effective frame of reference: existing category / adjacent category / sub-category / solution bundle / new category
-- Clarify what you are, what you are not, what alternatives customers compare you against
-- Align category framing to buyer understanding, not internal preference
+- Start from the candidate comparators in the Discover Context Document and the Strategize positioning hypothesis
+- Classify the product type for the primary audience; apply the rules of thumb
+- Choose one comparator; record the runners-up and why they lost
+- Clarify what you are, what you are not, and how buyers describe the space — align to buyer language, not internal preference
+- Map the full set of substitutes (direct competitors, status quo, manual workaround, internal build, adjacent tools) so Step 8 can address them
 
-**Useful frameworks:**
-- **Category design / frame-of-reference analysis:** What problem space do buyers think they're buying in? What vendors will they compare you to? Is it smarter to fit a known category or shape a new one?
-- **Competitive substitute mapping:** Include direct competitors, status quo, manual workaround, internal build, adjacent tools
+**Templates:** Product type and comparator worksheet, Competitive alternatives map, "What are we?" decision memo.
 
-**Templates:** Category framing worksheet, Competitive alternatives map, Market context positioning brief, "What are we?" decision memo.
+**Key outputs:** Product type, chosen comparator (with rationale and runners-up), Competitive alternatives map, Category language guidance.
 
-**Key outputs:** Category/frame-of-reference recommendation, Competitive alternatives map, Category language guidance.
-
-**Good:** Buyers can quickly understand what the product is; sales can explain the offer without over-educating; uses a frame customers recognize.
-**Weak:** Company insists on category language no customer uses; product described in abstract invented terms; confusion about whether it competes with tools, services, or workflows.
+**Good:** Buyers can quickly understand what the product is; one clear comparator; sales can explain the offer without over-educating; uses a frame customers recognize.
+**Weak:** Company insists on category language no customer uses; product described in abstract invented terms; positioning against several alternatives at once; confusion about whether it competes with tools, services, or workflows.
 
 ---
 
 ### Step 4 — Create the positioning statement
 
-The centerpiece of the Define phase. Positioning is not a slogan — it is the strategic articulation of your place in the market.
+The centerpiece of the Define phase. Positioning is not a slogan — it is the strategic articulation of your place in the market, for the primary audience, against the chosen comparator.
 
-**Positioning must answer:**
-- For whom is this?
+**Master positioning — the three questions (MKT1).** Lead with these; this is the version teams remember:
+1. **Who is it for?** The primary audience, narrowed until the product is clearly better for them
+2. **What is it?** In plain language the audience already uses
+3. **Why is it better** than the chosen comparator, on the single most important difference?
+
+**Long-form internal statement.** Once the three answers are set, expand them into the full statement below for internal alignment. It must not contradict the three answers.
+
+**Positioning must also answer:**
 - What unmet need or problem does it solve?
-- What is it?
-- Why is it different?
 - Why should the market believe us?
 
-**Positioning statement structure:**
+**Long-form positioning statement structure:**
 ```
 For [target customer / persona / segment]
 Who [has a specific problem or goal]
@@ -152,10 +184,16 @@ Because [proof / reasons to believe]
 **Actions:**
 - Build a positioning statement covering: target audience, need/problem, product/solution definition, key value, differentiation, proof/credibility
 - Test it: is it specific? Is it distinct from competitors? Is it focused on outcomes? Is it credible and supportable? Simple enough to remember, strong enough to scale?
+- Compare against the Strategize positioning hypothesis: record what changed and why
 
-**Templates:** Positioning statement template (PMA: coda.io/@product-marketing-alliance-pma), Geoffrey Moore-style positioning framework, Internal positioning canvas, Narrative architecture template.
+**Refinements (only where needed):**
+- **Segment-level positioning** for a Scaling-tier ICP whose who / why-better genuinely differs
+- **Feature- or product-level positioning** for a distinct product line
+- **Today vs. future positioning** — what you can credibly claim now, versus where the product is heading. Never let future positioning leak into today's copy.
 
-**Key outputs:** Master positioning statement, Internal positioning narrative, Approved market-facing positioning direction.
+**Templates:** Three-question positioning template, Positioning statement template (PMA: coda.io/@product-marketing-alliance-pma), Geoffrey Moore-style positioning framework, Internal positioning canvas.
+
+**Key outputs:** Master positioning (three answers), Long-form internal positioning statement, Positioning change log vs. the Strategize hypothesis, Approved market-facing positioning direction.
 
 **Good:** Specific, audience-centered, outcome-focused, distinct from competitors, credible and scalable.
 **Weak:** Generic "single pane of glass / end-to-end / seamless / innovative" language; could apply to any competitor; no clear difference from status quo; too broad to be useful.
@@ -166,11 +204,19 @@ Because [proof / reasons to believe]
 
 Once positioning is set, create a messaging system usable across channels, personas, funnel stages, and internal teams.
 
+**Top-level building blocks (MKT1)** — draft these first for the primary audience and get buy-in from a small cross-functional group before going further:
+- **Problem** you solve
+- **Solution** — what the product does about it
+- **Who it's for**
+- **Why it's better** than the comparator
+
+These four blocks become the homepage hero and the first slide of the sales narrative.
+
 **Messaging hierarchy structure:**
 
 **1. Core message** — The one central idea the market should remember.
 
-**2. Value pillars** — Three to five major reasons the product matters (e.g., faster outcomes, lower risk, better visibility, easier collaboration, stronger ROI).
+**2. Value pillars** — Default to **three** distinct, benefit-led reasons the product matters (e.g., faster outcomes, lower risk, better visibility). Go to four or five only if each is genuinely distinct and provable.
 
 **3. Supporting messages** — What each pillar means in practice.
 
@@ -180,8 +226,12 @@ Once positioning is set, create a messaging system usable across channels, perso
 
 **6. Use-case adaptations** — How the story changes based on the job-to-be-done.
 
+**7. How it works** — The product explained in about three simple steps. Essential for "new way" products and anything complex; it removes the question "but how?"
+
 **Actions:**
-- Create a messaging hierarchy with: core message, value pillars, persona-specific messages, use-case-specific messages, proof points, objection handling themes, channel adaptations, copy guidance
+- Draft the four top-level building blocks for the primary audience first; secure buy-in; then repeat for secondary audiences
+- Create a messaging hierarchy with: core message, value pillars, how it works, persona-specific messages, use-case-specific messages, proof points, objection handling themes, channel adaptations, copy guidance
+- Keep the core messaging guide to a page or two
 
 **Templates:** Messaging hierarchy template, Messaging matrix, Value pillars worksheet, Persona messaging template, Message map, PMA Messaging Framework (coda.io/@product-marketing-alliance-pma), PMA Storytelling Framework.
 
@@ -240,8 +290,11 @@ Customers often buy solutions for a specific job, not a full feature set. Use-ca
 - **Complication:** Why current methods fail
 - **Resolution:** How the product improves the outcome
 
+**Lead with one "land" use case (MKT1).** Listing everything the product can do makes the message confusing. Choose a single entry-point use case — the one that best fits the primary audience's most urgent problem and is easiest to adopt — and lead with it in top-of-funnel messaging. Other use cases support expansion and appear deeper in the funnel.
+
 **Actions:**
 - Prioritize the most commercially relevant use cases
+- Name the land use case; map the others to expansion or specific personas
 - For each: identify trigger, workflow/problem, desired outcome, product capability involved, proof/credibility needed
 - Translate the product into "how it helps in a real situation"
 
@@ -271,6 +324,11 @@ Translate competitive insight into a usable, credible market stance — starting
 - Incumbent solution
 - Point solution
 - Internal build
+
+**Choose the competitive target by market maturity (MKT1):**
+- **Early or "new way" markets:** position against the old way (status quo, manual process, legacy approach), not against other emerging players. Emerging competitors help validate the approach; attacking them confuses buyers.
+- **Maturing markets:** as buyers start comparing vendors directly, shift differentiation toward named competitors.
+- **Match the audience's sophistication:** for advanced buyers, explain why current approaches are hard and differentiate against the tools they use now. For less mature buyers, differentiate against the status quo and introduce far fewer new concepts.
 
 **Actions:**
 - Identify competitors and alternatives most likely to matter
@@ -331,9 +389,38 @@ Messaging cannot exist in a vacuum — how an offer is packaged shapes how it sh
 
 ---
 
-### Step 11 — Create the product story and narrative flow
+### Step 11 — Define perceptions (the company story layer)
 
-Positioning and messaging are essential, but teams also need the coherent narrative that explains the market problem, urgency, solution, impact, and credibility — the backbone for launch presentations, web copy, keynote structure, sales pitches, demos, and press narrative.
+Product positioning covers the product. **Perceptions** cover the whole company story: the 3–5 beliefs you want your audience to hold and repeat back to you (MKT1). They sit above product positioning; the product story, launches, and most content should support at least one of them. Without them, every launch tells a separate story.
+
+**Write 3–5 perceptions, each:**
+- Written from the **audience's point of view**, as a belief they'd say out loud ("Brand is measurable," not "We measure brand")
+- Tagged with a category: **company**, **audience**, **market**, or **product** insight
+- Given a status: **established** (already believed), **emerging** (some evidence), or **new** (we must create it)
+- Backed by supporting evidence — customer quotes, data, trends — that content can later use
+- Durable for roughly 6–12 months
+
+**Test:** No other company could credibly claim the same combination of perceptions. If a competitor could, sharpen them.
+
+**Actions:**
+- Draft perceptions cross-functionally (product, sales, CS, leadership), grounded in Discover research
+- Check that the master positioning reinforces at least one product perception
+- For each perception, sketch the content, campaigns, or proof that would drive it (handed to Get Set and Grow)
+
+**Templates:** Perceptions worksheet (perception, POV, category, status, evidence, programs that drive it).
+
+**Key outputs:** 3–5 approved perceptions with status and supporting evidence.
+
+**Good:** Perceptions are specific, audience-voiced, and distinctive; teams can say which perception a piece of content supports.
+**Weak:** Perceptions read like company values or taglines; written in "we" voice; generic enough that any competitor could claim them.
+
+> **In job hunt mode:** infer the perceptions the company appears to be driving today from its site, content, and executive posts, then propose a sharper set.
+
+---
+
+### Step 12 — Create the product story and narrative flow
+
+Positioning and messaging are essential, but teams also need the coherent narrative that explains the market problem, urgency, solution, impact, and credibility — the backbone for launch presentations, web copy, keynote structure, sales pitches, demos, and press narrative. The product story should nest under the perceptions from Step 11, not tell a separate story.
 
 **Master product story elements:**
 - Market context (why this matters now)
@@ -358,13 +445,15 @@ Positioning and messaging are essential, but teams also need the coherent narrat
 
 ---
 
-### Step 12 — Validate messaging before full-scale rollout
+### Step 13 — Validate messaging before full-scale rollout
 
 PMMs should not assume the first draft is correct because internal stakeholders like it.
 
 **Test messaging with:** customers, prospects, sales reps, CS, executives, partners.
 
 **What to test:** clarity, relevance, differentiation, believability, emotional resonance, recall.
+
+**Homepage hero test (MKT1):** Visitors give a homepage a few seconds. Show the hero (or a draft of it) to someone in the primary audience for about five seconds, then ask: Who is this for? What is it? Why is it better than what you use now? If they can't answer all three, the copy failed — fix messaging before writing more assets. In job hunt mode, run this audit on the company's current homepage and propose a rewrite.
 
 **Qualitative testing:** interviews to explore what resonates, what confuses, what feels unique, what sounds generic.
 **Quantitative testing:** surveys or experiments to measure preference, comprehension, perceived differentiation, and intent.
@@ -378,14 +467,21 @@ PMMs should not assume the first draft is correct because internal stakeholders 
 
 ---
 
-### Step 13 — Secure cross-functional approval and establish message governance
+### Step 14 — Secure cross-functional approval and establish message governance
 
 Define is not done when the messaging exists. It is done when the organization knows which message is official and how it should be used.
 
 **Actions:**
 - Align stakeholders on final narrative and message set
-- Document: approved positioning, approved pillars, approved proof points, words/phrases to use, words/phrases to avoid
-- Establish governance for future edits
+- Document: approved positioning, approved perceptions, approved pillars, approved proof points, words/phrases to use, words/phrases to avoid
+- Define brand voice and tone (personality, a few do/don't examples) so copy doesn't sound generic or machine-written
+- Establish governance for future edits, including when positioning gets revisited (e.g., comparator shift as the market matures)
+
+**Copy guardrails to include in the terminology guide (MKT1):**
+- Clear over clever — write the way the audience speaks; plain language beats pithy wordplay
+- No generic outcome claims ("increase revenue," "boost productivity") in the hero or top third of a page — every competitor says them
+- Match jargon to audience sophistication
+- Specific social proof ("Used by 40 regional utilities") over vague praise ("Companies love us")
 
 **Templates:** Messaging approval workflow, Message governance doc, Terminology guide, Brand and PMM alignment brief.
 
@@ -398,22 +494,33 @@ Define is not done when the messaging exists. It is done when the organization k
 
 ## Core messaging document structure
 
-The main Define deliverable should contain these 12 sections:
+Lead with a **one-page summary** that most teams can work from on its own. Everything else is an appendix for teams that need depth.
+
+**Page 1 — Positioning & messaging on a page:**
+- Primary audience (and ICP tier)
+- Product type and comparator
+- Master positioning: who it's for / what it is / why it's better
+- Perceptions (3–5)
+- Top-level messaging blocks: problem / solution / who / why better
+- Three value pillars, each with its strongest proof point
+- Land use case
+- How it works (three steps)
+
+**Appendix:**
 
 | Section | Contents |
 |---|---|
-| 1. Executive summary | What is being defined, for whom, why it matters, what teams use this for |
-| 2. Audience definition | Primary segment, buyer personas, user personas, buying roles |
-| 3. Customer problem | Core pain, current-state friction, business impact, why now |
-| 4. Value proposition | Core value thesis, desired outcomes, promise to customer |
-| 5. Category / frame of reference | What the offering is, key alternatives, how the market should understand it |
-| 6. Positioning statement | Full internal positioning articulation |
-| 7. Messaging architecture | Core message, value pillars, support points, proof points |
-| 8. Persona & use-case adaptations | What each audience cares about, objections, tailored value emphasis |
-| 9. Differentiation | Why we win, where we're distinct, where to avoid weak comparisons |
-| 10. Story framework | Narrative flow for launch, content, and sales |
-| 11. Guidance | Approved terms, claims guidance, copy guardrails, phrases to avoid |
-| 12. Validation notes | What has been tested, what still needs testing, known risks |
+| A. Audience definition | Primary segment, buyer personas, user personas, buying roles |
+| B. Customer problem | Core pain, current-state friction, business impact, why now |
+| C. Value proposition | Core value thesis, desired outcomes, promise to customer |
+| D. Frame of reference | Product type rationale, comparator runners-up, full alternatives map |
+| E. Long-form positioning | Full internal positioning statement; segment, feature, and future positioning if any |
+| F. Messaging architecture | Core message, value pillars, support points, proof points |
+| G. Persona & use-case adaptations | What each audience cares about, objections, tailored value emphasis |
+| H. Differentiation | Why we win, where we're distinct, where to avoid weak comparisons |
+| I. Story framework | Narrative flow for launch, content, and sales |
+| J. Guidance | Approved terms, voice and tone, copy guardrails, phrases to avoid |
+| K. Validation notes | What has been tested (incl. homepage hero test), what still needs testing, known risks |
 
 ---
 
@@ -427,10 +534,14 @@ The main Define deliverable should contain these 12 sections:
 **Positioning foundation:**
 - [ ] Customer problem clearly articulated?
 - [ ] Desired customer outcome defined?
-- [ ] Market frame of reference chosen?
+- [ ] Product type identified and one comparator chosen?
+- [ ] Strategize positioning hypothesis tested and changes logged?
 
 **Messaging:**
-- [ ] Master positioning statement written?
+- [ ] Master positioning written as three answers (who / what / why better)?
+- [ ] 3–5 perceptions defined, audience-voiced, with status?
+- [ ] Land use case named?
+- [ ] One-page summary exists?
 - [ ] Value pillars created with supporting proof?
 - [ ] Clear messaging hierarchy exists?
 
@@ -451,6 +562,7 @@ The main Define deliverable should contain these 12 sections:
 
 **Validation and governance:**
 - [ ] Messaging tested externally or with the field?
+- [ ] Homepage hero passes the who / what / why-better test?
 - [ ] One approved source of truth exists?
 - [ ] Teams know what language to use and avoid?
 
@@ -468,6 +580,10 @@ The main Define deliverable should contain these 12 sections:
 8. **Letting every stakeholder rewrite the message** — governance must be established early
 9. **Skipping message testing** — internal consensus is not market validation
 10. **Building a messaging deck no team actually uses** — operationalize the framework, don't file it away
+11. **Positioning against several alternatives at once** — choose one comparator
+12. **Coining a category too early** — describe the new way in plain language first
+13. **Writing an exhaustive positioning document** — condense to a page; put depth in the appendix
+14. **Telling launch stories that don't ladder up** — every launch should support at least one perception
 
 ---
 
@@ -501,7 +617,11 @@ The main Define deliverable should contain these 12 sections:
 - Define phase kickoff brief
 - Problem statement template
 - Value proposition canvas
+- Product type and comparator worksheet
+- Three-question positioning template (who / what / why better)
 - Positioning statement template (PMA: coda.io/@product-marketing-alliance-pma)
+- Perceptions worksheet
+- Positioning & messaging on a page (one-page summary)
 - Messaging hierarchy / messaging house (PMA Messaging Framework)
 - Value pillars worksheet
 - Persona messaging template (PMA B2B Buyer Persona Template)
@@ -511,8 +631,8 @@ The main Define deliverable should contain these 12 sections:
 - Differentiation framework
 - Claims-to-proof matrix
 - Product story / narrative outline (PMA Storytelling Framework)
-- Message testing guide
-- Terminology and governance guide
+- Message testing guide, including the homepage hero test
+- Terminology and governance guide, including voice and tone
 
 **Optional but valuable:**
 - Category framing worksheet
@@ -527,8 +647,10 @@ The main Define deliverable should contain these 12 sections:
 ## Downstream skills this feeds into
 
 The Define outputs power everything in Get Set:
-- **PMM Get Set** — uses the messaging framework, positioning statement, persona guides, use-case narratives, and product story to build: sales decks, battlecards, launch emails, demo talk tracks, onboarding copy, website copy, campaign briefs
-- **PMM Grow** — uses messaging as the baseline to measure adoption and message pull-through post-launch
+- **PMM Get Set** — uses the one-page summary, messaging framework, positioning statement, persona guides, land use case, use-case narratives, and product story to build: sales decks, battlecards, launch emails, demo talk tracks, onboarding copy, website copy, campaign briefs. Launch messaging must support at least one perception.
+- **PMM Grow** — uses messaging as the baseline to measure adoption and message pull-through post-launch, and tracks whether perceptions are moving from new → emerging → established
+
+Define also writes back to the Discover Context Document if positioning work changes the primary audience, primary problem, or comparator.
 
 ---
 
@@ -544,7 +666,11 @@ The Define outputs power everything in Get Set:
 - PMA Customer Case Study Questions
 - PMM-GPT best practice guidance (PMA, 2026)
 
-**Secondary (philosophical lens):**
-- MKT1 / Emily Kramer — audience-first positioning; the "who is this for" question before "what does it do"
-- MKT1 positioning guide — positioning is research + answer, not research + more research; the 4 product types and comparator framework
+**Secondary (philosophical lens and operating practices):**
+- MKT1 / Emily Kramer — audience-first positioning; the "who is this for" question before "what does it do"; specifically:
+  - Product types, comparators, three positioning questions, today vs. future positioning (MKT1 Guide to Positioning; Field Guide to B2B Startup Marketing, Part 2)
+  - Market-maturity guidance, land use case, primary audience in the hero (Positioning & messaging teardown, with Anthony Pierri)
+  - Messaging building blocks, messaging vs. copy (How to create a more effective homepage)
+  - Perceptions (Perceptions: Our favorite marketing strategy exercise; How to build your marketing strategy in Claude)
+  - Common messaging mistakes, brand personality (guest post by Allyson Letteri)
 - SVPG / Martina Lauchengco (Loved) — messaging as the market side of product/market fit
