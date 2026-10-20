@@ -84,6 +84,8 @@ The aim is research that is efficient but deep: start from the best sources, cov
 | | Quick scan | Deep dive |
 |---|---|---|
 | **When** | Early conversations, recruiter or hiring-manager screens | Final rounds, panel presentations, take-home assignments |
+| **Research method** | Regular, targeted research — about one round of searches per pillar | Deep research for the broad sweep, plus targeted research for precise details (see "Deep dive: using deep research" below) |
+| **Time and usage** | Fast; light on usage | Takes longer and uses more of the user's usage allowance |
 | **Audience** | Primary ICP hypothesis, top pains, buying triggers | Full ICP tiers, TAM coverage map, audience behavior |
 | **Competitors** | Top 3 plus status quo | 3–5 plus status quo, full matrix, complements and frenemies |
 | **Product** | Primary problem, top use cases | Full features → use cases → benefits map, changelog trends |
@@ -103,6 +105,41 @@ The aim is research that is efficient but deep: start from the best sources, cov
 
 Run independent searches in parallel where the environment allows. Stop a pillar when each required output for the chosen depth has a sourced answer or is flagged ❓.
 
+**Deep dive: using deep research.** Deep research reads far more sources than a normal search pass and returns a long, cited report. Use it for breadth; use targeted research for precision.
+
+| Use deep research for | Use targeted research for |
+|---|---|
+| Market and category landscape, trends, timing | The job posting and any presentation prompt |
+| Broad sweep of competitors, alternatives, and complements | The company's own pricing, docs, and changelog |
+| Recent news, funding, leadership changes, analyst views | Filling the competitor matrix cell by cell |
+| Customer sentiment across review sites and communities | The features → use cases → benefits map |
+
+1. **Check that it's available.** A skill can't turn deep research on. If the environment offers a deep or extended research capability (a research mode, tool, or skill), use it. If it needs the user to turn it on — in the Claude app, the Research option in the chat — say so and offer two choices: turn it on, or continue the deep dive with regular research (slower, fewer sources).
+2. **Send it a brief built from Discover's needs**, not an open question:
+
+   ```
+   Research brief — [Company] ([URL]) — for a product marketing deep dive
+   Goal: [the decision or deliverable from the Engagement setup]
+   Known competitors and alternatives: [list, plus "status quo / do nothing"]
+   Starting sources: [links the user provided]
+   Cover three pillars:
+   1. Audience — who buys and uses it (company types, roles, buyer roles), pains,
+      buying triggers, how they find and evaluate solutions, communities they use
+   2. Ecosystem & competitors — direct competitors, alternatives, complements
+      (integrations, partners, communities, influencers), positioning and pricing
+      posture of each, recent moves
+   3. Product & market — what the product does today, recent launches and direction,
+      category trends and timing, analyst views
+   Source priority: company-owned pages, then customer voice (reviews, communities,
+      case studies), then third-party (news, analysts)
+   Rules: cite a source and date for every claim; mark anything that can't be found
+      as unknown rather than estimating; flag sources older than 18 months
+   Output: findings grouped by pillar, then a list of open questions
+   ```
+3. **Treat the report as raw material, not the deliverable.** Map its findings into Discover's tables (ICP tiers, TAM coverage, competitor matrix, ecosystem map, product analysis). Don't paste the report into the Context Document — link it and summarize.
+4. **Verify what the recommendations depend on.** Check the 5–10 facts that the ICP tiers, candidate comparators, and business case rest on directly against their original sources. Apply the research reliability rules: distrust round numbers, keep unknowns as ❓.
+5. **Fill the precise items with targeted research** (right-hand column above), then close with the three lists in step 6.
+
 **6. Close with three lists** (added to the Context Document):
 - **Couldn't verify** — open questions with the best guess and why
 - **Questions to ask in interviews** — the hypotheses only insiders can confirm
@@ -111,6 +148,8 @@ Run independent searches in parallel where the environment allows. Stop a pillar
 **Optional, with permission:** the user's own email, meeting notes, or documents (recruiter threads, notes from earlier interviews, prep notes). Never attempt to access the target company's systems.
 
 ### Build mode — what to pull from connected tools
+
+Deep research also suits the market, competitor, and ecosystem research in build mode — use the same brief and the same verification step. Internal data comes from connected tools.
 
 Check which tool categories are connected (see `skills/pmm-director/references/connections.md`). Pull scoped samples, not everything:
 

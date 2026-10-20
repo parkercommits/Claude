@@ -58,7 +58,7 @@ When sources disagree: evidence beats frameworks; PMA sets the structure; MKT1 s
 
 ## Modes, inputs, and tool connections
 
-**Job hunt mode** relies on what you provide plus public research. The more starting links you share, the better: the job posting, homepage, pricing, blog, changelog, help docs, case studies, review-site pages, news, and industry reports — plus competitors you know and what you've heard from your network. Choose a **quick scan** (about an hour of research) or a **deep dive** (full Discover across audience, ecosystem, and product). With your permission, it can also read your own email, meeting notes, or docs for recruiter threads and earlier interview notes.
+**Job hunt mode** relies on what you provide plus public research. The more starting links you share, the better: the job posting, homepage, pricing, blog, changelog, help docs, case studies, review-site pages, news, and industry reports — plus competitors you know and what you've heard from your network. Choose a **quick scan** (regular, targeted research — fast) or a **deep dive** (Claude's deep research for the broad landscape plus targeted research for precise details — slower, uses more of your usage allowance, best before final rounds and presentations). Deep research may need to be turned on in the chat; the plugin will tell you. With your permission, it can also read your own email, meeting notes, or docs for recruiter threads and earlier interview notes.
 
 **Build mode** works best with your company's tools connected. The plugin refers to tools by category, so it works with whichever ones you use:
 

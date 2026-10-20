@@ -12,6 +12,7 @@ All notable changes to the PMM Framework plugin. Versions follow [semantic versi
 
 ### Changed — `pmm-discover`
 - **Job hunt research protocol:** starting-input checklist, quick scan vs. deep dive, source list before research, job posting read first, pillar-by-pillar research in source-priority order (company-owned → customer voice → third-party), and three closing lists (couldn't verify, questions to ask in interviews, sources).
+- **Deep research in deep dives:** quick scan uses regular, targeted research; deep dive uses deep research for the broad landscape (market, competitors, ecosystem, news, sentiment) plus targeted research for precise items (job posting, pricing, docs, the competitor matrix). Includes an availability check, a structured research brief template, treating the report as raw material, and verifying the 5–10 decision-critical facts. Also available in build mode for market and competitor research.
 - **Build mode pulls:** what to take from each connected tool category for Discover, with sample sizes and time windows.
 - Step 6 adds to the Context Document created at intake rather than starting a new one.
 

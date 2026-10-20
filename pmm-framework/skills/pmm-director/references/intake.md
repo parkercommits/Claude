@@ -50,8 +50,10 @@ Ask for whatever the user has; everything else is researched from public sources
 - Their own early hypotheses about the company's positioning or challenges
 
 **Research depth** — offer a choice:
-- **Quick scan** (roughly an hour of research): enough for an early-stage conversation
-- **Deep dive**: full Discover research across all three pillars, for final rounds or presentations
+- **Quick scan** — regular, targeted research; fast and light on usage. Enough for early conversations and screens.
+- **Deep dive** — deep research for the broad landscape plus targeted research for precise details. Takes longer and uses more of the user's usage allowance. Best for final rounds, presentations, and take-homes.
+
+If the user picks deep dive, check whether a deep research capability is available. If it needs to be turned on by the user (in the Claude app, the Research option in the chat), tell them now so it's ready when Discover starts.
 
 **Optional connections in job hunt mode** (only the user's own data, only with permission):
 - Email (e.g., Gmail) — recruiter threads, the job description, interview scheduling details
