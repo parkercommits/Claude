@@ -64,6 +64,19 @@ Refined against MKT1 launch and campaign best practices.
 - **Step 12:** 30/60/90-day post-launch momentum plan and Grow handoff.
 - Prerequisites read Strategy on a page and Define's one-page summary; updated checklist, document structure, mistakes, templates, and MKT1 references.
 
+### Changed — `pmm-grow`
+Refined against MKT1 measurement, customer marketing, and review practices.
+
+- **Make the call:** every review ends with scale / improve / pause / stop decisions.
+- **Step 1:** learning agenda starts from big bets, KPO goals, the revenue lever, the GACCS brief, the momentum plan, and perceptions.
+- **Step 2:** measure for learning, not credit — lifecycle stages for contacts and accounts, last touch before meeting/opportunity, campaign influence reporting, blended CAC, inbound and outbound reported separately, neutral pipeline labels; efficiency metrics (CAC ratio, payback, LTV:CAC); report to sales in pipeline terms.
+- **Step 5:** track perceptions and update their status with evidence.
+- **Step 8:** express segment findings as ICP tier moves; review ecosystem partner performance.
+- **Step 10:** rethink the case study — searchable customer library, "case study, plus," interview first, the share test, amplify customer posts.
+- **Step 11:** start field updates with the rep partners; find content hits, repurpose them, and reinforce perceptions.
+- **Step 12:** traffic-light review (red / yellow / green) as the decision step; big bet and momentum-plan review; quarterly Context Document update (ICP tiers, levers, advantages, ecosystem, perceptions, positioning flag).
+- Updated checklist, document structure, mistakes, templates, upstream connections, and MKT1 references.
+
 ## [0.1.0] — 2026-06-04
 
 Initial release: `pmm-director`, `pmm-discover`, `pmm-strategize`, `pmm-define`, `pmm-get-set`, `pmm-grow`.
