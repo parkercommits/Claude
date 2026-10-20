@@ -600,7 +600,7 @@ For a standard Discover engagement:
 - Align leadership
 - Hand off into Strategize
 
-*For job hunt mode: follow the research protocol under "Inputs and connections." A quick scan takes roughly an hour of research; a deep dive covers all three pillars in full. Either way, flag what's unverified.*
+*For job hunt mode: follow the research protocol under "Inputs and connections." A quick scan uses regular, targeted research; a deep dive adds deep research for the broad landscape and covers all three pillars in full. Either way, flag what's unverified.*
 
 ---
 
