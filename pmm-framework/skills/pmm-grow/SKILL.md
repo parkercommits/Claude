@@ -11,7 +11,7 @@ description: >
   segment expansion, product feedback, proof collection, enablement refresh, and post-launch reviews
   with traffic-light decisions and quarterly updates to the Context Document.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   author: "Parker Lyons"
 ---
 
@@ -66,6 +66,23 @@ This skill executes the **Grow phase of the PMA Product Marketing Framework.**
 
 - **Build mode** — Working at or for this company. All 12 steps apply. Access to product analytics, CRM data, call recordings, customer interviews, and CS feedback.
 - **Job hunt mode** — Targeting this company as a prospective employer. Build a hypothetical Grow analysis using public signals: product reviews, G2/Capterra feedback themes, public case studies, competitor comparisons, community discussions. Demonstrate what you'd measure, what you'd hypothesize, and what optimizations you'd investigate. Flag all as hypotheses ⚠️ **Job Hunt Mode**. This is especially powerful for senior PMM roles.
+
+---
+
+## Inputs and connections
+
+Start from the **Engagement setup**, the Get Set section (GACCS brief, momentum plan, baseline), and earlier sections of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`). Grow depends on data more than any other phase — say plainly which analyses can't be done without a connection.
+
+| Input | Job hunt mode — where it comes from | Build mode — where it comes from |
+|---|---|---|
+| Pipeline, win rate, campaign influence | — (hypothesize what you'd measure) | **CRM** — lifecycle stages, campaign influence, closed-won/lost since launch |
+| Adoption, activation, retention | Public usage claims, reviews mentioning onboarding | **Product analytics** — activation, feature adoption, retention cohorts |
+| Customer feedback themes | Review sites, community threads since launch | **Support and feedback** — ticket and survey themes; **call recordings** — post-launch calls |
+| Message and perception pull-through | Reviews, social posts, analyst commentary | **Call recordings** — language prospects repeat back; **web analytics** — page conversion |
+| Content performance | Visible engagement on public content | **Web and marketing analytics** — traffic, conversion, influenced pipeline by asset |
+| Product feedback | Feature requests in reviews and communities | **Roadmap and issues** — customer-requested issues and their status |
+
+Pull the review period's data only (e.g., the 30, 60, or 90 days since launch), compare against the Get Set baseline, and cite the tool and date range. Ask before creating issues or posting findings anywhere. Follow the guardrails in `skills/pmm-director/references/connections.md`.
 
 ---
 

@@ -10,7 +10,7 @@ description: >
   enablement, CS readiness, commercial mechanics, internal comms, governance, QA, measurement
   setup, readiness review, and launch handoff with a post-launch momentum plan.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   author: "Parker Lyons"
 ---
 
@@ -87,6 +87,22 @@ A Tier 3 release should take about a day of PMM effort, not twelve steps.
 
 - **Build mode** — Working at or for this company. All 12 steps apply for a Tier 1 launch; trim by tier using the "Right-size by tier" table above. Access to internal teams, CRM, pricing systems, and field feedback.
 - **Job hunt mode** — Targeting this company as a prospective employer. Build a hypothetical launch readiness plan: identify what assets a launch would need, what enablement gaps likely exist, what the governance model should look like, based on public information about their product, sales model, and customer base. Flag all assumptions ⚠️ **Job Hunt Mode**. This demonstrates operational PMM maturity to interviewers.
+
+---
+
+## Inputs and connections
+
+Start from the **Engagement setup**, "Strategy on a page," and Define's one-page summary in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+
+| Input | Job hunt mode — where it comes from | Build mode — where it comes from |
+|---|---|---|
+| What's launching and when | Changelog, public roadmap, announcements | **Roadmap and issues** — scope, dates, dependencies |
+| Existing enablement and assets | Public sales content, webinars, docs | **Sales enablement** and **docs** — current decks, battlecards, FAQs |
+| Field questions and objections | Reviews, community threads | **Call recordings** — recent objections; **email and chat** — questions from the field |
+| Ecosystem amplifiers | Partner directory, integrations page, community leaders | **CRM** — partner and customer advocates; **docs** — partner lists |
+| Measurement baseline | — | **CRM**, **product analytics**, **web analytics** — current pipeline, adoption, and conversion |
+
+**Actions that change things need approval.** Get Set is where Claude may be asked to create issues, draft internal announcements, or update shared docs. Draft them for review; create, send, or post only after the user confirms each one. Follow the guardrails in `skills/pmm-director/references/connections.md`.
 
 ---
 

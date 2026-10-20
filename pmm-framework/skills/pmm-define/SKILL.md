@@ -9,7 +9,7 @@ description: >
   statement, messaging architecture, personas, use cases, differentiation, proof points,
   perceptions, product narrative, message validation, and governance.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   author: "Parker Lyons"
 ---
 
@@ -68,6 +68,23 @@ Product positioning is also a subset of the company story, not the whole of it. 
 
 - **Build mode** — Working at or for this company. All 14 steps apply. Access to internal data, existing personas, sales input, and customer research to ground messaging in reality.
 - **Job hunt mode** — Targeting this company as a prospective employer. Build a hypothetical positioning and messaging framework from public sources. This is exceptionally powerful for interviews — showing up with a complete messaging house for a company's product demonstrates senior-level PMM thinking. Always include the homepage hero audit (Step 13) of the company's current site: what it says today, how it scores on who / what / why better, and a proposed rewrite. Flag all assumptions ⚠️ **Job Hunt Mode**.
+
+---
+
+## Inputs and connections
+
+Start from the **Engagement setup**, the Discover section, and "Strategy on a page" in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+
+| Input | Job hunt mode — where it comes from | Build mode — where it comes from |
+|---|---|---|
+| Current positioning and messaging | Homepage, product pages, sales-facing content, executive posts | **Docs and wiki** — positioning docs, messaging framework, brand guidelines |
+| Customer language and pains | Review sites, case studies, community threads | **Call recordings / meeting notes** — how customers describe the problem; **support and feedback** verbatims |
+| Objections and comparators buyers actually use | Reviews naming alternatives, comparison pages | **Call recordings** — competitor mentions; **CRM** — loss reasons |
+| Proof points | Case studies, customer logos, published metrics | **CRM** — reference customers; **docs** — case studies; **product analytics** — outcome data |
+| Homepage performance (Step 13) | The homepage itself, for the hero audit | **Web analytics** — homepage conversion and drop-off |
+| Message testing (Step 13) | Hypotheses to test in interviews | **Call recordings** — reaction to new talk tracks; ask before contacting customers |
+
+Quote customers without names or identifying details unless the user says otherwise. Follow the guardrails in `skills/pmm-director/references/connections.md`.
 
 ---
 
