@@ -50,6 +50,20 @@ Refined against MKT1 marketing strategy best practices.
 - **"Strategy on a page"** leads the artifact stack and is written into the Context Document.
 - Updated week-by-week model, decision framework, common mistakes, downstream handoffs, and MKT1 references.
 
+### Changed — `pmm-get-set`
+Refined against MKT1 launch and campaign best practices.
+
+- **A launch is a campaign**, with one DRI and momentum beyond launch day; checklists are a starting point, not the strategy.
+- **Right-size by tier** table: which of the 12 steps apply at Tier 1, 2, and 3.
+- **Step 1:** decide whether it deserves a launch at all (roadmap ≠ marketing calendar); tier by comparing against other campaigns; tier frequencies; bundle releases and decouple ship and announce dates; **GACCS launch brief** replaces the generic launch charter.
+- **Step 2:** new ecosystem amplification workstream (early access and amplification kits for creators, customers, partners, community); pair launches with data reports, events, and other moments.
+- **Step 3:** every asset brief names the perception it supports and its distribution plan.
+- **Step 4:** co-build enablement with one or two reps, capture what buyers say, speak in pipeline terms, set rules of engagement for launch leads.
+- **Step 9:** QA checks perceptions, the homepage hero test, and the pricing page.
+- **Step 10:** launch metrics tied to the revenue lever the launch moves.
+- **Step 12:** 30/60/90-day post-launch momentum plan and Grow handoff.
+- Prerequisites read Strategy on a page and Define's one-page summary; updated checklist, document structure, mistakes, templates, and MKT1 references.
+
 ## [0.1.0] — 2026-06-04
 
 Initial release: `pmm-director`, `pmm-discover`, `pmm-strategize`, `pmm-define`, `pmm-get-set`, `pmm-grow`.
