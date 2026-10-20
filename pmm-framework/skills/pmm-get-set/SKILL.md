@@ -6,10 +6,11 @@ description: >
   "build launch readiness", "write the battlecard / objection handling / sales deck",
   "what do we need before we can launch", "set up the go/no-go process", or
   "operationalize the launch". Executes the PMA Get Set phase: 12 steps covering launch
-  tiering, planning, asset briefs, sales enablement, CS readiness, commercial mechanics,
-  internal comms, governance, QA, measurement setup, readiness review, and launch handoff.
+  tiering and GACCS launch brief, planning and ecosystem amplification, asset briefs, sales
+  enablement, CS readiness, commercial mechanics, internal comms, governance, QA, measurement
+  setup, readiness review, and launch handoff with a post-launch momentum plan.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   author: "Parker Lyons"
 ---
 
@@ -29,7 +30,7 @@ Invoke this skill when the user says any of the following (or close variants):
 - "Help me operationalize the launch"
 - Any request to execute a launch or prepare teams after positioning and strategy are defined
 
-**Prerequisite:** The Define phase should be complete — specifically: approved positioning statement, messaging framework, value pillars, proof points, persona guidance, and use-case narratives. The Strategize phase should also be complete — GTM motion, target segment, pricing/packaging direction, KPIs, and launch tier. If these don't exist, ask the user to provide them or run the relevant phases first.
+**Prerequisite:** The Define phase should be complete — specifically: the one-page positioning and messaging summary, approved positioning statement, perceptions, land use case, messaging framework, value pillars, proof points, persona guidance, and use-case narratives. The Strategize phase should also be complete — "Strategy on a page" (big bets, chosen growth engines, KPO goals, ranked revenue levers), GTM motion, target segment, pricing/packaging direction, and launch tier. Discover's ecosystem map feeds the amplification plan. If these don't exist, ask the user to provide them or run the relevant phases first.
 
 ---
 
@@ -55,11 +56,36 @@ This skill executes the **Get Set phase of the PMA Product Marketing Framework.*
 
 **The best PMMs treat Get Set as a readiness system, not a content production scramble.**
 
+**A launch is a campaign, not an event (MKT1).** A campaign combines fuel (messaging, content, creative) and engine (channels) for a specific audience, around a theme, over a set period. Treat the launch the same way: one directly responsible individual (DRI), a GACCS brief, a story that supports the company's perceptions, and momentum that continues well past launch day.
+
+**Checklists are a starting point, not the strategy (MKT1).** The 12 steps below are the full set for a Tier 1 launch. Trim them to the tier — see "Right-size by tier" below.
+
+---
+
+## Right-size by tier
+
+| Step | Tier 1 | Tier 2 | Tier 3 |
+|---|---|---|---|
+| 1. Tier, scope, GACCS brief | Full | Full | Short brief (a few lines) |
+| 2. Launch plan + amplification | Full | Focused: fewer workstreams, light amplification | Skip — add to changelog/lifecycle calendar |
+| 3. Asset briefs | Full | Priority assets only | Update existing web, docs, enablement content |
+| 4. Sales enablement | Full program + readiness checks | Targeted session + core assets | Release note to the field |
+| 5. CS / support readiness | Full | Full if customer-facing change | Support FAQ / macro update |
+| 6. Commercial mechanics | Full if pricing/packaging changes | Full if pricing/packaging changes | Only if pricing/packaging changes |
+| 7. Internal comms | Full | Full | Single announcement |
+| 8. Governance and gates | All five gates | Gates 2, 4, 5 | None — owner sign-off |
+| 9. QA | Full | Core touchpoints | Spot-check changed pages |
+| 10. Measurement | Full plan + dashboard | Core KPIs | Usage/adoption metric only |
+| 11. Readiness review | Formal RYG review | Light review | Skip |
+| 12. Handoff + momentum plan | Full; 30/60/90-day plan | Handoff; 30-day follow-up | Skip |
+
+A Tier 3 release should take about a day of PMM effort, not twelve steps.
+
 ---
 
 ## Engagement modes
 
-- **Build mode** — Working at or for this company. All 12 steps apply. Access to internal teams, CRM, pricing systems, and field feedback.
+- **Build mode** — Working at or for this company. All 12 steps apply for a Tier 1 launch; trim by tier using the "Right-size by tier" table above. Access to internal teams, CRM, pricing systems, and field feedback.
 - **Job hunt mode** — Targeting this company as a prospective employer. Build a hypothetical launch readiness plan: identify what assets a launch would need, what enablement gaps likely exist, what the governance model should look like, based on public information about their product, sales model, and customer base. Flag all assumptions ⚠️ **Job Hunt Mode**. This demonstrates operational PMM maturity to interviewers.
 
 ---
@@ -70,10 +96,28 @@ This skill executes the **Get Set phase of the PMA Product Marketing Framework.*
 
 Before building anything, confirm the scale of the launch and define what "ready" actually means. Not every release deserves the same effort level — if everything is treated as Tier 1, the team burns out and quality falls.
 
+**First: does this deserve a launch at all? (MKT1)** Don't use the product roadmap as the marketing calendar. Start from the big-bet campaign calendar set in Strategize and fit launches into it. A feature that doesn't support a big bet or a perception may belong in the changelog, lifecycle emails, or existing content instead of a launch.
+
+**The tiering question (MKT1):** Is this release more important than the *other campaigns* marketing could run in the same period? Compare it to campaigns, not just to other launches.
+
 **Launch tier model:**
-- **Tier 1 — Major launch:** High revenue or strategic impact. Full campaign, executive alignment, PR, broad field enablement, robust measurement.
-- **Tier 2 — Important launch:** Focused GTM motion, selective enablement, key assets, moderate campaign support.
-- **Tier 3 — Maintenance / low-impact release:** Lightweight updates, self-service documentation, minimal coordinated launch motion.
+- **Tier 1 — Major launch:** High revenue or strategic impact. Full campaign, executive alignment, broad field enablement, ecosystem amplification, robust measurement. Expect about **1–2 per year**, with momentum kept up for weeks or months.
+- **Tier 2 — Important launch:** Focused GTM motion for one segment or one funnel/lifecycle stage; selective enablement, key assets, moderate campaign support. About **one per quarter**.
+- **Tier 3 — Maintenance / low-impact release:** Mostly content updates across web, enablement, and support docs; little or no announcement.
+
+**Bundle to earn a tier.** Combine related smaller releases into one story to reach Tier 1 or 2. Because exclusive press coverage is less likely today, the announcement can come well after the features ship — decouple the ship date from the announce date.
+
+**Write the GACCS launch brief (MKT1).** This is the launch brief/charter — short, shared, and kept up to date as the story or channels change:
+
+| | Contents |
+|---|---|
+| **G — Goal** | The KPI or big bet it serves, the revenue lever it moves, and how success is measured — agreed across marketing, product, and sales |
+| **A — Audience** | Primary ICP and tier; secondary audiences |
+| **C — Creative** | The perception it drives; launch positioning (what the audience uses today, who it's for, what it is, why it's better); format; unique point of view |
+| **C — Channels** | Growth engines, including ecosystem amplification |
+| **S — Stakeholders** | The single DRI, contributors, reviewers, and approvers |
+
+Get ICP input before the launch where possible: customer calls, beta feedback, validation calls, message tests.
 
 **Readiness categories to define for the chosen tier:**
 - Product readiness
@@ -83,9 +127,9 @@ Before building anything, confirm the scale of the launch and define what "ready
 - Customer readiness
 - Measurement readiness
 
-**Templates:** Launch tiering framework, Launch brief/charter, Readiness criteria checklist, Stage-gate framework, PMA Launch Tiers (coda.io/@product-marketing-alliance-pma).
+**Templates:** Launch tiering framework, GACCS launch brief, Readiness criteria checklist, Stage-gate framework, PMA Launch Tiers (coda.io/@product-marketing-alliance-pma).
 
-**Key outputs:** Launch tier recommendation, Launch brief/charter, Readiness definition, Stage-gate criteria.
+**Key outputs:** Launch-or-not decision, Launch tier recommendation, GACCS launch brief, Readiness definition, Stage-gate criteria.
 
 **Good:** Company knows what kind of launch this is; effort matches strategic importance; minimum launch bar is shared; everyone knows what must be done before greenlighting.
 **Weak:** Every launch treated as urgent and critical; no shared readiness bar; launch date fixed before quality is assessed; teams confuse activity with readiness.
@@ -97,7 +141,15 @@ Before building anything, confirm the scale of the launch and define what "ready
 Translate strategy and messaging into a concrete execution plan with owners, milestones, dependencies, and deliverables.
 
 **Workstreams to plan across:**
-Product, web/content, demand gen, sales enablement, CS/support, lifecycle/customer comms, partner/channel, legal/compliance, operations/analytics.
+Product, web/content, demand gen, sales enablement, CS/support, lifecycle/customer comms, **ecosystem amplification**, partner/channel, legal/compliance, operations/analytics.
+
+**Ecosystem amplification (MKT1).** Tech press coverage is scarce; launches increasingly depend on people the audience already trusts. Using Discover's ecosystem map:
+- Pick the creators, customers, partners, and community members whose audiences overlap most with the primary ICP
+- Give them **early access** and an **amplification kit** (key messages, visuals, short demo, suggested angles) so they can talk about the launch in their own words
+- Make the ask easy to fulfill — e.g., a calendar invite for the moment to post
+- Treat press as one channel among several, not the plan
+
+**Pair the launch with other moments (MKT1).** Look for moments that amplify the story: a data report that frames the problem before the feature arrives, an event, a fundraise, a rebrand. Bundle stories and content, not just features — and use the launch as a forcing function for related initiatives.
 
 **Explicit milestone categories:**
 - Strategy frozen
@@ -124,11 +176,12 @@ Positioning doesn't automatically become usable assets — teams need structured
 
 **For each asset, define:**
 - Primary audience
-- Use case it serves
+- Use case it serves (lead with the land use case at the top of the funnel)
+- **Perception it supports** — every asset should ladder up to at least one
 - Message pillar it supports
 - Proof point it demonstrates
 - CTA
-- Channel/placement
+- **Distribution plan, set up front** (MKT1): primary channel, gated or ungated, expected reach (high / medium / low) — don't make distribution an afterthought
 - Owner and deadline
 
 **Typical assets to scope by tier:**
@@ -173,7 +226,13 @@ A launch is not ready because a deck exists. It is ready when the field can conf
 *Core:* Sales narrative / talk track, pitch deck or storyline slides, battlecard, objection handling guide, discovery questions, qualification criteria.
 *Supporting:* Use-case cheat sheet, competitive comparison guidance, pricing/packaging explanation, demo flow guidance, internal FAQ.
 
-**Templates:** Sales enablement plan, Readiness checklist, Sales play template, PMA Battlecard Template (coda.io/@product-marketing-alliance-pma), Objection handling framework (PMA Objection Handling Script), Demo talk track template, Discovery question guide, FAQ template, Certification/knowledge-check template, PMA Sales Playbook Template, PMA Sales One-Pager.
+**Working with sales (MKT1):**
+- **Co-build with one or two reps.** Iterate the talk track and assets with them before rollout; they give honest feedback and know what the wider team needs.
+- **Ask what buyers are saying.** Messaging often lags behind real sales conversations — fold what reps hear into objections and proof.
+- **Speak sales' language.** Frame the launch's value and results in pipeline, meetings, and closed deals, not impressions or MQLs.
+- **Set rules for launch-generated leads.** Who follows up, within what window, and the automated nurture fallback if the window passes. Agree ownership of the CRM fields and stages involved.
+
+**Templates:** Sales enablement plan, Readiness checklist, Sales play template, Launch lead rules of engagement, PMA Battlecard Template (coda.io/@product-marketing-alliance-pma), Objection handling framework (PMA Objection Handling Script), Demo talk track template, Discovery question guide, FAQ template, Certification/knowledge-check template, PMA Sales Playbook Template, PMA Sales One-Pager.
 
 **Key outputs:** Field enablement plan, Sales readiness assets, Training sessions, Readiness completion status, FAQ/objection handling set.
 
@@ -297,6 +356,9 @@ PMM acts as the final quality-control layer across message consistency and custo
 - Is naming consistent across all channels?
 - Are CTAs appropriate for the audience?
 - Is proof claimed accurate and supportable?
+- Does every asset support at least one perception, and none tell a separate story?
+- Does the homepage hero (or launch landing page) pass the who / what / why-better test?
+- Does the plans and pricing page reflect the launch accurately?
 
 **Templates:** Launch QA checklist, Messaging consistency checklist, Web/campaign review rubric, Customer experience walkthrough checklist, Claim verification worksheet.
 
@@ -311,8 +373,16 @@ PMM acts as the final quality-control layer across message consistency and custo
 
 A launch is not ready if you cannot measure whether it worked. Measurement setup belongs in Get Set, not after launch.
 
+**Tie metrics to the revenue lever the launch is meant to move** (from Strategize):
+- *Core-audience top of funnel* → qualified pipeline and win rate in Core ICPs
+- *New audience* → top-of-funnel growth and early pipeline in the new ICP
+- *Customer value* → adoption, expansion revenue, retention
+- *Efficiency* → conversion rates, sales velocity, cost per acquisition
+
+Make sure the GACCS brief's goal and these metrics match, and that marketing, product, and sales agreed on them before launch.
+
 **Metrics to operationalize (select by launch type):**
-Influenced pipeline, sourced pipeline, win rate, feature adoption, activation, usage depth, retention/expansion, traffic and conversion, trial/demo volume, enablement completion and adoption, support ticket themes, customer sentiment.
+Influenced pipeline, sourced pipeline, win rate, feature adoption, activation, usage depth, retention/expansion, traffic and conversion, trial/demo volume, ecosystem amplification reach, enablement completion and adoption, support ticket themes, customer sentiment.
 
 **Feedback loops to configure:**
 - Sales feedback form (quick post-call input on message resonance, objections encountered, prospect questions)
@@ -368,9 +438,15 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 - Who can authorize scope changes or delays
 - Single source of truth for launch-day assets
 
-**Templates:** Launch handoff package, Launch day run-of-show, Command center doc, Issue escalation matrix, Final approvals checklist.
+**Post-launch momentum plan (MKT1).** Launch day is the start, not the finish. PMs often move to the next release quickly, so PMM owns adoption. Before launch, plan:
+- **30 / 60 / 90-day follow-up content** — customer stories, how-to content, data from early usage, webinars — that keeps the story going
+- **Ecosystem follow-through** — second-wave posts from partners and customers
+- **Adoption pushes** through lifecycle and in-product messaging
+- **The handoff to Grow** — who owns the post-launch review, and when
 
-**Key outputs:** Final handoff package, Launch day runbook, Owner list/escalation paths, Execution-ready source of truth.
+**Templates:** Launch handoff package, Launch day run-of-show, Command center doc, Issue escalation matrix, Final approvals checklist, Post-launch momentum plan.
+
+**Key outputs:** Final handoff package, Launch day runbook, Owner list/escalation paths, Execution-ready source of truth, 30/60/90-day momentum plan.
 
 **Good:** Launch-week execution smoother because ambiguity is low; teams know who owns issues in real time; handoff enables action without repeated clarification.
 **Weak:** Launch-day questions expose unfinished decisions; teams scramble for final files and approvals; ownership unclear; PMM answering preventable questions all week.
@@ -380,7 +456,9 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 ## Get Set readiness checklist
 
 **Launch design:**
-- [ ] Right launch tier assigned?
+- [ ] Confirmed this deserves a launch (fits a big bet or perception), not just "it shipped"?
+- [ ] Right launch tier assigned, compared against other campaigns?
+- [ ] GACCS launch brief written, with one DRI?
 - [ ] Launch scope clear?
 - [ ] Readiness definition shared with all teams?
 
@@ -388,10 +466,11 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 - [ ] Integrated launch plan with owners and deadlines?
 - [ ] Dependencies visible?
 - [ ] Critical path and escalation path defined?
+- [ ] Ecosystem amplifiers chosen, with early access and an amplification kit?
 
 **Asset creation:**
 - [ ] Right assets prioritized?
-- [ ] Every major asset has a clear brief?
+- [ ] Every major asset has a clear brief, including its perception and distribution plan?
 - [ ] Messages consistent across channels?
 
 **Sales readiness:**
@@ -423,6 +502,7 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 - [ ] Execution teams know what happens on launch day?
 - [ ] Ownership clear during launch week?
 - [ ] Final unresolved issues addressed or formally accepted?
+- [ ] 30/60/90-day momentum plan in place, with the Grow handoff owner named?
 
 ---
 
@@ -430,17 +510,21 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 
 | Section | Contents |
 |---|---|
-| 1. Executive summary | What is launching, why it matters, launch tier, launch date/scope |
-| 2. Objectives and success criteria | Launch goals, key metrics, readiness definition |
-| 3. Audience and message summary | Target segments, core messaging, key use cases, message guardrails |
-| 4. Workstreams and deliverables | Content/web, sales enablement, CS/support, customer comms, campaign/channel, ops/analytics, legal/commercial |
-| 5. Asset plan | Required assets, owners, due dates, approval status |
-| 6. Readiness plan | Training plan, stakeholder communication, support readiness, internal launch comms |
-| 7. Commercial readiness | Pricing, packaging, SKUs, systems/process updates |
-| 8. Dependencies and risks | Blockers, assumptions, mitigation plans, escalation path |
-| 9. Governance | Stage gates, checkpoint meetings, go/no-go criteria, decision owners |
-| 10. Measurement and feedback | KPI tracking, dashboard setup, feedback loop design, review cadence |
-| 11. Launch-day plan | Run-of-show, owner matrix, escalation contacts, contingency actions |
+| 1. GACCS launch brief | Goal, audience, creative (perception, launch positioning, POV), channels, stakeholders — the one-page summary |
+| 2. Executive summary | What is launching, why it matters, launch tier, launch and announce dates, scope |
+| 3. Objectives and success criteria | Launch goals tied to the revenue lever, key metrics, readiness definition |
+| 4. Audience and message summary | Target segments, core messaging, land use case, perceptions supported, message guardrails |
+| 5. Workstreams and deliverables | Content/web, sales enablement, CS/support, customer comms, ecosystem amplification, campaign/channel, ops/analytics, legal/commercial |
+| 6. Asset plan | Required assets, owners, due dates, distribution plan, approval status |
+| 7. Readiness plan | Training plan, stakeholder communication, support readiness, internal launch comms |
+| 8. Commercial readiness | Pricing, packaging, SKUs, systems/process updates |
+| 9. Dependencies and risks | Blockers, assumptions, mitigation plans, escalation path |
+| 10. Governance | Stage gates, checkpoint meetings, go/no-go criteria, decision owners |
+| 11. Measurement and feedback | KPI tracking, dashboard setup, feedback loop design, review cadence |
+| 12. Launch-day plan | Run-of-show, owner matrix, escalation contacts, contingency actions |
+| 13. Momentum plan | 30/60/90-day content, ecosystem follow-through, adoption pushes, Grow handoff |
+
+For Tier 2 and 3 launches, the GACCS brief plus the relevant sections is enough.
 
 ---
 
@@ -482,13 +566,21 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 10. Running status meetings with no real decisions
 11. Letting launch date pressure override launch quality
 12. Failing to define what is "must-have before launch" vs. "can follow post-launch"
+13. Using the product roadmap as the marketing calendar — launching whatever ships
+14. Treating launches as isolated events — every launch should support a perception
+15. Assuming press will carry the launch — plan ecosystem amplification instead
+16. Following the checklist instead of the strategy — trim steps to the tier
+17. Stopping at launch day — no 30/60/90-day momentum, no owner for adoption
 
 ---
 
 ## Template toolkit
 
 **Essential:**
-- Launch brief/charter, Launch tiering framework, PMA Launch Tiers
+- GACCS launch brief, Launch tiering framework, PMA Launch Tiers, Right-size-by-tier table
+- Ecosystem amplification kit
+- Launch lead rules of engagement
+- Post-launch momentum plan (30/60/90 days)
 - Workback plan / integrated project plan
 - Cross-functional RACI or DACI
 - Dependency tracker
@@ -513,7 +605,6 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 - Support macro guide
 - Executive briefing doc
 - Regional localization checklist
-- Partner launch kit
 - Issue escalation matrix
 - Post-launch review template
 
@@ -522,7 +613,7 @@ Get Set ends when execution teams can move quickly without reopening foundationa
 ## Downstream skills this feeds into
 
 Get Set outputs directly enable:
-- **PMM Grow** — uses the KPI framework, measurement plan, feedback loops, and launch baseline to track post-launch performance, adoption, and optimization opportunities
+- **PMM Grow** — uses the KPI framework, measurement plan, feedback loops, launch baseline, GACCS brief goals, and the 30/60/90-day momentum plan to track post-launch performance, adoption, and optimization opportunities
 
 ---
 
@@ -541,6 +632,10 @@ Get Set outputs directly enable:
 - PMA Customer Onboarding Template
 - PMM-GPT best practice guidance (PMA, 2026)
 
-**Secondary (philosophical lens):**
-- MKT1 / Emily Kramer — enablement as "showing how the product fits into the audience's full workflow," not just explaining features
+**Secondary (philosophical lens and operating practices):**
+- MKT1 / Emily Kramer — enablement as showing how the product fits into the audience's full workflow, not just explaining features; specifically:
+  - Five bad launch habits, launch tiers and frequency, bundling, perceptions, ecosystem amplification, 30/60/90-day momentum (Dear Marketers, Episode 11: How has the product launch playbook changed?)
+  - Campaign framework and GACCS brief (MKT1 Field Guide to B2B Startup Marketing, Part 1; Dear Marketers, Episode 2; The GACC Marketing Brief)
+  - Distribution planned up front (Stop making content distribution an afterthought)
+  - Working with sales, rules of engagement for leads (Dear Marketers, Episode 5: How can sales and marketing actually work together?)
 - SVPG / Martina Lauchengco (Loved) — launch readiness as a shared PMM/PM accountability, not a handoff

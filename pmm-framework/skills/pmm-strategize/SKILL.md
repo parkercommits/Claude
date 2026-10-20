@@ -5,11 +5,12 @@ description: >
   "help me strategize [launch/product/segment]", "run the Strategize phase",
   "build a go-to-market plan", "define our GTM motion", "set objectives and KPIs for [launch]",
   "help me plan pricing and packaging", or "build the launch operating plan".
-  Executes the PMA Strategize phase: 8 workstreams covering strategic point of view,
-  OKRs/KPIs, GTM strategy, pricing/packaging, sales readiness, launch governance,
-  validation planning, and budget/resourcing.
+  Executes the PMA Strategize phase: 8 workstreams covering strategic point of view
+  (revenue levers, marketing advantages, working positioning and perceptions), goals and
+  KPIs, GTM strategy and growth engines, pricing/packaging, sales readiness, launch
+  governance, validation planning, and budget/resourcing.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   author: "Parker Lyons"
 ---
 
@@ -27,7 +28,11 @@ Invoke this skill when the user says any of the following (or close variants):
 - "Build the launch operating plan"
 - Any request to develop commercial strategy after Discovery is complete
 
-**Prerequisite:** The Discover phase Context Document should exist before this skill runs. If it doesn't, prompt the user to run Discover first — or ask them to provide key discovery outputs directly (target audience, core problem, competitive context, market opportunity).
+**Prerequisite:** The Discover phase Context Document should exist before this skill runs. If it doesn't, prompt the user to run Discover first — or ask them to provide key discovery outputs directly (target audience, core problem, competitive context, market opportunity). Strategize relies especially on Discover's ICP tiers, audience behavior, ecosystem map, candidate comparators, and candidate marketing advantages.
+
+**Inherit or build (scope).** PMA's Strategize plans an initiative — usually a launch. MKT1's strategy work is company-level: what drives growth for the whole business. Strategize needs both, but should not rebuild the company level every time:
+- **If the company already has a marketing strategy** (prioritized marketing advantages, ranked revenue levers, perceptions, ICP tiers, positioning), inherit it. Check the initiative against it and flag conflicts.
+- **If it doesn't** — common at startups, and always true in job hunt mode — draft a light version in Workstream 1 and mark it as a working draft.
 
 ---
 
@@ -51,6 +56,13 @@ If Discover answers "What opportunity is real, for whom, and why?" — Strategiz
 - Grow optimizes it over time
 
 **The PMM's role in Strategize:** PMM leads the strategic thread that connects product, sales, marketing, CS, and support — but does not become the default owner of every executional task. The job is to force strategic clarity on audience, use case, motion, pricing, readiness, and success metrics before execution starts. Strategy is decision-making, not planning.
+
+**The three drivers of marketing strategy (MKT1).** Every strategy should rest on:
+1. **Product marketing research** — audience, market/ecosystem, and product (from Discover)
+2. **Business model and GTM motion** — self-serve vs. sales-led, deal size, adoption path
+3. **Marketing advantages** — the company's built-in tailwinds
+
+You can't copy another company's strategy, because its audience, model, and advantages differ. Copying tactics without fit is what MKT1 calls "random acts of marketing."
 
 ---
 
@@ -83,9 +95,45 @@ Before building a GTM plan, turn research into a clear strategic recommendation.
 - What risks could weaken launch success?
 - What would make this a bad bet?
 
-**Templates:** Strategic recommendation memo, Opportunity assessment, Segment prioritization framework, Use-case prioritization matrix, Risk and dependency log, Executive strategy brief
+#### 1A. Rank the four revenue levers (MKT1)
 
-**Key output:** A strategic point of view stating who to target, what problem/use case to lead with, why now, why your company can win, and what constraints shape the plan.
+Make "where to focus" concrete. Stack-rank, 1–4, by importance to the business right now:
+
+| Lever | What it means | Current maturity (investing / starting / nothing yet) |
+|---|---|---|
+| **Grow top of funnel with the core audience** | More market share in Core-tier ICPs | |
+| **Grow top of funnel with a new audience** | Expand to a Scaling or Testing ICP | |
+| **Increase customer value** | Pricing, upsell, expansion, retention, moving upmarket | |
+| **Increase efficiency** | Better conversion, lower acquisition cost, less waste | |
+
+For the top one or two levers, state how this initiative moves them. Levers ranked 3–4 become explicit non-goals unless the initiative clearly serves them. Relying only on top-of-funnel volume gets harder as the TAM saturates.
+
+#### 1B. Identify and prioritize marketing advantages (MKT1)
+
+Marketing advantages are strengths or positive dynamics in the business, product, team, or story that accelerate growth — tailwinds. Examples: network effects, a free plan or free tool, integrations and an ecosystem, a strong community, a compelling founder or company story, market timing (a new regulation or shift), a clear vertical wedge, unusual customer love. Most successful later-stage companies leverage two or more.
+
+**Run the exercise** (start from Discover's candidate advantages):
+1. List the advantages.
+2. Rate each: **potential strength** if fully leveraged vs. **current strength** today.
+3. Check competitors: do they have the same advantage, and use it the same way? If everyone has it, it isn't an advantage.
+4. Note combinations — advantages that reinforce each other.
+5. Prioritize: which to start on, which to double down on.
+6. Name the projects that would accelerate each priority advantage (these feed big bets in Workstream 2).
+
+**Watch-outs:** an advantage doesn't drive growth on its own — it needs investment. Some need company-wide buy-in (product for network effects; GTM teams for ecosystem). Some can be built deliberately (a free plan, a vertical wedge); others, like a compelling story, are hard to force. If the company has no advantages, say so — it signals a product, business, or GTM problem, not a marketing one.
+
+#### 1C. Draft the working positioning hypothesis and perceptions
+
+Strategy choices rest on a view of how the product wins, so draft one now; Define tests and finalizes it.
+
+- **Positioning hypothesis:** product type (vertical solution / new way / 10x better / buy vs. build), one comparator, and the three answers — who it's for, what it is, why it's better than the comparator. Start from Discover's candidate comparators and primary audience. Optionally add a "one year out" version.
+- **Working perceptions:** 2–5 beliefs you want the audience to repeat back, written in their voice, each tagged company / audience / market / product and established / emerging / new. These anchor the big bets in Workstream 2.
+
+Keep both short and mark them **working drafts**. Define (Steps 3, 4, and 11) owns the final versions and logs what changed.
+
+**Templates:** Strategic recommendation memo, Revenue lever stack-rank, Marketing advantages worksheet, Working positioning hypothesis, Working perceptions, Opportunity assessment, Segment prioritization framework, Use-case prioritization matrix, Risk and dependency log, Executive strategy brief
+
+**Key output:** A strategic point of view stating who to target, what problem/use case to lead with, why now, why your company can win, and what constraints shape the plan — plus ranked revenue levers, prioritized marketing advantages, a working positioning hypothesis, and working perceptions.
 
 **Good:** Clear choices with explicit tradeoffs, evidence-backed, leadership can immediately understand "why this, why now, why us."
 **Weak:** Strategy is just a research summary, no prioritization, team tries to target everyone.
@@ -113,9 +161,16 @@ Define what success actually means. Most GTM failures come from confusing activi
 **Example metrics a PMM may define:**
 Pipeline created, qualified demand from target segment, trial starts / demo requests, activation rate, time to first value, conversion to paid, attach / adoption rate, win rate in target segment, competitive win rate, retention at 30/60/90/180 days, expansion revenue, message pull-through in sales calls, enablement completion and confidence.
 
-**Templates:** GTM objectives framework, KPI tree, Launch scorecard, Stage-gate checklist, Metric definitions document, Success criteria worksheet
+**Set goals across three types — KPIs aren't a plan on their own (MKT1 KPO goals):**
+- **K — KPIs:** the metrics above, derived from the top-ranked revenue levers
+- **P — Projects:** 1–3 **big bets** — initiatives that could drive outsized impact. Treat the launch itself as a big bet. Each big bet names its target ICP tier, the perception it drives, the marketing advantage it accelerates, its growth engine(s), the content it needs, and its success criteria.
+- **O — Ops:** foundational work the plan depends on — tools, tracking, hiring, workflows, repeatable processes
 
-**Key output:** A measurement framework with business goal, KPIs, targets, owners, reporting cadence, and stage gates.
+Also list **non-goals** (what this initiative deliberately won't do), plus dependencies and risks. Without projects and ops goals, growth stays linear.
+
+**Templates:** GTM objectives framework, KPO goals sheet (KPIs / Projects / Ops / non-goals), Big bet brief, KPI tree, Launch scorecard, Stage-gate checklist, Metric definitions document, Success criteria worksheet
+
+**Key output:** A measurement framework with business goal, KPIs, targets, owners, reporting cadence, and stage gates — plus 1–3 big bets, ops goals, and non-goals.
 
 **Good:** Metrics connect to company goals, teams know what they own, success is measurable before launch starts, mix of near-term and long-term indicators.
 **Weak:** "Success" = launching on time, no agreed KPIs, only vanity metrics, post-launch measurement is an afterthought.
@@ -127,11 +182,12 @@ Pipeline created, qualified demand from target segment, trial starts / demo requ
 The heart of Strategize. PMM should own the GTM strategy even when cross-functional teams execute parts of it.
 
 #### 3A. Audience strategy
-- Primary target segment (narrow — resist the urge to list everyone)
-- Secondary segment, if any
+Start from Discover's ICP tiers rather than re-deriving segments:
+- **Primary audience** — the one Core-tier ICP this initiative leads with (narrow — resist the urge to list everyone)
+- **Effort by tier** — rough share of time and budget for Core / Scaling / Testing; "Not a priority today" gets none
 - Buyer vs. user focus
 - Priority personas and buying committee roles
-- Expansion path after initial traction
+- **Expansion path** — the plan to move Scaling and Testing ICPs up a tier after initial traction
 
 #### 3B. Use-case strategy
 - Lead use case and use-case hierarchy
@@ -146,18 +202,27 @@ Choose the motion based on ACV, implementation complexity, buyer education needs
 - **Partner-led** — reach via channel, reseller, or ecosystem
 - **Hybrid** — PLG for initial adoption + sales overlay for expansion
 
-#### 3D. Acquisition strategy
-Match channels to the segment and buying motion — don't just list every channel:
-- Paid acquisition
-- Content / SEO
-- Product-led loops
-- Outbound sales
-- Partner ecosystem
-- Events / community
-- Lifecycle / customer marketing
-- Field marketing / ABM
+**Check that marketing fits the motion (MKT1):** e.g., gated content and demo-only CTAs fight an easy-to-adopt self-serve product; pure self-serve content won't carry a six-figure, committee-led deal. If changing the motion is on the table, estimate the company-wide impact (billing, RevOps, onboarding) before recommending it.
 
-For each prioritized channel, define: audience fit, expected role in the buyer journey, resource requirements, message implications, risks.
+#### 3D. Acquisition strategy — choose growth engines (MKT1)
+Don't list every channel. Group channels into engines and choose a focused set:
+
+| Engine | What it includes | Tends to fit when… |
+|---|---|---|
+| **Inbound** | Content, SEO, AEO/LLM visibility, social, paid search | The audience actively searches for or learns about the problem |
+| **Outbound** | SDR/AE prospecting, ABM, targeted paid | High-value accounts, a defined target list, sales-led motion |
+| **Product virality** | Free plans, invites, sharing, product-led loops | The product has network effects or is naturally shared |
+| **Events** | Webinars, conferences, field events, dinners | The audience values in-person or peer learning |
+| **Ecosystem** | Integrations, partners, communities, influencers, agencies, affiliates | The product connects to tools the audience already uses, or others reach the audience credibly |
+| **Lifecycle** | Onboarding, nurture, customer marketing, expansion | After the top of funnel — activation, retention, expansion (and virality if used for referrals) |
+
+**Choose engines from the three drivers:** audience behavior and ecosystem (from Discover), GTM motion (3C), and marketing advantages (1B). Then:
+- Run a **focused set** now, but plan for a **mix over time** — single channels saturate, decline, or get disrupted
+- **Pair engines that reinforce each other** (content feeding outbound follow-up; events supporting outbound)
+- **Don't invest in virality or outbound before the product supports it**
+- Don't silo engines between teams (e.g., marketing's inbound and sales' outbound sending prospects conflicting messages)
+
+For each chosen engine, define: audience fit, expected role in the buyer journey, resource requirements (including the content it needs — see Workstream 8), message implications, risks.
 
 #### 3E. Conversion and onboarding strategy
 Strategize is not just top-of-funnel:
@@ -174,14 +239,14 @@ Strategize is not just top-of-funnel:
 - What readiness milestones exist
 - How launch dependencies will be managed
 
-**Useful frameworks:** STP (Segmentation / Targeting / Positioning), Bowling pin strategy (one segment/use case first, then expand), GTM motion design, Customer journey mapping, Persona × channel mapping, Barrier analysis (awareness / credibility / adoption / switching barriers).
+**Useful frameworks:** STP (Segmentation / Targeting / Positioning), Bowling pin strategy (one segment/use case first, then expand), MKT1 ICP tiers, MKT1 growth engines, GTM motion design, Customer journey mapping, Persona × engine mapping, Barrier analysis (awareness / credibility / adoption / switching barriers).
 
 **Templates:** GTM strategy template, Audience and segment plan, Buyer journey map, Channel strategy worksheet, Route-to-market decision framework, Internal communication plan, Dependency tracker, Risk register, Launch workback plan.
 
 **Key output:** A documented GTM strategy defining who you're targeting, which problem/use case you lead with, which motion you use, which channels you prioritize, how buyers move from awareness to value realization, and what internal orchestration is required.
 
-**Good:** Narrow focus, GTM motion fits the product and segment, onboarding/retention implications built in early, channel choices tied to buyer behavior.
-**Weak:** "We'll use all channels," no clarity on motion, strategy ends at lead generation, no internal coordination plan.
+**Good:** Narrow focus, GTM motion fits the product and segment, onboarding/retention implications built in early, engine choices tied to buyer behavior and marketing advantages.
+**Weak:** "We'll use all channels," channels copied from another company, no clarity on motion, strategy ends at lead generation, no internal coordination plan.
 
 ---
 
@@ -195,6 +260,16 @@ One of the most strategic and most commonly underdeveloped parts of Strategize. 
 - Pressure-test pricing against: market norms, alternatives, value delivered, implementation effort, procurement friction
 - Define launch offers if needed: beta access, early adopter pricing, limited-time incentives, bundled onboarding
 - Identify packaging barriers: too many SKUs, confusing tiers, value buried in upper plans, misalignment with buyer mental models
+- Decide the **plans and pricing page** approach (below)
+
+**Plans and pricing page (MKT1):**
+- Have one. A plans page clarifies what the product is and which packages exist, even without prices. Exceptions: a single plan, or a product not yet defined.
+- Show at least some prices — often the lowest tier. Hiding prices drives evaluators to competitors that show theirs, doesn't stop buyers finding prices elsewhere, and moves sticker shock into sales calls.
+- Avoid "fake" gating — a form or chat that leads to a demo request without ever revealing price.
+- Keep the model simple; avoid pages full of sliders, calculators, and toggles. If the model is complex, add an FAQ or a short note on pricing philosophy.
+- The pricing page should reinforce the positioning hypothesis. If a page with prices isn't converting, suspect price/expectation mismatch, weak value messaging, or an overcomplicated model.
+- If transparency is contested internally, test it: plans-only → lowest tier shown → full pricing, measuring conversion through the funnel.
+- Note market norms: usage-based pricing is spreading, especially for AI products where usage drives cost. Check what the comparator and alternatives charge on.
 
 **Useful frameworks:**
 - Value-based pricing
@@ -204,7 +279,7 @@ One of the most strategic and most commonly underdeveloped parts of Strategize. 
 - Competitive price corridor analysis
 - Van Westendorp price sensitivity analysis (when appropriate)
 
-**Templates:** Pricing strategy brief, Packaging matrix, Price/value hypothesis log, Offer design template, Pricing objection map, Monetization recommendation memo.
+**Templates:** Pricing strategy brief, Packaging matrix, Price/value hypothesis log, Offer design template, Pricing objection map, Plans and pricing page decision, Monetization recommendation memo.
 
 **Key output:** A pricing and packaging recommendation with pricing logic, packaging rationale, offer strategy, expected commercial impact, and known risks/assumptions.
 
@@ -296,8 +371,9 @@ The strongest Strategize phases don't assume the first launch plan is perfect. T
 Strategy without feasibility is aspiration. Ensure the GTM plan is resourced and approved.
 
 **Actions:**
-- Estimate required budget by channel and launch activity
+- Estimate required budget by engine and launch activity
 - Identify team bandwidth constraints
+- **Check fuel vs. engine balance (MKT1):** "fuel" is what you create (messaging, content, creative); "engine" is the channels that distribute it. For each chosen engine, confirm there is capacity to produce the content it needs. Startups often over-invest in one side — channels with nothing to say, or content no channel distributes.
 - Clarify must-have vs. nice-to-have work
 - Build scenarios: minimum viable launch / recommended plan / high-investment plan
 - Align executives on tradeoffs and expected return
@@ -316,33 +392,38 @@ Strategy without feasibility is aspiration. Ensure the GTM plan is resourced and
 
 ## Recommended minimum artifact stack
 
-These seven documents are usually enough to move cleanly into Define and launch execution:
+These eight documents are usually enough to move cleanly into Define and launch execution:
 
 | # | Artifact | What it covers |
 |---|---|---|
-| 1 | Strategy brief | The big choices and rationale |
-| 2 | GTM strategy doc | Target, motion, channel, buyer journey, onboarding |
-| 3 | KPI and success framework | Objectives, metrics, owners, targets |
-| 4 | Pricing and packaging brief | Monetization strategy |
-| 5 | Sales/readiness brief | Who needs what to be ready |
-| 6 | Launch plan + RACI | Milestones and ownership |
-| 7 | Risk/dependency log | What could derail execution |
+| 1 | **Strategy on a page** | Prioritized marketing advantages, ICP tiers and primary audience, working perceptions, working positioning hypothesis, ranked revenue levers, KPO goals and big bets. Modeled on MKT1's marketing decision dashboard. |
+| 2 | Strategy brief | The big choices and rationale |
+| 3 | GTM strategy doc | Target, motion, growth engines, buyer journey, onboarding |
+| 4 | KPI and success framework | KPIs, big bets, ops goals, non-goals, owners, targets |
+| 5 | Pricing and packaging brief | Monetization strategy and pricing page approach |
+| 6 | Sales/readiness brief | Who needs what to be ready |
+| 7 | Launch plan + RACI | Milestones and ownership |
+| 8 | Risk/dependency log | What could derail execution |
+
+**Write "Strategy on a page" into the Context Document** (a Strategize section beneath Discover's) so Define, Get Set, and Grow read the same inputs.
 
 ---
 
 ## Week-by-week operating model
 
 **Week 1 — Focus the strategy**
-- Confirm opportunity and target audience from Discover
+- Confirm opportunity, ICP tiers, and primary audience from Discover
+- Inherit or draft the company-level inputs: revenue levers, marketing advantages
 - Prioritize segment and lead use case
+- Draft the working positioning hypothesis and working perceptions
 - Write the strategic recommendation
 - Align leadership on strategic direction
 
 **Week 2 — Define success and GTM approach**
-- Establish objectives and KPIs
-- Choose GTM motion
+- Establish KPO goals: KPIs, big bets, ops goals, non-goals
+- Choose GTM motion and check marketing fits it
 - Map buyer journey
-- Prioritize channels
+- Choose growth engines
 - Identify onboarding and retention implications
 
 **Week 3 — Shape commercial mechanics**
@@ -359,7 +440,8 @@ These seven documents are usually enough to move cleanly into Define and launch 
 
 **Week 5 — Validate and finalize**
 - Decide on beta/pilot if needed
-- Lock budget and resourcing
+- Lock budget and resourcing; check fuel vs. engine balance
+- Write "Strategy on a page" into the Context Document
 - Secure executive signoff
 - Hand off into Define (positioning) / Get Set (launch execution)
 
@@ -373,8 +455,11 @@ When reviewing the strategy, these are the most important questions:
 |---|---|
 | **Audience** | Is this the most valuable segment to win first? Are we targeting buyer, user, or both? |
 | **Problem/use case** | Is this problem painful, urgent, and easy to communicate? Does this use case showcase value quickly? |
-| **Differentiation** | Can we win with a clear commercial story? Do we have proof that buyers will care? |
-| **Motion** | Is the route to market appropriate for deal size and complexity? Can our current teams support this motion? |
+| **Differentiation** | Can we win with a clear commercial story? Do we have proof that buyers will care? Is there one clear comparator? |
+| **Advantages** | Which marketing advantages does this plan accelerate? Are they real advantages, or things every competitor has? |
+| **Focus** | Which revenue levers does this move? What are the explicit non-goals? |
+| **Motion** | Is the route to market appropriate for deal size and complexity? Can our current teams support this motion? Does the marketing fit it? |
+| **Engines** | Are engines chosen from audience behavior, motion, and advantages — or copied from habit? Is there content capacity for each? |
 | **Readiness** | Is the product mature enough? Can sales, CS, and support deliver a good experience? |
 | **Economics** | Does pricing reflect value and fit buyer expectations? Is the plan feasible with available budget? |
 | **Measurement** | What metrics will tell us early if this is working? What would trigger an adjustment? |
@@ -390,6 +475,11 @@ When reviewing the strategy, these are the most important questions:
 5. **Underthinking onboarding and retention** — optimizing for lead generation, then being surprised by poor activation or churn
 6. **Leaving pricing too late** — positioning value without confirming how value will be monetized
 7. **Failing to define ownership** — assuming cross-functional alignment without formal accountability
+8. **Random acts of marketing** — copying channels or tactics from other companies without checking fit
+9. **Ignoring marketing advantages** — planning as if the company has no tailwinds, or claiming advantages every competitor shares
+10. **KPIs without projects** — setting targets with no big bets or ops work to reach them
+11. **Fuel and engine out of balance** — channels with nothing to say, or content nothing distributes
+12. **Hiding prices by default** — pushing sticker shock into sales calls instead of deciding pricing transparency deliberately
 
 ---
 
@@ -416,15 +506,17 @@ A weak Strategize phase has: no real prioritization, GTM plan is a list of activ
 - Do not leave pricing for the product team to handle alone — PMM must be in the room
 - Do not conflate launch project management with GTM strategy ownership
 - Do not skip the beta/validation plan — it is the difference between an educated launch and a costly assumption
+- Do not rebuild company-level strategy for every launch — inherit it when it exists
+- Do not finalize positioning or perceptions here — draft them as working hypotheses for Define
 
 ---
 
 ## Downstream skills this feeds into
 
-The Strategize outputs (particularly the GTM strategy doc, KPI framework, and launch plan) are read by:
-- **PMM Define** — uses audience strategy, use-case prioritization, and competitive positioning to build the messaging architecture
-- **PMM Get Set** — uses the launch plan, RACI, sales readiness plan, and enablement brief to execute
-- **PMM Grow** — uses KPIs and success criteria to measure post-launch performance and prioritize optimization
+The Strategize outputs (particularly Strategy on a page, the GTM strategy doc, KPI framework, and launch plan) are read by:
+- **PMM Define** — uses the working positioning hypothesis and working perceptions (to test and finalize), audience strategy, use-case prioritization, and competitive positioning to build the messaging architecture
+- **PMM Get Set** — uses the launch plan, RACI, big bets, chosen growth engines, sales readiness plan, and enablement brief to execute
+- **PMM Grow** — uses KPIs, big bet success criteria, revenue lever ranking, and success criteria to measure post-launch performance and prioritize optimization
 
 ---
 
@@ -439,6 +531,11 @@ The Strategize outputs (particularly the GTM strategy doc, KPI framework, and la
 - PMA Guide to Pricing Models (coda.io/@product-marketing-alliance-pma)
 - PMM-GPT best practice guidance (PMA, 2026)
 
-**Secondary (philosophical lens):**
-- MKT1 / Emily Kramer — audience-first strategy; packaging around ICP needs not feature bundles
+**Secondary (philosophical lens and operating practices):**
+- MKT1 / Emily Kramer — audience-first strategy; packaging around ICP needs not feature bundles; specifically:
+  - Random acts of marketing, fuel and engine, marketing advantages, three drivers of strategy, four revenue levers, KPO goals, decision dashboard (MKT1 Field Guide to B2B Startup Marketing, Part 1)
+  - Growth engines and channel selection (Field Guide, Part 2; MKT1 Guide to Channel <> Startup fit)
+  - Marketing advantages exercise, GTM motion alignment (Marketing strategy exercises to kick off your annual planning process; Find & accelerate your marketing advantages)
+  - Strategy file structure: ICP priorities, perceptions, positioning, revenue levers, big bets (How to build your marketing strategy in Claude)
+  - Plans and pricing pages (Why all B2B startups need plans & pricing pages); usage-based pricing trend (State of B2B Marketing Report 2026, Part 2)
 - SVPG / Martina Lauchengco (Loved) — GTM as equal partner to product discovery

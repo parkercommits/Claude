@@ -8,9 +8,10 @@ description: >
   "identify new segments or expansion opportunities", or "run the 30/60/90-day review".
   Executes the PMA Grow phase: 12 steps covering learning agenda, KPI measurement, adoption
   analysis, VOC synthesis, message-market fit, funnel diagnosis, onboarding optimization,
-  segment expansion, product feedback, proof collection, enablement refresh, and post-launch reviews.
+  segment expansion, product feedback, proof collection, enablement refresh, and post-launch reviews
+  with traffic-light decisions and quarterly updates to the Context Document.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   author: "Parker Lyons"
 ---
 
@@ -31,7 +32,7 @@ Invoke this skill when the user says any of the following (or close variants):
 - "Build the voice-of-customer synthesis"
 - Any request to measure, analyze, optimize, or learn from a product that is already in market
 
-**Prerequisite:** The product, feature, or offer should be live in market with some measurable activity. The Grow phase requires: defined KPIs from Strategize, messaging from Define, and launch baseline from Get Set. If post-launch measurement wasn't configured, start by establishing what data is available and what the learning agenda should be.
+**Prerequisite:** The product, feature, or offer should be live in market with some measurable activity. The Grow phase requires: KPO goals, big bets, and ranked revenue levers from Strategize ("Strategy on a page"); messaging and perceptions from Define; and the launch baseline, GACCS brief, and 30/60/90-day momentum plan from Get Set. If post-launch measurement wasn't configured, start by establishing what data is available and what the learning agenda should be.
 
 ---
 
@@ -57,6 +58,8 @@ This skill executes the **Grow phase of the PMA Product Marketing Framework.**
 
 **The core test for Grow maturity:** Can the PMM team clearly explain which customer behaviors lead to value, which GTM motions drive adoption and revenue, and what three changes would most improve growth in the next quarter? If no — Grow is not mature yet.
 
+**Make the call (MKT1).** Grow exists to decide what to **scale, improve, pause, or stop** — not to report. Every review ends in those calls, using the traffic-light review in Step 12.
+
 ---
 
 ## Engagement modes
@@ -78,8 +81,17 @@ The biggest Grow mistake is entering post-launch without clarity on what you're 
 - Product experience questions (are customers using it as intended? where do they stall?)
 - Commercial execution questions (are messages landing? are sales plays working?)
 
+**Start from the plan, not a blank page.** Pull the questions from what earlier phases committed to:
+- Each **big bet's** success criteria (Strategize)
+- The **project and ops goals**, not just the KPIs
+- The **revenue lever** the launch was meant to move
+- The **GACCS launch brief** goal and the **30/60/90-day momentum plan** (Get Set) — did the momentum plan actually run?
+- The **perceptions** the launch was meant to support (Define)
+
 **Strong learning question examples:**
 - Are we attracting the ICP we expected?
+- Which perception is taking hold, and which is lagging?
+- Which ecosystem partners, creators, or customers actually drove pipeline?
 - Which use cases convert fastest?
 - Where in onboarding do users stall?
 - Which persona responds best to the value prop?
@@ -110,7 +122,20 @@ Revenue, pipeline, win rate, retention, expansion, churn, NRR, customer lifetime
 
 **Interpretation principle:** A launch with strong awareness but poor activation has a different problem than one with weak awareness but strong downstream conversion. PMM should identify which part of the funnel the issue lives in.
 
-**Templates:** Growth KPI dashboard, Post-launch scorecard, Cohort analysis template, Funnel performance tracker, Segment performance review deck.
+**Measure for learning, not credit (MKT1).** Attribution exists to show what works, not to decide which team gets credit. Common startup mistakes: too little reporting, fighting over credit, judging channels in isolation, and over-relying on first-touch ("original source") attribution — which in account-based GTM often just reflects list building. Instead:
+- **Lifecycle stages for contacts and accounts** — track volume (or value) at each stage, conversion between stages, and time between stages
+- **Capture the last touch before a meeting or opportunity** — what moved the deal forward matters more than how the record entered the system
+- **Campaign influence reporting** — every campaign a contact or account engaged with before or during the sales process, and the pipeline and revenue it influenced. Campaigns span channels, and one deal is often influenced by several.
+- **Blended CAC** — total acquisition spend across marketing, sales, and partnerships divided by new customers, rather than per-channel CAC
+- **Report inbound and outbound separately** — they move through the funnel differently
+- **Don't label pipeline "marketing-sourced" vs. "sales-sourced"** — use neutral stage names and focus on what moves deals
+- Use several views (first touch, last touch before qualification, campaign influence); a complex multi-touch model is usually overkill at early stages
+
+**Efficiency metrics** — when the launch targeted the efficiency lever, track the three MKT1 efficiency metrics: **CAC ratio, payback period, LTV:CAC**. Agree on standard definitions with finance first.
+
+**Report to sales in their terms:** pipeline, meetings, win rate, deal velocity — not impressions or MQLs.
+
+**Templates:** Growth KPI dashboard, Campaign influence report, Lifecycle stage report, Blended CAC and efficiency metrics sheet, Post-launch scorecard, Cohort analysis template, Funnel performance tracker, Segment performance review deck.
 
 **Key outputs:** Performance dashboard, Post-launch metrics review, Leading/lagging indicator analysis, Segment and cohort insights.
 
@@ -185,8 +210,15 @@ Clarity, relevance, distinctiveness, credibility, motivation.
 **Sales call review analysis — identify:**
 Where prospects lean in, what they ask about, what they misunderstand, what language reps actually use successfully.
 
+**Track perceptions (MKT1).** Define set 3–5 perceptions with a status (new / emerging / established). Check each one:
+- Are prospects, customers, analysts, and partners repeating it back — in calls, reviews, social posts, community threads?
+- Is its status moving (new → emerging → established)? Update the status with evidence.
+- Which perception is lagging, and what content or campaign would move it?
+- Is content still laddering up to the perceptions, or drifting?
+
 **Key questions:**
 - Are customers repeating our language back to us?
+- Are they repeating our perceptions back to us?
 - Which message pillars are resonating?
 - Which messages create confusion or skepticism?
 - Is the category framing working?
@@ -207,6 +239,8 @@ Growth problems often sit outside the product. Diagnose where the GTM motion is 
 
 **Full funnel to analyze:**
 Awareness → engagement → demo/trial → activation → opportunity → close → onboarded → retained → expanded.
+
+Use the lifecycle stage and campaign influence reports from Step 2 to locate leaks — and keep inbound and outbound funnels separate, or conversion rates will mislead.
 
 **Win/loss classification:**
 Competitor win, no decision, missing capability, budget, poor fit, value not proven, implementation concern, internal priority shift.
@@ -249,7 +283,11 @@ Purchase, onboarding, activation, adoption maturity, expansion readiness.
 Market reality often reveals opportunities the original strategy didn't fully anticipate. Use post-launch insight to discover: unexpected user groups, stronger-than-expected use cases, new industries or regions, expansion triggers, packaging opportunities, cross-sell/upsell motions.
 
 **Signals to look for:**
-Unusual adoption concentration, customer-led use-case innovation, high-retention cohorts, sales pull from adjacent segments, expansion behavior by account type, customer language suggesting broader needs.
+Unusual adoption concentration, customer-led use-case innovation, high-retention cohorts, sales pull from adjacent segments, expansion behavior by account type, customer language suggesting broader needs, partners or communities driving unexpected demand.
+
+**Express findings as ICP tier moves.** A strong new segment is a candidate to move from Testing → Scaling (or Scaling → Core); a weak one may drop to "Not a priority today." Recommend the tier change explicitly so Strategize can reallocate effort.
+
+**Ecosystem performance.** Review which partners, creators, communities, and customers drove influenced pipeline or adoption. A few strong partners usually beat many transactional ones — recommend where to deepen and where to stop.
 
 **Opportunity prioritization lens:**
 Demand signal, strategic fit, ICP overlap, monetization potential, implementation complexity, differentiation potential, enablement complexity.
@@ -291,12 +329,21 @@ Volume/frequency, segment importance, revenue impact, strategic alignment, urgen
 
 Grow is where the market gives you evidence you didn't have in Define. Continuously strengthen the proof base.
 
-**Capture and organize by:** segment, persona, use case, industry, funnel stage, objection type, message pillar.
+**Rethink the case study (MKT1).** Small edits won't fix the traditional problem → solution → "how we helped" case study. Use customers throughout marketing instead:
+- **Build a searchable customer library** — quotes, stats, mini-stories, tagged so sales can answer a prospect's question without waiting for a full case study
+- **"Case study, plus"** — from one interview, produce a short write-up for sales requests *and* a video per customer and cross-customer montages
+- **Interview first, then pick the format** (video, quote, one-pager, interactive page) based on the story
+- **When sales asks for a case study, ask what problem they're solving** — the right asset may be different
+- **Bring customers in early** — build them into campaigns and launches, not as a quote added at the end
+- **The share test:** would the customer share this with their own audience? A standard case study usually fails it.
+- **Amplify customers' own posts** — e.g., boost them as LinkedIn thought-leader ads
+
+**Capture and organize by:** segment, persona, use case, industry, funnel stage, objection type, message pillar, perception supported.
 
 **Types of evidence to collect:**
 Customer wins, outcome metrics, implementation success stories, adoption milestones, workflow improvements, ROI evidence, before/after narratives, customer quotes, expansion stories.
 
-**Templates:** Case study intake form, Customer proof tracker, Win story template, ROI story worksheet, Referenceability tracker, PMA Customer Case Study Questions (coda.io/@product-marketing-alliance-pma).
+**Templates:** Customer library (searchable proof), Case study intake form, Customer proof tracker, Win story template, ROI story worksheet, Referenceability tracker, PMA Customer Case Study Questions (coda.io/@product-marketing-alliance-pma).
 
 **Key outputs:** Proof point library, Case study pipeline, Customer story repository, Reference customer list, Claims strengthening recommendations.
 
@@ -320,6 +367,14 @@ Grow is not just analysis — it produces improvements in the field. Once PMM id
 - Customer marketing messaging
 - Onboarding and lifecycle communications
 
+**Start field updates with the rep partners.** The one or two reps who helped build the launch enablement are the fastest source of honest feedback on what's working in calls.
+
+**Double down on content that works (MKT1):**
+- **Find the hits** — which launch and follow-up assets drove engagement, influenced pipeline, or got shared
+- **Repurpose each hit** into more formats (a report → blog posts, social threads, a webinar, a template), each with its **own distribution plan**
+- **Make more of what works** before inventing something new
+- **Reinforce the perceptions** — keep reusing the core perceptions, frameworks, and concepts across formats. Repetition strengthens the story, even when it feels like a broken record.
+
 **Templates:** Enablement update brief, Sales play refresh template, Lifecycle optimization plan, Updated FAQ and objection tracker, Demo narrative revision template, PMA Sales Confidence Survey Questions (to measure impact of updates).
 
 **Key outputs:** Updated field guidance, Revised sales plays, Expansion and retention messaging, Lifecycle communications refinements.
@@ -337,22 +392,43 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 - 30-day review: early signal check, onboarding friction, quick wins
 - 60-day review: adoption patterns, messaging performance, field feedback
 - 90-day review: full performance assessment, funnel diagnosis, optimization priorities
-- Quarterly: strategic iteration, expansion opportunities, future launch recommendations
+- Quarterly: strategic iteration, expansion opportunities, future launch recommendations, **Context Document update** (below)
+
+**Traffic-light review (MKT1)** — the decision step in every review. Rate each item red / yellow / green: campaigns, growth engines and channels, content series, sales plays, segments, ecosystem partners, big bets.
+
+| Light | Meaning | Where time goes | Typical call |
+|---|---|---|---|
+| 🟢 Green | Working | A lot — scale it, find *why* it works, apply the pattern elsewhere | **Scale** |
+| 🟡 Yellow | Close to working | The most — this is where effort moves results | **Improve** |
+| 🔴 Red | Not working | The least — reds rarely turn green | **Pause** or **stop** |
+
+The common mistake is spending most energy trying to fix the reds. Every item leaves the review with one call — scale, improve, pause, or stop — and an owner.
 
 **Strong review structure:**
-1. Launch objective recap
-2. KPI performance vs. targets
-3. Adoption analysis
-4. Segment and use-case findings
-5. Messaging and enablement effectiveness
-6. Customer feedback themes
-7. Product friction and issues
-8. Optimization actions with owners and deadlines
-9. Implications for future launches
+1. Launch objective recap (GACCS goal, revenue lever, big bet success criteria)
+2. KPI performance vs. targets, plus project and ops goal status
+3. Did the 30/60/90-day momentum plan run?
+4. Adoption analysis
+5. Segment and use-case findings (including recommended ICP tier moves)
+6. Messaging, perception, and enablement effectiveness
+7. Customer feedback themes
+8. Product friction and issues
+9. Traffic-light review: scale / improve / pause / stop, with owners and deadlines
+10. Implications for future launches
 
-**Templates:** Post-launch review template, Lessons learned worksheet, 30/60/90-day review deck, Action log, Decision register.
+**Quarterly Context Document update (MKT1 strategy review).** Write what Grow learned back into the shared Context Document, each change dated "last verified":
+- **ICP tiers** — move ICPs between Core / Scaling / Testing / Not a priority
+- **Revenue levers** — re-rank if priorities shifted
+- **Marketing advantages** — re-rate current strength; add or drop advantages
+- **Ecosystem** — new competitors, complements, or frenemies; partner performance
+- **Perceptions** — update each status with evidence
+- **Positioning** — flag whether it needs revisiting (e.g., the comparator shifts from the old way to named competitors as the market matures)
 
-**Key outputs:** Post-launch review, Lessons learned repository, Optimization action plan, Future launch recommendations.
+These updates are what Discover, Strategize, and Define read on the next cycle.
+
+**Templates:** Post-launch review template, Traffic-light review sheet, Lessons learned worksheet, 30/60/90-day review deck, Action log, Decision register, Context Document update log.
+
+**Key outputs:** Post-launch review, Traffic-light decisions (scale / improve / pause / stop), Lessons learned repository, Optimization action plan, Future launch recommendations, Updated Context Document.
 
 **Good:** Review is honest, specific, and action-oriented; learnings documented and reused; teams leave with decisions; PMM improves launch quality over time through organizational memory.
 **Weak:** Postmortems skipped or become blame sessions; no action log maintained; same launch mistakes repeat; learnings discussed once then forgotten.
@@ -362,9 +438,10 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 ## Grow phase checklist
 
 **Learning and measurement:**
-- [ ] Defined what we need to learn post-launch?
+- [ ] Defined what we need to learn post-launch, starting from big bets, KPO goals, and the GACCS brief?
 - [ ] Tracking both leading and lagging indicators?
 - [ ] Results segmented by audience, use case, and channel?
+- [ ] Campaign influence and lifecycle stage reporting in place; inbound and outbound reported separately?
 
 **Adoption and lifecycle:**
 - [ ] Activation defined and measured?
@@ -378,6 +455,7 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 
 **Messaging and GTM performance:**
 - [ ] Know which messages resonate and which don't?
+- [ ] Perception statuses updated with evidence?
 - [ ] Objections and conversion blockers tracked?
 - [ ] Win/loss insights shaping field guidance?
 
@@ -388,9 +466,11 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 
 **Product and organizational learning:**
 - [ ] Structured insights fed back to product?
-- [ ] Proof points and case studies being collected?
+- [ ] Customer library of proof maintained, and stories pass the share test?
 - [ ] Enablement, lifecycle, and sales plays updated based on learnings?
-- [ ] Lessons documented and action owners assigned?
+- [ ] Content hits repurposed and doubled down on?
+- [ ] Traffic-light review done, with a scale / improve / pause / stop call and owner for every item?
+- [ ] Context Document updated (ICP tiers, levers, advantages, ecosystem, perceptions, positioning flag)?
 
 ---
 
@@ -399,15 +479,16 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 | Section | Contents |
 |---|---|
 | 1. Executive summary | What launched, review period, top performance outcomes, top growth priorities |
-| 2. Objective recap | Original goals, KPIs, hypotheses, success criteria |
-| 3. Performance analysis | Leading/lagging indicators, funnel performance, segment/cohort insights |
+| 2. Objective recap | Original goals, revenue lever, KPO goals, big bet success criteria, hypotheses |
+| 3. Performance analysis | Leading/lagging indicators, lifecycle stages, campaign influence, efficiency metrics, segment/cohort insights |
 | 4. Adoption and usage | Activation definition, adoption trends, time-to-value, usage depth, retention signals |
 | 5. Customer insight | Top feedback themes, onboarding friction, unmet needs, customer language updates |
-| 6. Messaging and GTM effectiveness | Message resonance, objection themes, sales feedback, campaign performance, competitive patterns |
-| 7. Growth opportunities | New segments, expansion use cases, retention improvements, pricing/packaging implications |
+| 6. Messaging and GTM effectiveness | Message resonance, perception status, objection themes, sales feedback, campaign and ecosystem performance, competitive patterns |
+| 7. Growth opportunities | New segments and recommended ICP tier moves, expansion use cases, retention improvements, pricing/packaging implications |
 | 8. Product implications | Roadmap feedback, feature gaps, commercially important friction points |
-| 9. Proof and enablement updates | New case studies, proof points, enablement changes, lifecycle optimization |
-| 10. Actions and owners | Recommended optimizations, priority level, owner, timeline, expected impact |
+| 9. Proof and enablement updates | Customer library additions, proof points, content hits to repurpose, enablement changes, lifecycle optimization |
+| 10. Traffic-light decisions | Every item rated red / yellow / green with a scale / improve / pause / stop call, owner, timeline, expected impact |
+| 11. Context Document updates | ICP tiers, revenue levers, advantages, ecosystem, perceptions, positioning flag — dated |
 
 ---
 
@@ -449,6 +530,11 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 10. Not feeding insights back into product, sales, and lifecycle teams
 11. Optimizing acquisition while neglecting retention and expansion
 12. Moving on to the next launch before extracting real learning
+13. Spending most energy trying to fix the reds instead of scaling the greens and moving the yellows
+14. Fighting over attribution credit instead of learning what works
+15. Relying on first-touch / original-source attribution alone
+16. Producing long, generic case studies no customer would share
+17. Leaving the Context Document stale after the market has moved
 
 ---
 
@@ -457,6 +543,10 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 **Essential:**
 - Post-launch learning agenda
 - Growth KPI dashboard
+- Campaign influence and lifecycle stage reports
+- Traffic-light review sheet
+- Customer library (searchable proof)
+- Context Document update log
 - Post-launch scorecard
 - Cohort analysis template
 - Adoption and activation analysis worksheet
@@ -489,11 +579,11 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 
 ## Downstream connections
 
-The Grow phase feeds back into all upstream phases — it is a continuous loop:
-- **Back to Discover** — new customer insights update the Audience Analysis and competitive landscape
-- **Back to Strategize** — new segment/use-case findings may require GTM strategy updates
-- **Back to Define** — messaging learnings refresh positioning, value pillars, and proof points
-- **Back to Get Set** — enablement and asset updates based on what's actually working in the field
+The Grow phase feeds back into all upstream phases — it is a continuous loop. The quarterly Context Document update (Step 12) is how:
+- **Back to Discover** — new customer insights, ICP tier moves, and ecosystem changes update the Context Document
+- **Back to Strategize** — re-ranked revenue levers, re-rated marketing advantages, and traffic-light calls on engines and big bets reshape the next plan
+- **Back to Define** — perception statuses and messaging learnings refresh positioning, value pillars, and proof; a flag if the comparator should change
+- **Back to Get Set** — enablement, content hits to repurpose, and the customer library feed the next launch
 
 ---
 
@@ -508,6 +598,14 @@ The Grow phase feeds back into all upstream phases — it is a continuous loop:
 - PMA OKR Toolkit
 - PMM-GPT best practice guidance (PMA, 2026)
 
-**Secondary (philosophical lens):**
-- MKT1 / Emily Kramer — customer feedback as the foundation of audience understanding; win/loss as core PMM intelligence
+**Secondary (philosophical lens and operating practices):**
+- MKT1 / Emily Kramer — customer feedback as the foundation of audience understanding; win/loss as core PMM intelligence; specifically:
+  - Traffic lights and KPO goals (Dear Marketers, Episode 9)
+  - Campaign influence reporting, lifecycle stages, blended CAC, neutral pipeline labels, rethinking case studies (Dear Marketers, Episode 12)
+  - Basic tracking and attribution views; inbound vs. outbound (How to measure what marketing activities are actually driving revenue)
+  - Attribution for learning, not credit (Dear Marketers, Episode 6)
+  - Efficiency metrics: CAC ratio, payback period, LTV:CAC (How to calculate your marketing budget)
+  - Repurpose and reinforce (MKT1 Field Guide to B2B Startup Marketing, Part 2)
+  - Strategy review cadence (Marketing strategy exercises to kick off your annual planning process)
+  - Making the cut-vs-scale call (I analyzed 1,100+ marketing job posts)
 - SVPG / Martina Lauchengco (Loved) — post-launch learning as a shared PM/PMM responsibility for reaching sustained product/market fit
