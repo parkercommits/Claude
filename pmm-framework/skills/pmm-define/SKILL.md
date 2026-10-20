@@ -29,9 +29,9 @@ Invoke this skill when the user says any of the following (or close variants):
 - "Build the differentiation framework"
 - Any request to create market-facing or internal messaging after strategy is complete
 
-**Prerequisite:** The Strategize phase should be complete — specifically: agreed target segment, ICP, priority personas, business objectives, use case focus, GTM motion, pricing/packaging assumptions, and the **working positioning hypothesis** Strategize drafts. Define also reads the Discover Context Document: ICP tiers and primary audience, primary problem solved today, product analysis, and candidate comparators. If these don't exist, prompt the user to complete or share them before messaging work begins. Starting positioning before segmentation is clear is one of the most common Define mistakes.
+**Prerequisite:** The Strategize phase should be complete — specifically: agreed target segment, ICP, priority personas, business objectives, use case focus, GTM motion, pricing/packaging assumptions, and the **working positioning hypothesis and working perceptions** Strategize drafts (see "Strategy on a page" in the Context Document). Define also reads the Discover Context Document: ICP tiers and primary audience, primary problem solved today, product analysis, and candidate comparators. If these don't exist, prompt the user to complete or share them before messaging work begins. Starting positioning before segmentation is clear is one of the most common Define mistakes.
 
-**Positioning handoff:** Strategize drafts a working positioning hypothesis (product type, comparator, and the three positioning answers) so GTM choices rest on it. Define does not start positioning from scratch — it pressure-tests that hypothesis against the evidence, then finalizes it (Steps 3–4). If Strategize skipped the hypothesis, draft it in Step 3 from the Discover inputs.
+**Positioning and perceptions handoff:** Strategize drafts a working positioning hypothesis (product type, comparator, and the three positioning answers) and working perceptions, so GTM choices and big bets rest on them. Define does not start from scratch — it pressure-tests both against the evidence, then finalizes them (positioning in Steps 3–4, perceptions in Step 11) and logs what changed. If Strategize skipped either, draft it in the relevant step from the Discover inputs.
 
 ---
 
@@ -80,7 +80,7 @@ Weak Define work happens when teams jump straight into taglines and copy without
 **Actions:**
 - Review and confirm: target segment, ICP, priority personas, business objective, use case focus, GTM motion, pricing/packaging assumptions
 - Pull from the Discover Context Document: ICP tiers and the one primary audience, primary problem solved today, features → use cases → benefits map, and candidate comparators
-- Pull the working positioning hypothesis from Strategize; note which parts are evidence-backed and which are guesses
+- Pull the working positioning hypothesis and working perceptions from Strategize; note which parts are evidence-backed and which are guesses
 - Identify unresolved strategic issues that would weaken positioning
 - Clarify what is fixed vs. still a hypothesis
 - Align on the scope of what is being defined: product / feature / solution / package / platform capability / category narrative
@@ -403,7 +403,7 @@ Product positioning covers the product. **Perceptions** cover the whole company 
 **Test:** No other company could credibly claim the same combination of perceptions. If a competitor could, sharpen them.
 
 **Actions:**
-- Draft perceptions cross-functionally (product, sales, CS, leadership), grounded in Discover research
+- Start from Strategize's working perceptions; refine them cross-functionally (product, sales, CS, leadership), grounded in Discover research, and log what changed — big bets planned in Strategize may need updating if a perception changes
 - Check that the master positioning reinforces at least one product perception
 - For each perception, sketch the content, campaigns, or proof that would drive it (handed to Get Set and Grow)
 

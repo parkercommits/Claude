@@ -34,6 +34,21 @@ Refined against MKT1 positioning and messaging best practices. Define now has 14
 - **Governance** adds voice and tone plus MKT1 copy guardrails.
 - **One-page summary** now leads the core messaging document; the rest moves to an appendix.
 - Updated checklist, common mistakes, templates, downstream handoffs, and MKT1 references.
+- Step 11 now starts from Strategize's working perceptions and finalizes them.
+
+### Changed — `pmm-strategize`
+Refined against MKT1 marketing strategy best practices.
+
+- **Inherit or build.** Inherit an existing company-level marketing strategy; draft a light version only when none exists (always in job hunt mode).
+- **Three drivers of strategy** — research, business model / GTM motion, marketing advantages — framed up front, with "random acts of marketing" as the anti-pattern.
+- **Workstream 1 adds:** ranked four revenue levers (1A), the marketing advantages exercise (1B), and a working positioning hypothesis plus working perceptions (1C) for Define to finalize.
+- **KPO goals:** KPIs plus 1–3 big bets (the launch is one), ops goals, and explicit non-goals.
+- **Audience strategy uses Discover's ICP tiers**, with effort allocation by tier.
+- **Growth engines replace the flat channel list:** inbound, outbound, product virality, events, ecosystem, lifecycle — chosen from audience behavior, motion, and advantages. Adds a check that marketing fits the GTM motion.
+- **Plans and pricing page guidance:** have one, show some prices, avoid fake gating, keep it simple, test transparency.
+- **Fuel vs. engine balance** check in resourcing.
+- **"Strategy on a page"** leads the artifact stack and is written into the Context Document.
+- Updated week-by-week model, decision framework, common mistakes, downstream handoffs, and MKT1 references.
 
 ## [0.1.0] — 2026-06-04
 
