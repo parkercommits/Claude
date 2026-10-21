@@ -1,16 +1,8 @@
 ---
 name: pmm-strategize
-description: >
-  This skill should be used when the user wants to "build the GTM strategy for [company/product]",
-  "help me strategize [launch/product/segment]", "run the Strategize phase",
-  "build a go-to-market plan", "define our GTM motion", "set objectives and KPIs for [launch]",
-  "help me plan pricing and packaging", or "build the launch operating plan".
-  Executes the PMA Strategize phase: 8 workstreams covering strategic point of view
-  (revenue levers, marketing advantages, working positioning and perceptions), goals and
-  KPIs, GTM strategy and growth engines, pricing/packaging, sales readiness, launch
-  governance, validation planning, and budget/resourcing.
+description: "This skill should be used when the user wants to \"build the GTM strategy for [company/product]\", \"help me strategize [launch/product/segment]\", \"run the Strategize phase\", \"build a go-to-market plan\", \"define our GTM motion\", \"set objectives and KPIs for [launch]\", \"help me plan pricing and packaging\", or \"build the launch operating plan\". Executes the PMA Strategize phase: 8 workstreams covering strategic point of view (revenue levers, marketing advantages, working positioning and perceptions), goals and KPIs, GTM strategy and growth engines, pricing/packaging, sales readiness, launch governance, validation planning, and budget/resourcing.\n"
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   author: "Parker Lyons"
 ---
 
@@ -70,6 +62,23 @@ You can't copy another company's strategy, because its audience, model, and adva
 
 - **Build mode** — Working at or for this company. All 8 workstreams apply. Access to internal data (CRM, pipeline, sales input, product roadmap).
 - **Job hunt mode** — Targeting this company as a prospective employer. Build a hypothetical GTM strategy based on public information. Flag all assumptions clearly. This becomes a powerful interview artifact: "Here's the GTM strategy I'd recommend if I joined." Mark all outputs ⚠️ **Job Hunt Mode**.
+
+---
+
+## Inputs and connections
+
+Start from the **Engagement setup** and the Discover section of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+
+| Input | Job hunt mode — where it comes from | Build mode — where it comes from |
+|---|---|---|
+| Company-level strategy to inherit (advantages, levers, perceptions) | Public signals: executive interviews, investor updates, the job posting | **Docs and wiki** — marketing strategy, annual plan, board decks the user can share |
+| Business model, GTM motion, deal size | Pricing page, sales vs. self-serve signup, careers page (sales roles) | **CRM** — deal size, cycle length, win rate by segment and motion |
+| Revenue lever maturity | Public signals of expansion, upmarket moves, new segments | **CRM** and **product analytics** — new logo vs. expansion mix, retention |
+| Growth engine performance | Content footprint, events, partner pages, social presence | **Web and marketing analytics** — traffic and conversion by source; **CRM** campaign influence |
+| Pricing and packaging | Pricing page, review-site pricing comments | **Docs** — pricing documentation; **CRM** — discounting patterns |
+| What's shipping | Changelog, public roadmap, release notes | **Roadmap and issues** — upcoming releases and scope |
+
+In build mode, pull scoped samples (e.g., the last 2–4 quarters) and cite the tool and date range for each figure. Follow the guardrails in `skills/pmm-director/references/connections.md`.
 
 ---
 
