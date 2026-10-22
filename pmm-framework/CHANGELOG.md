@@ -2,6 +2,23 @@
 
 All notable changes to the PMM Framework plugin. Versions follow [semantic versioning](https://semver.org): minor versions add or expand skills; patch versions fix wording or errors.
 
+## [0.4.0] — 2026-10-21
+
+Makes the plugin easy for teams who didn't build it: a guided setup, a reusable company profile, and plain-language entry points.
+
+### Added
+- **`pmm-setup` skill.** A guided setup of about 15 minutes: orientation and coach-mode choice; a company snapshot drafted from public research for the user to correct; a **10-area PMM health check** on a four-level scale (Missing / Ad hoc / Documented / Operationalized) with evidence checks; open questions on pricing, GTM plans, feedback loops, systems, and team communication; a "bring what you have" asset checklist; a tool connection check; a **company profile**; and a **health check report** with three recommended first moves. References: `health-check.md` (rubric and scoring), `company-profile-template.md`, `project-setup.md` (saving the profile to a shared Claude Project or Drive folder).
+- **Company profile**: one document with eleven sections (health check, company, audiences, positioning, brand voice, pricing, competitors, GTM plan, teams and tools, customer voice, glossary), each with an owner and last-updated date.
+- **Recurring task offers**: customer voice digest, competitor scan, GTM calendar check, and quarterly review, created only with the user's agreement.
+- **Marketplace file** at the repository root, so the plugin installs from GitHub (`parkercommits/Claude`); a root README.
+
+### Changed
+- **`pmm-director`**: a **job menu** ("Prep a launch," "We keep losing to X," "Fix our homepage") so users don't need phase names; detects the company profile and offers setup to first-time teams; explains company profile vs. Context Document; adds **coach mode** (why it matters / what good looks like / watch out for, kept out of deliverables); offers recurring work. Intake skips questions the profile answers.
+- **All five phases**: a **Company profile and existing work** section — read the relevant profile sections, **audit existing work before building**, ask only for gaps, and propose profile updates to section owners instead of editing silently. Define and Get Set apply the profile's brand voice to all customer-facing drafts.
+- **`pmm-grow`**: the quarterly review also proposes company profile updates and re-runs the health check.
+- **README** rewritten for new users: install options, the first 15 minutes, what you can ask, and how it works.
+- Plugin manifest adds a display name, homepage, and repository, and an updated description.
+
 ## [0.3.0] — 2026-10-20
 
 ### Added — engagement intake and tool connections

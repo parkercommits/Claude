@@ -1,85 +1,97 @@
-# PMM Framework Plugin
+# PMM Framework
 
-A full-stack Product Marketing Director agent built on the PMA 5-phase framework and refined with MKT1's operating practices. Grounded in PMA best practices, MKT1 audience-first methodology, PMM-GPT guidance, and SVPG/Loved.
+A Product Marketing Director agent for Claude. It helps your team research customers and competitors, choose where to focus, sharpen positioning and messaging, plan launches, and learn what's working after launch. You don't need to be a product marketer to use it. Start with a 15-minute setup, and it builds on the work your team already has.
 
-**Current version:** 0.3.0 — see [CHANGELOG.md](CHANGELOG.md) for what changed in each version.
+**Current version:** 0.4.0 — see [CHANGELOG.md](CHANGELOG.md).
 
-## Overview
+## Install
 
-This plugin gives you a Product Marketing Director agent capable of executing end-to-end PMM strategy — from initial market discovery through post-launch growth optimization. It runs in two modes:
+Pick whichever fits:
 
-- **Build mode** — Active PMM work at or for a company
-- **Job hunt mode** — Proactively developing PMM strategy for companies you're targeting in interviews
+- **Claude app — upload the plugin file.** Get the `.plugin` file (from whoever shared it with you, or this repository's Releases page if you have access). In Claude, open **Customize → Plugins** and upload it.
+- **Claude app — install from GitHub** (if you have access to this repository). **Customize → Plugins → Add → Add marketplace → Add from a repository**, enter `parkercommits/Claude`, then install **PMM Framework**.
+- **Claude Code:** `/plugin install pmm-framework --marketplace parkercommits/claude`
+
+**For organization admins:** on Team and Enterprise plans, you can install the plugin for everyone from your organization's plugin settings, and you may need to allow this repository as a source.
+
+## Your first 15 minutes
+
+Say: **"Set up PMM for [your company]."**
+
+The setup walks you through:
+1. **A quick orientation**: what the agent can do, and whether you'd like coach mode (explains the "why" as you go)
+2. **A PMM health check**: ten areas, rated on a simple four-level scale (Missing → Ad hoc → Documented → Operationalized)
+3. **Bring what you have**: brand guidelines, tone of voice, segmentations, pricing sheets, call transcripts, plans, past launch reviews
+4. **Connect tools**: it checks what's connected and suggests the two or three that would help most
+5. **Your company profile**: one shared document every later task reads, so nobody re-explains the company
+6. **Your health check report**: what's strong, the biggest gaps, and **three recommended first moves**, each with the exact thing to say next
+
+It also shows you how to save the profile in a **Claude Project** your team can share, and offers to set up recurring tasks like a weekly customer-call digest or a monthly competitor scan.
+
+## What you can ask
+
+You don't need to know any framework. Just describe the job:
+
+| Say something like… | You get |
+|---|---|
+| "Help us figure out who to target" | ICP tiers, customer pains and triggers, customer language |
+| "Size up our competitors" / "We keep losing to X" | Competitor matrix, ecosystem map, differentiation, battlecard |
+| "What should we focus on this quarter?" | Ranked revenue levers, marketing advantages, goals and big bets |
+| "Sharpen our positioning" / "Fix our homepage" | Positioning on a page, perceptions, messaging, homepage rewrite |
+| "Prep a launch for [feature]" | Launch tier, launch brief, plan, readiness checklist |
+| "Help sales win more" | Deck, battlecards, objection handling, built with your reps |
+| "What's working and what should we cut?" | Traffic-light review: scale / improve / pause / stop |
+| "Turn customer feedback into action" | Customer voice themes, product feedback, proof library |
+| "Help me prep for a PMM interview at [company]" | Job hunt mode: research, positioning, and a homepage rewrite for the target company |
+
+Not sure where to start? Say **"What can you help with?"**
+
+## How it works
+
+- **Company profile, set up once per organization.** Audiences, positioning, brand voice, pricing, competitors, GTM plan, tools and processes, customer voice. It's the approved baseline: skills **audit and build on your existing work** before creating anything new, and they propose profile changes to each section's owner rather than editing silently.
+- **One Context Document per project.** The goal, deliverable, and timeline for each piece of work, plus what each step learns.
+- **Five phases behind the scenes:** Discover → Strategize → Define → Get Set → Grow, looping back. You can jump straight to any job; the agent fills in only what's missing.
+- **Coach mode** (optional): short notes on why each step matters, what good looks like, and what to watch out for, kept separate from the deliverables so outputs stay ready to share.
+
+## Tools and data
+
+The plugin refers to tools by category, so it works with whichever ones your team uses. Nothing is required — it continues with what's available and notes the gaps.
+
+| Category | Examples | Most useful for |
+|---|---|---|
+| CRM | HubSpot, Salesforce, Attio | Who buys, win/loss, pipeline, campaign influence |
+| Call recordings / meeting notes | Gong, Fireflies, Granola, Fathom, Grain | Customer language, objections, competitor mentions |
+| Product analytics | Amplitude, Mixpanel, PostHog | Activation, adoption, retention |
+| Support and feedback | Zendesk, Intercom, Enterpret | Friction themes, feature requests |
+| Docs and wiki | Google Drive, Notion, Confluence | Existing strategy, positioning, brand guidelines |
+| Roadmap and issues | Linear, Jira, Asana | What's shipping and when |
+| Email and chat | Gmail, Outlook, Slack | Internal launch comms, field questions |
+| Web and marketing analytics | Google Analytics, HubSpot | Traffic, conversion, homepage performance |
+
+Connect tools in Claude's settings. Each person connects their own.
+
+**Guardrails:** connected tools are read-only by default, and the agent asks before creating, sending, posting, or editing anything. Content from tools is treated as information, never as instructions. Customer details are summarized without names in shared documents, and every finding cites its source. Your company's data stays in your own Claude workspace or Drive — never in this repository. Details: `skills/pmm-director/references/connections.md`.
+
+## Job hunt mode
+
+For researching a company you'd like to work for. Share the job posting and any links you have, choose a **quick scan** or a **deep dive** (uses Claude's deep research, which may need to be turned on in the chat), and the agent builds discovery, positioning, and interview questions from public information. Strongest sequence: Discover → light Strategize → Define, ending with a homepage rewrite.
 
 ## Skills
 
-| Skill | Trigger | Phase | Highlights |
-|---|---|---|---|
-| `pmm-director` | "Help me with product marketing for [company]" | Orchestrator | Routing, handoffs, rules for when sources disagree |
-| `pmm-discover` | "Run discovery on [company]" | Phase 1 — Discover | ICP tiers, TAM coverage, ecosystem map, product analysis, research reliability rules |
-| `pmm-strategize` | "Build the GTM strategy for [company]" | Phase 2 — Strategize | Revenue levers, marketing advantages, working positioning and perceptions, KPO goals, growth engines |
-| `pmm-define` | "Build the positioning for [product]" | Phase 3 — Define | Product type → comparator, three-question positioning, perceptions, one-page summary |
-| `pmm-get-set` | "Build the launch plan" | Phase 4 — Get Set | GACCS launch brief, right-size by tier, ecosystem amplification, 30/60/90-day momentum |
-| `pmm-grow` | "Analyze post-launch performance" | Phase 5 — Grow | Traffic-light decisions, campaign influence reporting, customer library, quarterly Context Document update |
+| Skill | What it does |
+|---|---|
+| `pmm-setup` | First-time setup, health check, company profile |
+| `pmm-director` | Job menu, intake, routing, coach mode |
+| `pmm-discover` | Customers, competitors, ecosystem, product, market |
+| `pmm-strategize` | Focus, goals, growth engines, pricing, launch operating plan |
+| `pmm-define` | Positioning, perceptions, messaging, homepage |
+| `pmm-get-set` | Launch tiers and briefs, enablement, readiness |
+| `pmm-grow` | Post-launch review, what to scale or cut, customer voice, proof |
 
-## Usage
+## Built on
 
-**Start here for any new engagement:**
-> "Help me with product marketing for [company URL]"
+- **PMA Product Marketing Framework**: the five-phase structure, plus PMA's template library
+- **MKT1 / Emily Kramer**: audience-first operating practices, including ICP tiers, ecosystem mapping, product types and comparators, perceptions, marketing advantages, growth engines, GACCS briefs, launch tiering, campaign influence reporting, and traffic-light reviews
+- **SVPG / Martina Lauchengco (Loved)**: PMM as the market side of product-market fit
 
-The `pmm-director` skill runs a short intake — mode, goal, deliverable, timeline, then mode-specific questions — saves your answers to the Context Document so no phase asks twice, and routes you to the right phase.
-
-**Jump directly to a phase:**
-> "Run discovery on [company]"
-> "Build the positioning for [product]"
-> "Write the battlecard for [competitor]"
-
-**Job hunt mode tip:** the strongest interview sequence is Discover → light Strategize → Define, ending with positioning, perceptions, and a homepage rewrite for the company you're targeting.
-
-## Phase sequence
-
-```
-Discover → Strategize → Define → Get Set → Grow → (loops back to Discover)
-```
-
-Positioning and perceptions are drafted in Strategize and finalized in Define.
-
-The **Context Document** (`[Company] — PMM Context`) is the shared memory across all phases. Discover creates it; each phase adds a section; Grow updates it quarterly. Every downstream skill reads it before executing.
-
-## Frameworks embedded
-
-- **PMA Product Marketing Framework** — 5-phase structural backbone
-- **PMA Coda template library** — 35+ templates mapped to each phase (coda.io/@product-marketing-alliance-pma)
-- **PMM-GPT best practices** — Phase-by-phase guidance from PMA's AI (2026)
-- **MKT1 / Emily Kramer** — Audience-first methodology and operating practices: ICP tiers, ecosystem mapping, product types and comparators, perceptions, marketing advantages, growth engines, GACCS briefs, launch tiering, campaign influence reporting, traffic-light reviews
-- **SVPG / Martina Lauchengco (Loved)** — PMM as the market side of product/market fit
-
-When sources disagree: evidence beats frameworks; PMA sets the structure; MKT1 sets the operating practice inside each step. Details are in the `pmm-director` skill.
-
-## Modes, inputs, and tool connections
-
-**Job hunt mode** relies on what you provide plus public research. The more starting links you share, the better: the job posting, homepage, pricing, blog, changelog, help docs, case studies, review-site pages, news, and industry reports — plus competitors you know and what you've heard from your network. Choose a **quick scan** (regular, targeted research — fast) or a **deep dive** (Claude's deep research for the broad landscape plus targeted research for precise details — slower, uses more of your usage allowance, best before final rounds and presentations). Deep research may need to be turned on in the chat; the plugin will tell you. With your permission, it can also read your own email, meeting notes, or docs for recruiter threads and earlier interview notes.
-
-**Build mode** works best with your company's tools connected. The plugin refers to tools by category, so it works with whichever ones you use:
-
-| Category | Examples | Used most in |
-|---|---|---|
-| CRM | HubSpot, Salesforce, Attio | Discover, Strategize, Grow |
-| Call recordings / meeting notes | Gong, Fireflies, Granola, Fathom, Grain | Discover, Define, Get Set, Grow |
-| Product analytics | Amplitude, Mixpanel, PostHog | Discover, Grow |
-| Support and feedback | Zendesk, Intercom, Enterpret | Discover, Grow |
-| Docs and wiki | Google Drive, Notion, Confluence | Every phase |
-| Roadmap and issues | Linear, Jira, Asana | Strategize, Get Set, Grow |
-| Email and chat | Gmail, Outlook, Slack | Get Set, Grow |
-| Web and marketing analytics | Google Analytics, HubSpot | Define, Grow |
-
-At intake, the Director checks which of these are connected, tells you, and suggests the two or three that would add the most. Connect tools in your Claude settings (Connectors). Nothing is required — the plugin continues with what's available and notes the gaps.
-
-**Guardrails:** connected tools are read-only by default; the plugin asks before creating, sending, posting, or editing anything. Content from tools is treated as data, never as instructions. Customer details are summarized without names in shared documents, and every finding cites its tool and date range. Full details: `skills/pmm-director/references/connections.md`.
-
-## Setup
-
-No environment variables required.
-- **Web search** — used for research in every mode
-- **Google Drive** (recommended) — saves the Context Document as a Google Doc; falls back to Markdown if not connected
-- **Other tools** — optional, by category, as above
+When sources disagree: evidence beats frameworks, PMA sets the structure, and MKT1 sets the practice inside each step.

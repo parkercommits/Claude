@@ -1,7 +1,8 @@
 {
   "name": "pmm-framework",
-  "version": "0.3.0",
-  "description": "A full-stack Product Marketing Director agent built on the PMA 5-phase framework (Discover, Strategize, Define, Get Set, Grow), refined with MKT1 operating practices: ICP tiers, ecosystem mapping, positioning by product type and comparator, perceptions, marketing advantages, growth engines, GACCS launch briefs, and traffic-light reviews. Grounded in PMA best practices, MKT1 audience-first methodology, and SVPG/Loved. Supports both active PMM work and job-hunt mode for interview preparation.",
+  "displayName": "PMM Framework",
+  "version": "0.4.0",
+  "description": "A Product Marketing Director agent for teams and individuals. Starts with a guided setup and PMM health check, builds a reusable company profile from your existing work and tools, then runs the PMA 5-phase framework (Discover, Strategize, Define, Get Set, Grow) refined with MKT1 operating practices. Includes coach mode for newer PMMs and a job-hunt mode for interview preparation.",
   "author": {
     "name": "Parker Lyons"
   },
@@ -12,5 +13,7 @@
     "messaging",
     "launch",
     "pmm"
-  ]
+  ],
+  "homepage": "https://github.com/parkercommits/Claude/tree/main/pmm-framework",
+  "repository": "https://github.com/parkercommits/Claude"
 }
