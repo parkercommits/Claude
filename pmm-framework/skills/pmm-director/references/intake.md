@@ -9,6 +9,8 @@ The Director runs intake once per engagement and saves the answers to the **Enga
 - **Accept "don't know" and skips.** Anything skipped, research it if possible; otherwise record it as an open question.
 - **Don't re-ask** what the user already said in the conversation or what a connected tool can answer.
 - **Offer a fast start.** If the user wants to skip intake, collect only the Round 1 answers and go.
+- **Offer "just tell me."** The user can describe the situation freely instead — typed, or spoken with their app's microphone or dictation. Extract the answers, play back "Here's what I heard," and ask only about what's still missing.
+- **Offer "fill it in for me."** For any question, draft an answer from research and what's already known, mark it as an estimate, and let the user correct it.
 
 ---
 
@@ -64,6 +66,8 @@ If the user picks deep dive, check whether a deep research capability is availab
 
 ## Round 2B — Build mode
 
+**If a company profile exists, skip most of this round.** Ask only about the initiative (what, who, what's decided), and anything the profile marks ❓ or "Not yet defined" that this initiative depends on. If no profile exists and the user expects to come back or share with a team, offer `pmm-setup` first.
+
 **About the initiative**
 - What's the initiative? (new product, feature launch, repositioning, new segment, competitive response)
 - Who are the key stakeholders and decision-makers? (roles are enough)
@@ -78,6 +82,9 @@ If the user picks deep dive, check whether a deep research capability is availab
 - Pricing and packaging documentation
 
 **Tools and data** — which tools does the company use, by category? (See `connections.md`.) Then check which are already connected in this session and suggest the most valuable missing ones.
+
+**Frameworks and experts** (optional)
+- Any product marketing frameworks, thought leaders, or internal playbooks the team follows for this kind of work? Use them per the Director's "When sources disagree" rules.
 
 **Access and sensitivity**
 - Anything Claude should not read or should not copy into shared documents?

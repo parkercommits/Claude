@@ -2,7 +2,7 @@
 name: pmm-strategize
 description: "This skill should be used when the user wants to \"build the GTM strategy for [company/product]\", \"help me strategize [launch/product/segment]\", \"run the Strategize phase\", \"build a go-to-market plan\", \"define our GTM motion\", \"set objectives and KPIs for [launch]\", \"help me plan pricing and packaging\", or \"build the launch operating plan\". Executes the PMA Strategize phase: 8 workstreams covering strategic point of view (revenue levers, marketing advantages, working positioning and perceptions), goals and KPIs, GTM strategy and growth engines, pricing/packaging, sales readiness, launch governance, validation planning, and budget/resourcing.\n"
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   author: "Parker Lyons"
 ---
 
@@ -68,6 +68,16 @@ You can't copy another company's strategy, because its audience, model, and adva
 ## Inputs and connections
 
 Start from the **Engagement setup** and the Discover section of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+
+### Company profile and existing work (build mode)
+
+If the team has a company profile (created by `pmm-setup`), read sections 7 (GTM plan), 5 (Pricing and packaging), 2 (Audiences and ICP tiers), and 8 (Teams, tools, and processes) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
+
+**Audit before you build.** If the team already has the current marketing or GTM plan, calendar, roadmap, and pricing sheet, start from them. Inherit them (see "Inherit or build" above), check this initiative against them, and flag conflicts — don't draft a parallel strategy.
+
+**Propose profile updates; don't make them silently.** When this phase produces something durable — revenue lever ranking, marketing advantages, big bets on the calendar, and pricing changes — show the proposed change to the section owner and add a change-log line once they agree. If there's no profile, suggest `pmm-setup` once, then continue without it.
+
+### Where each input comes from
 
 | Input | Job hunt mode — where it comes from | Build mode — where it comes from |
 |---|---|---|

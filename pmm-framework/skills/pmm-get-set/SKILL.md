@@ -2,7 +2,7 @@
 name: pmm-get-set
 description: "This skill should be used when the user wants to \"help me plan the launch for [product/feature]\", \"build the launch plan\", \"run the Get Set phase\", \"create the sales enablement for [launch]\", \"build launch readiness\", \"write the battlecard / objection handling / sales deck\", \"what do we need before we can launch\", \"set up the go/no-go process\", or \"operationalize the launch\". Executes the PMA Get Set phase: 12 steps covering launch tiering and GACCS launch brief, planning and ecosystem amplification, asset briefs, sales enablement, CS readiness, commercial mechanics, internal comms, governance, QA, measurement setup, readiness review, and launch handoff with a post-launch momentum plan.\n"
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   author: "Parker Lyons"
 ---
 
@@ -85,6 +85,16 @@ A Tier 3 release should take about a day of PMM effort, not twelve steps.
 ## Inputs and connections
 
 Start from the **Engagement setup**, "Strategy on a page," and Define's one-page summary in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+
+### Company profile and existing work (build mode)
+
+If the team has a company profile (created by `pmm-setup`), read sections 7 (GTM plan — calendar and big bets), 4 (Brand voice and copy rules), 8 (Teams, tools, and processes — approval norms and where outputs go), and 3 (Positioning) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
+
+**Audit before you build.** If the team already has past launch plans and post-launch reviews, existing launch checklists, and current enablement assets, start from them. Reuse what worked and fix what the reviews flagged. Fit the launch into the existing calendar, follow the team's approval norms, and write every asset in the section 4 voice.
+
+**Propose profile updates; don't make them silently.** When this phase produces something durable — launch dates and tiers on the calendar, and lessons for the next launch — show the proposed change to the section owner and add a change-log line once they agree. If there's no profile, suggest `pmm-setup` once, then continue without it.
+
+### Where each input comes from
 
 | Input | Job hunt mode — where it comes from | Build mode — where it comes from |
 |---|---|---|
