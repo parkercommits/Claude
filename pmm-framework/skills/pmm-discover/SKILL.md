@@ -61,7 +61,7 @@ Before executing, confirm which mode applies:
 
 ### Company profile and existing work (build mode)
 
-If the team has a company profile (created by `pmm-setup`), read sections 2 (Audiences and ICP tiers), 6 (Competitors and ecosystem), 9 (Customer voice), and 1 (Company and product) before starting, and skip any question they already answer.
+If the team has a company profile (created by `pmm-setup`), read sections 2 (Audiences and ICP tiers), 6 (Competitors and ecosystem), 9 (Customer voice), and 1 (Company and product) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
 
 **Audit before you build.** If the team already has existing segmentation, persona, or ICP work; competitive analyses and battlecards; win/loss notes, start from them. Score each against the evidence: what's supported, what's stale, what's missing. Research then fills the gaps instead of repeating what the team already knows — this is the heart of Step 3 (internal audit).
 

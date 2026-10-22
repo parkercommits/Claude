@@ -85,6 +85,9 @@ Owner: · Last updated:
 - How teams communicate: channels, recurring meetings, where decisions are written down
 - Feedback loops: how customer insight reaches GTM and product, and on what cadence
 - Tools by category (CRM, call recordings, analytics, docs, roadmap, chat) and which are connected to Claude
+- PMM frameworks, experts, and playbooks the team follows: what each is used for, and whether it's formally adopted or just admired
+  | Framework or expert | Used for | Adopted or admired | Notes |
+  |---|---|---|---|
 - Where PMM outputs should go, and approval norms
 - Anything Claude should not read or copy into shared documents
 

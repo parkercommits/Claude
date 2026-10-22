@@ -18,10 +18,17 @@ Pick whichever fits:
 
 Say: **"Set up PMM for [your company]."**
 
-The setup walks you through:
+Pick the path that fits your time:
+- **Guided** (about 15 minutes, recommended)
+- **Express** (about 5 minutes)
+- **Just tell me**: a free-form brain dump. Tap the microphone in the message box and talk through where product marketing stands, your challenges, and what you want to achieve. Claude turns it into your health check and profile for you to confirm.
+
+Every step can be skipped or left for Claude to fill in, so you can come back later with "finish my setup."
+
+The guided setup walks you through:
 1. **A quick orientation**: what the agent can do, and whether you'd like coach mode (explains the "why" as you go)
 2. **A PMM health check**: ten areas, rated on a simple four-level scale (Missing → Ad hoc → Documented → Operationalized)
-3. **Bring what you have**: brand guidelines, tone of voice, segmentations, pricing sheets, call transcripts, plans, past launch reviews
+3. **Bring what you have**: brand guidelines, tone of voice, segmentations, pricing sheets, call transcripts, plans, past launch reviews, plus any PMM frameworks or experts your team follows (e.g., April Dunford's positioning method), which the agent will then use
 4. **Connect tools**: it checks what's connected and suggests the two or three that would help most
 5. **Your company profile**: one shared document every later task reads, so nobody re-explains the company
 6. **Your health check report**: what's strong, the biggest gaps, and **three recommended first moves**, each with the exact thing to say next
@@ -94,4 +101,4 @@ For researching a company you'd like to work for. Share the job posting and any 
 - **MKT1 / Emily Kramer**: audience-first operating practices, including ICP tiers, ecosystem mapping, product types and comparators, perceptions, marketing advantages, growth engines, GACCS briefs, launch tiering, campaign influence reporting, and traffic-light reviews
 - **SVPG / Martina Lauchengco (Loved)**: PMM as the market side of product-market fit
 
-When sources disagree: evidence beats frameworks, PMA sets the structure, and MKT1 sets the practice inside each step.
+When sources disagree: evidence beats frameworks, then **your team's adopted frameworks**, then PMA (the structure) and MKT1 (the practice inside each step).

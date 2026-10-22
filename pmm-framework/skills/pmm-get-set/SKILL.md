@@ -88,7 +88,7 @@ Start from the **Engagement setup**, "Strategy on a page," and Define's one-page
 
 ### Company profile and existing work (build mode)
 
-If the team has a company profile (created by `pmm-setup`), read sections 7 (GTM plan — calendar and big bets), 4 (Brand voice and copy rules), 8 (Teams, tools, and processes — approval norms and where outputs go), and 3 (Positioning) before starting, and skip any question they already answer.
+If the team has a company profile (created by `pmm-setup`), read sections 7 (GTM plan — calendar and big bets), 4 (Brand voice and copy rules), 8 (Teams, tools, and processes — approval norms and where outputs go), and 3 (Positioning) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
 
 **Audit before you build.** If the team already has past launch plans and post-launch reviews, existing launch checklists, and current enablement assets, start from them. Reuse what worked and fix what the reviews flagged. Fit the launch into the existing calendar, follow the team's approval norms, and write every asset in the section 4 voice.
 

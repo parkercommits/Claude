@@ -66,7 +66,7 @@ Start from the **Engagement setup**, the Get Set section (GACCS brief, momentum 
 
 ### Company profile and existing work (build mode)
 
-If the team has a company profile (created by `pmm-setup`), read sections 0 (Health check summary), 7 (GTM plan — goals and big bets), 8 (Teams, tools, and processes — feedback loops), and 9 (Customer voice) before starting, and skip any question they already answer.
+If the team has a company profile (created by `pmm-setup`), read sections 0 (Health check summary), 7 (GTM plan — goals and big bets), 8 (Teams, tools, and processes — feedback loops), and 9 (Customer voice) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
 
 **Audit before you build.** If the team already has existing dashboards, VOC reports, win/loss programs, and earlier post-launch reviews, start from them. Build on the team's existing reports and cadence rather than creating a parallel one, and compare against the goals in section 7.
 

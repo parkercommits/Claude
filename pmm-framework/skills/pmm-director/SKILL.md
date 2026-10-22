@@ -124,11 +124,12 @@ Every downstream skill reads this document before executing. If a user skips Dis
 The plugin draws on several sources. When they point in different directions, apply these rules in order:
 
 1. **Evidence beats frameworks.** Research about this company, audience, and market outranks any framework's default.
-2. **PMA sets the structure** — the five phases, their sequence, the steps, gates, and artifacts.
-3. **MKT1 sets operating practice inside those steps** where it is more specific — e.g., TAM coverage mapping, ICP tiers, the product type → comparator method, three-question positioning, perceptions, growth engines, launch tiering by campaign value, campaign influence reporting, traffic-light reviews.
-4. **Where the skills have already chosen, follow the skill.** Known choices: TAM coverage mapping over TAM/SAM/SOM; three-question master positioning with the Moore-style statement as the long form; growth engines over a flat channel list; a GACCS brief as the launch charter. If the user's organization uses the alternative, mention it and adapt.
-5. **Flag, don't blend.** If a real conflict isn't resolved by rules 1–4, tell the user what each source recommends and ask which to follow, rather than mixing them silently.
-6. **New sources follow the same pattern.** Any future source is added as practice inside PMA steps, cited in the skill's references, and must state which existing guidance it replaces.
+2. **The team's adopted frameworks come next.** If the company profile (section 8) or the user names frameworks, experts, or internal playbooks the team follows — a positioning method, a launch process, a messaging format — use their structure and vocabulary for the matching deliverable, and map them onto the plugin's steps so nothing important is dropped. If a plugin step covers something the team's framework doesn't, include it and say why in one line. If you don't know the framework well, research it, summarize it in your own words, and cite the source; never reproduce paid or copyrighted material.
+3. **PMA sets the structure** — the five phases, their sequence, the steps, gates, and artifacts.
+4. **MKT1 sets operating practice inside those steps** where it is more specific — e.g., TAM coverage mapping, ICP tiers, the product type → comparator method, three-question positioning, perceptions, growth engines, launch tiering by campaign value, campaign influence reporting, traffic-light reviews.
+5. **Where the skills have already chosen, follow the skill** — unless rule 2 applies. Known choices: TAM coverage mapping over TAM/SAM/SOM; three-question master positioning with the Moore-style statement as the long form; growth engines over a flat channel list; a GACCS brief as the launch charter.
+6. **Flag, don't blend.** If a real conflict isn't resolved by rules 1–5, tell the user what each source recommends and ask which to follow, rather than mixing them silently.
+7. **New sources follow the same pattern.** Any future source built into the plugin is added as practice inside PMA steps, cited in the skill's references, and must state which existing guidance it replaces.
 
 ## Mode settings
 

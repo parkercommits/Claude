@@ -1,6 +1,6 @@
 ---
 name: pmm-setup
-description: "This skill should be used when a team or person is starting with the PMM Framework for the first time, or wants to \"set up the PMM agent for [company]\", \"get started\", \"onboard our team\", \"what can this do\", \"run a PMM health check\", \"assess our product marketing\", \"rate our PMM maturity\", \"build our company profile\", or \"update our company profile\". Runs a guided setup of about 15 minutes: orientation, a 10-area PMM health check, gathering existing work (brand guidelines, segmentation, pricing, call transcripts, plans), connecting tools, building a reusable company profile, and a health check report with three recommended first moves."
+description: "This skill should be used when a team or person is starting with the PMM Framework for the first time, or wants to \"set up the PMM agent for [company]\", \"get started\", \"onboard our team\", \"what can this do\", \"run a PMM health check\", \"assess our product marketing\", \"rate our PMM maturity\", \"build our company profile\", \"update our company profile\", or \"finish my setup\". Offers a guided path (about 15 minutes), an express path (about 5), or a free-form brain dump (typed or spoken), and any step can be skipped or filled in by Claude. Covers orientation, a 10-area PMM health check, existing work (brand guidelines, segmentation, pricing, call transcripts, plans), the PMM frameworks and experts the team follows, tool connections, a reusable company profile, and a health check report with three recommended first moves."
 metadata:
   version: "0.4.0"
   author: "Parker Lyons"
@@ -14,7 +14,8 @@ Use this the first time a team (or person) uses the PMM Framework at a real comp
 
 ## Principles
 
-- **Make it easy.** About 15 minutes. Small rounds of questions, multiple choice wherever possible, skips always fine. The user can stop at any step and pick up later.
+- **Make it easy.** About 15 minutes for the full path, under 5 for the fastest. Small rounds of questions, multiple choice wherever possible. The user can stop at any step and pick up later.
+- **Every step is optional.** Every question and step offers two ways out: **Skip for now** (record it as "Not yet captured" and move on) and **Fill this in for me** (draft it from research, shared files, and what they've said so far; mark it as an estimate for them to check). Never make the user feel behind for skipping.
 - **Research first, then confirm.** Draft what you can from the company's website and the files they share, and ask the user to correct it — don't make them type what you can find.
 - **Their work is the baseline.** Existing brand guidelines, segmentations, pricing, and plans are the starting point. Later skills audit and build on them rather than starting over.
 - **Plain language.** No framework jargon until the user needs it. Talk about jobs ("prep a launch"), not phases ("Get Set").
@@ -29,7 +30,23 @@ Check for an existing company profile — in this project's files, the conversat
 Tell the user, briefly:
 - What the agent does: helps research customers and competitors, set GTM strategy, write positioning and messaging, plan launches, and learn what's working after launch.
 - How setup works: a few questions, a health check, share what you already have, and you'll get a short report with three recommended first moves.
-- That they can skip anything.
+- That they can skip anything, or ask you to fill anything in for them.
+
+**Choose a path.** Offer three, with the guided path recommended:
+
+| Path | Time | How it works |
+|---|---|---|
+| **Guided** (recommended) | ~15 min | All steps below, in short rounds |
+| **Express** | ~5 min | Round 1 questions below, plus the snapshot and a brain dump; Claude estimates the health check and drafts the profile for review |
+| **Just tell me** | As long as they like | A free-form brain dump (below); Claude turns it into the health check, profile, and report, then asks only about critical gaps |
+
+**The brain dump.** Suggest the user speak rather than type: most Claude apps have a microphone or dictation button in the message box, and phones have built-in dictation. Give them four prompts to talk through, in any order, as messily as they like:
+1. Where does product marketing stand at your company today — who does it, and what's working?
+2. What are the biggest challenges or frustrations?
+3. What do you want product marketing to achieve in the next 6–12 months?
+4. Anything you've tried before that did or didn't work?
+
+Then extract from it: answers to the Round 1 questions, estimated health check levels (marked "estimated from your notes"), profile content, the user's goal, and any tools, documents, or frameworks mentioned. Play back a short summary — "Here's what I heard" — and ask them to correct it before building anything. A brain dump can also be added at any point in the guided path.
 
 Then ask (one round, multiple choice where possible):
 1. **Company** — name and website (if not already known)
@@ -46,6 +63,8 @@ Research the company's public footprint (homepage, pricing, product pages, custo
 
 Run the 10-area health check in `references/health-check.md`: three rounds (4 + 3 + 3 areas), one multiple-choice question per area with the area-specific level descriptions as options. After each round, ask once for any documents or systems behind the answers.
 
+Offer **"Estimate these for me"** at the start of each round. Base estimates on the snapshot, shared files, and anything the user has said; mark them "estimated" in the report, and invite corrections.
+
 ## Step 4 — How you work today (a few open questions)
 
 Ask only what the snapshot, health check, and shared files haven't answered. Group into at most two rounds:
@@ -55,7 +74,10 @@ Ask only what the snapshot, health check, and shared files haven't answered. Gro
 - **Feedback loops** — how does what customers say reach marketing, sales, and product? On what rhythm, through which tools?
 - **Systems and processes** — which tools do you use for CRM, call recordings, analytics, docs, roadmap, and chat?
 - **How teams communicate** — where are decisions written down, which channels and meetings matter, and where should PMM outputs go?
+- **Frameworks and experts you follow** — "Are there product marketing frameworks, thought leaders, courses, or internal playbooks your team has adopted or likes?" Give a few examples so it's easy to answer (e.g., April Dunford's positioning method, Andy Raskin's strategic narrative, Pragmatic Institute, Lenny's Newsletter, or an internal launch playbook), and make "No preference — use your defaults" an easy option. For each one named, note what the team uses it for (positioning, launches, messaging…) and whether it's formally adopted or just admired.
 - **Boundaries** — anything I shouldn't read or copy into shared documents?
+
+**How named frameworks are used:** record them in profile section 8. Where the team has adopted a framework for a deliverable, later skills use its structure and vocabulary and map it onto the plugin's steps (see "When sources disagree" in the Director). If a framework is unfamiliar, research it briefly, summarize it in your own words, and cite the source — never reproduce paid or copyrighted material.
 
 ## Step 5 — Bring what you have
 
@@ -86,10 +108,11 @@ Fill in `references/company-profile-template.md` from everything gathered. Mark 
 ## Step 8 — Health check report
 
 Produce a one-page report, following the scoring guidance in `references/health-check.md`:
-- **Scorecard** — the ten areas, each with its level, whether evidence backs it, and a one-line note
+- **Scorecard** — the ten areas, each with its level, whether it was self-rated or estimated, whether evidence backs it, and a one-line note
 - **What's strong** — two or three things to protect
 - **Biggest gaps** — the ones that matter most for their stated goal
 - **Three first moves** — each with why now, what they'll get, rough time, and the exact thing to say to start it
+- **Not yet captured** — anything skipped, in one short list, with "Say *finish my setup* any time to fill these in"
 - **Offered next:** recurring tasks (Step 9) and saving the profile for the team (Step 10)
 
 Deliver the report the way the team works (section 8 of the profile): a document, or as an artifact or doc if that's the norm in this environment.

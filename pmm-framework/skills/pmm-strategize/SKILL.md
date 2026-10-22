@@ -71,7 +71,7 @@ Start from the **Engagement setup** and the Discover section of the Context Docu
 
 ### Company profile and existing work (build mode)
 
-If the team has a company profile (created by `pmm-setup`), read sections 7 (GTM plan), 5 (Pricing and packaging), 2 (Audiences and ICP tiers), and 8 (Teams, tools, and processes) before starting, and skip any question they already answer.
+If the team has a company profile (created by `pmm-setup`), read sections 7 (GTM plan), 5 (Pricing and packaging), 2 (Audiences and ICP tiers), and 8 (Teams, tools, and processes) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
 
 **Audit before you build.** If the team already has the current marketing or GTM plan, calendar, roadmap, and pricing sheet, start from them. Inherit them (see "Inherit or build" above), check this initiative against them, and flag conflicts — don't draft a parallel strategy.
 

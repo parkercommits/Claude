@@ -70,7 +70,7 @@ Start from the **Engagement setup**, the Discover section, and "Strategy on a pa
 
 ### Company profile and existing work (build mode)
 
-If the team has a company profile (created by `pmm-setup`), read sections 3 (Positioning, messaging, and perceptions), 4 (Brand voice and copy rules), and 9 (Customer voice) before starting, and skip any question they already answer.
+If the team has a company profile (created by `pmm-setup`), read sections 3 (Positioning, messaging, and perceptions), 4 (Brand voice and copy rules), and 9 (Customer voice) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
 
 **Audit before you build.** If the team already has current positioning or messaging docs, brand and tone-of-voice guidelines, the homepage, and the sales deck, start from them. Audit current positioning against Steps 3–4 (product type, one comparator, three answers) before proposing changes, and keep what's working. **Every customer-facing draft follows section 4's voice and word rules.**
 

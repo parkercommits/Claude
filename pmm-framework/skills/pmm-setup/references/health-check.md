@@ -15,6 +15,7 @@ Ten areas, each rated on the same four-level scale. The scale is short on purpos
 - After each round, ask once: "Is there a document or system behind any of these? Share links or files, or tell me where it lives."
 - **Self-ratings are a starting point, not the answer.** If the user rates an area 3 or 4 but nothing exists to show for it, keep their rating, and mark the area "unconfirmed" in the report. If an asset they share is stronger or weaker than their rating, say so gently and suggest the adjusted level.
 - If the user doesn't know, record "unknown" and treat it as level 1 for prioritizing — but say that's what you did.
+- **Estimates.** When the user asks you to estimate (or chose the Express or "Just tell me" path), rate from the evidence you have — the website, shared files, their brain dump — and mark each one "estimated." Estimate conservatively: without evidence, don't go above level 2. List the estimates at the top of the report so they're easy to correct.
 - Skip areas that clearly don't apply (e.g., Launches for a pre-product company) and say why.
 
 ## The ten areas
