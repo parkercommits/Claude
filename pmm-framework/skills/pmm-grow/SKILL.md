@@ -2,7 +2,7 @@
 name: pmm-grow
 description: "This skill should be used when the user wants to \"analyze the post-launch performance\", \"run the Grow phase\", \"help me understand what's driving adoption\", \"build the post-launch review\", \"what's working / not working since launch\", \"diagnose our funnel performance\", \"collect and synthesize customer feedback\", \"refresh our enablement based on what we've learned\", \"identify new segments or expansion opportunities\", or \"run the 30/60/90-day review\". Executes the PMA Grow phase: 12 steps covering learning agenda, KPI measurement, adoption analysis, VOC synthesis, message-market fit, funnel diagnosis, onboarding optimization, segment expansion, product feedback, proof collection, enablement refresh, and post-launch reviews with traffic-light decisions and quarterly updates to the Context Document.\n"
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   author: "Parker Lyons"
 ---
 
@@ -63,6 +63,16 @@ This skill executes the **Grow phase of the PMA Product Marketing Framework.**
 ## Inputs and connections
 
 Start from the **Engagement setup**, the Get Set section (GACCS brief, momentum plan, baseline), and earlier sections of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`). Grow depends on data more than any other phase — say plainly which analyses can't be done without a connection.
+
+### Company profile and existing work (build mode)
+
+If the team has a company profile (created by `pmm-setup`), read sections 0 (Health check summary), 7 (GTM plan — goals and big bets), 8 (Teams, tools, and processes — feedback loops), and 9 (Customer voice) before starting, and skip any question they already answer.
+
+**Audit before you build.** If the team already has existing dashboards, VOC reports, win/loss programs, and earlier post-launch reviews, start from them. Build on the team's existing reports and cadence rather than creating a parallel one, and compare against the goals in section 7.
+
+**Propose profile updates; don't make them silently.** When this phase produces something durable — customer voice themes, ICP tier moves, perception statuses, and a re-scored health check (see Step 12) — show the proposed change to the section owner and add a change-log line once they agree. If there's no profile, suggest `pmm-setup` once, then continue without it.
+
+### Where each input comes from
 
 | Input | Job hunt mode — where it comes from | Build mode — where it comes from |
 |---|---|---|
@@ -434,9 +444,11 @@ The common mistake is spending most energy trying to fix the reds. Every item le
 
 These updates are what Discover, Strategize, and Define read on the next cycle.
 
-**Templates:** Post-launch review template, Traffic-light review sheet, Lessons learned worksheet, 30/60/90-day review deck, Action log, Decision register, Context Document update log.
+**If the team has a company profile**, also propose the matching profile updates to each section owner (sections 2, 3, 6, 7, and 9 most often), and re-run the health check from `pmm-setup` so section 0 shows whether the PMM function is improving. Offer to schedule this quarterly review if it isn't already.
 
-**Key outputs:** Post-launch review, Traffic-light decisions (scale / improve / pause / stop), Lessons learned repository, Optimization action plan, Future launch recommendations, Updated Context Document.
+**Templates:** Post-launch review template, Traffic-light review sheet, Lessons learned worksheet, 30/60/90-day review deck, Action log, Decision register, Context Document update log, Company profile change log.
+
+**Key outputs:** Post-launch review, Traffic-light decisions (scale / improve / pause / stop), Lessons learned repository, Optimization action plan, Future launch recommendations, Updated Context Document, Proposed company profile updates and re-scored health check.
 
 **Good:** Review is honest, specific, and action-oriented; learnings documented and reused; teams leave with decisions; PMM improves launch quality over time through organizational memory.
 **Weak:** Postmortems skipped or become blame sessions; no action log maintained; same launch mistakes repeat; learnings discussed once then forgotten.

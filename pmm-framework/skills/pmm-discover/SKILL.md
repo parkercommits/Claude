@@ -2,7 +2,7 @@
 name: pmm-discover
 description: "This skill should be used when the user wants to \"run discovery on [company]\", \"research [company] for me\", \"set up the PMM context for [company]\", \"I'm targeting [company] — do the discovery\", \"start the PMM framework for [company]\", \"do audience analysis for [company]\", or any request to begin product marketing research where no prior context document exists. Executes the PMA Discover phase: audience analysis and ICP prioritization, competitive and ecosystem mapping, product analysis, JTBD canvas, TAM mapping, and business case.\n"
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   author: "Parker Lyons"
 ---
 
@@ -58,6 +58,14 @@ Before executing, confirm which mode applies:
 ## Inputs and connections
 
 **Start from the Engagement setup** at the top of the Context Document (written by the Director's intake): mode, goal, deliverable, timeline, links provided, known competitors, hypotheses, research depth, and connected tools. If intake was skipped, ask only for what's missing below — never the whole list.
+
+### Company profile and existing work (build mode)
+
+If the team has a company profile (created by `pmm-setup`), read sections 2 (Audiences and ICP tiers), 6 (Competitors and ecosystem), 9 (Customer voice), and 1 (Company and product) before starting, and skip any question they already answer.
+
+**Audit before you build.** If the team already has existing segmentation, persona, or ICP work; competitive analyses and battlecards; win/loss notes, start from them. Score each against the evidence: what's supported, what's stale, what's missing. Research then fills the gaps instead of repeating what the team already knows — this is the heart of Step 3 (internal audit).
+
+**Propose profile updates; don't make them silently.** When this phase produces something durable — ICP tier changes, new competitors or complements, and customer voice themes — show the proposed change to the section owner and add a change-log line once they agree. If there's no profile, suggest `pmm-setup` once, then continue without it.
 
 ### Job hunt mode — research protocol
 

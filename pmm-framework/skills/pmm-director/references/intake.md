@@ -64,6 +64,8 @@ If the user picks deep dive, check whether a deep research capability is availab
 
 ## Round 2B — Build mode
 
+**If a company profile exists, skip most of this round.** Ask only about the initiative (what, who, what's decided), and anything the profile marks ❓ or "Not yet defined" that this initiative depends on. If no profile exists and the user expects to come back or share with a team, offer `pmm-setup` first.
+
 **About the initiative**
 - What's the initiative? (new product, feature launch, repositioning, new segment, competitive response)
 - Who are the key stakeholders and decision-makers? (roles are enough)

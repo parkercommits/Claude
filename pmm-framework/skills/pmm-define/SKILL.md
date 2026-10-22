@@ -2,7 +2,7 @@
 name: pmm-define
 description: "This skill should be used when the user wants to \"build the positioning for [company/product]\", \"write the messaging framework\", \"help me define the product story\", \"run the Define phase\", \"create a messaging house\", \"build the value proposition\", \"help me with positioning and messaging\", \"write the product narrative\", \"define our use cases\", or \"build the differentiation framework\". Executes the PMA Define phase: 14 steps covering product type and comparator, positioning statement, messaging architecture, personas, use cases, differentiation, proof points, perceptions, product narrative, message validation, and governance.\n"
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
   author: "Parker Lyons"
 ---
 
@@ -67,6 +67,16 @@ Product positioning is also a subset of the company story, not the whole of it. 
 ## Inputs and connections
 
 Start from the **Engagement setup**, the Discover section, and "Strategy on a page" in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+
+### Company profile and existing work (build mode)
+
+If the team has a company profile (created by `pmm-setup`), read sections 3 (Positioning, messaging, and perceptions), 4 (Brand voice and copy rules), and 9 (Customer voice) before starting, and skip any question they already answer.
+
+**Audit before you build.** If the team already has current positioning or messaging docs, brand and tone-of-voice guidelines, the homepage, and the sales deck, start from them. Audit current positioning against Steps 3–4 (product type, one comparator, three answers) before proposing changes, and keep what's working. **Every customer-facing draft follows section 4's voice and word rules.**
+
+**Propose profile updates; don't make them silently.** When this phase produces something durable — final positioning, perceptions, value pillars, and new copy rules — show the proposed change to the section owner and add a change-log line once they agree. If there's no profile, suggest `pmm-setup` once, then continue without it.
+
+### Where each input comes from
 
 | Input | Job hunt mode — where it comes from | Build mode — where it comes from |
 |---|---|---|
