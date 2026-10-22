@@ -1,0 +1,18 @@
+{
+  "name": "parkercommits",
+  "owner": {
+    "name": "Parker Lyons",
+    "url": "https://github.com/parkercommits"
+  },
+  "description": "Claude plugins by Parker Lyons. Includes PMM Framework, a Product Marketing Director agent.",
+  "plugins": [
+    {
+      "name": "pmm-framework",
+      "displayName": "PMM Framework",
+      "source": "./pmm-framework",
+      "description": "A Product Marketing Director agent: guided setup and PMM health check, then research, strategy, positioning, launches, and post-launch growth, built on the PMA framework with MKT1 practices.",
+      "category": "marketing",
+      "tags": ["product-marketing", "gtm", "positioning", "messaging", "launch", "pmm"]
+    }
+  ]
+}
