@@ -38,6 +38,7 @@ Supporting tools, used where a step says so:
 | `mkt1_templates` | The current link to any MKT1 template a step names |
 | `mkt1_newsletter`, `mkt1_linkedin_search` | The source behind an MKT1 concept, when the user asks "why" |
 | `mkt1_job_description_and_scorecard`, `mkt1_interview_questions` | Job hunt mode: the likely scorecard and interview questions for the target role |
+| `mkt1_marketing_comp_checker`, `mkt1_salary_lookup`, `mkt1_startup_equity_evaluator` | Job hunt mode, offer stage: salary and equity against MKT1's market data |
 | `mkt1_marketing_strategy_setup` | Showing MKT1's strategy progress view beside the health check |
 
 ## The pattern for a delegated step
@@ -58,6 +59,10 @@ Supporting tools, used where a step says so:
 - `mkt1_competitive_research` fills three AEO columns and writes a styled spreadsheet only where there's a terminal (Claude Code). Elsewhere it returns the same table as CSV with those columns blank. Say which you got.
 - `mkt1_homepage_positioning` and the other research tools grade only what they can actually load. A login page, parked domain, or empty JavaScript shell is reported as such, not graded.
 - Some MKT1 templates are Figma boards, interactive microtools, or videos that Claude can't read. Name them and let the user open them.
+
+## Keeping this list current
+
+MKT1 adds and renames tools. Whoever maintains this plugin should check `mkt1_changelog` monthly and update the tables above when a step should use a new tool.
 
 ## Distribution rules
 

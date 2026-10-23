@@ -2,7 +2,7 @@
 name: pmm-get-set
 description: "This skill should be used when the user wants to \"help me plan the launch for [product/feature]\", \"build the launch plan\", \"run the Get Set phase\", \"create the sales enablement for [launch]\", \"build launch readiness\", \"write the battlecard / objection handling / sales deck\", \"what do we need before we can launch\", \"set up the go/no-go process\", or \"operationalize the launch\". Executes the PMA Get Set phase: 12 steps covering launch tiering and GACCS launch brief, planning and ecosystem amplification, asset briefs, sales enablement, CS readiness, commercial mechanics, internal comms, governance, QA, measurement setup, readiness review, and launch handoff with a post-launch momentum plan.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 

@@ -2,7 +2,7 @@
 name: pmm-strategize
 description: "This skill should be used when the user wants to \"build the GTM strategy for [company/product]\", \"help me strategize [launch/product/segment]\", \"run the Strategize phase\", \"build a go-to-market plan\", \"define our GTM motion\", \"set objectives and KPIs for [launch]\", \"help me plan pricing and packaging\", or \"build the launch operating plan\". Executes the PMA Strategize phase: 8 workstreams covering strategic point of view (revenue levers, marketing advantages, working positioning and perceptions), goals and KPIs, GTM strategy and growth engines, pricing/packaging, sales readiness, launch governance, validation planning, and budget/resourcing.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 

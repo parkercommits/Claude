@@ -2,7 +2,7 @@
 name: pmm-setup
 description: "This skill should be used when a team or person is starting with the PMM Framework for the first time, or wants to \"set up the PMM agent for [company]\", \"get started\", \"onboard our team\", \"what can this do\", \"run a PMM health check\", \"assess our product marketing\", \"rate our PMM maturity\", \"build our company profile\", \"update our company profile\", or \"finish my setup\". Offers a guided path (about 15 minutes), an express path (about 5), or a free-form brain dump (typed or spoken), and any step can be skipped or filled in by Claude. Covers orientation, a 10-area PMM health check, existing work (brand guidelines, segmentation, pricing, call transcripts, plans), the PMM frameworks and experts the team follows, tool connections, a reusable company profile, and a health check report with three recommended first moves."
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 
@@ -24,6 +24,8 @@ Use this the first time a team (or person) uses the PMM Framework at a real comp
 ## Before starting
 
 Check for an existing company profile — in this project's files, the conversation, or a connected Drive. If one exists, offer: **update the profile**, **re-run the health check**, or **skip to work**. Don't redo setup.
+
+Also check now whether MKT1 tools (`mkt1_*`) are connected, since Step 2 uses one (see `skills/pmm-director/references/mkt1-tools.md`). The full connection check is Step 6.
 
 ## Step 1 — Orient (1 minute)
 
@@ -57,7 +59,18 @@ Then ask (one round, multiple choice where possible):
 
 ## Step 2 — Company snapshot (research, then confirm)
 
-Research the company's public footprint (homepage, pricing, product pages, customers, recent news). Present a short draft: what they do, who they sell to, business model and sales motion, stage. Ask: "What's wrong or missing?"
+Research the company's public footprint (homepage, pricing, product pages, customers, recent news). Present a short draft and ask: "What's wrong or missing?"
+
+The draft covers:
+- What they do, in one sentence; stage, size, and rough revenue and customer count if public
+- Who they sell to: the primary buyer (role and company type), any secondary buyer or champion, and how buyers find and evaluate products
+- Market type (established category, new category, or vertical), key competitors, and ecosystem players
+- GTM motion (one of the five buckets in the company profile), deal size and sales cycle, top-down or bottom-up adoption, any free plan or trial, how customers expand, and whether the TAM is a knowable list of accounts or a broad market
+- Brand and voice references: the logo, brand guide, and voice guide the team uses, if any (feeds profile section 4)
+
+Mark inferences clearly and confirm them before they go into the profile.
+
+**With MKT1 tools:** run `mkt1_company_overview` for this step and write the confirmed result to profile section 1 under **COMPANY OVERVIEW** (and to the Context Document if an engagement is already open).
 
 ## Step 3 — Health check (5 minutes)
 
@@ -113,6 +126,7 @@ Produce a one-page report, following the scoring guidance in `references/health-
 - **Biggest gaps** — the ones that matter most for their stated goal
 - **Three first moves** — each with why now, what they'll get, rough time, and the exact thing to say to start it
 - **Not yet captured** — anything skipped, in one short list, with "Say *finish my setup* any time to fill these in"
+- **MKT1 strategy progress** (only if MKT1 tools are connected): offer `mkt1_marketing_strategy_setup`'s progress view beside the scorecard, so the team sees which strategy exercises (ICPs, advantages, perceptions, positioning, levers, big bets, goals) already exist
 - **Offered next:** recurring tasks (Step 9) and saving the profile for the team (Step 10)
 
 Deliver the report the way the team works (section 8 of the profile): a document, or as an artifact or doc if that's the norm in this environment.

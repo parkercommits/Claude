@@ -2,7 +2,7 @@
 name: pmm-discover
 description: "This skill should be used when the user wants to \"run discovery on [company]\", \"research [company] for me\", \"set up the PMM context for [company]\", \"I'm targeting [company] — do the discovery\", \"start the PMM framework for [company]\", \"do audience analysis for [company]\", or any request to begin product marketing research where no prior context document exists. Executes the PMA Discover phase: audience analysis and ICP prioritization, competitive and ecosystem mapping, product analysis, JTBD canvas, TAM mapping, and business case.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 

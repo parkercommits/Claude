@@ -2,7 +2,7 @@
 name: pmm-grow
 description: "This skill should be used when the user wants to \"analyze the post-launch performance\", \"run the Grow phase\", \"help me understand what's driving adoption\", \"build the post-launch review\", \"what's working / not working since launch\", \"diagnose our funnel performance\", \"collect and synthesize customer feedback\", \"refresh our enablement based on what we've learned\", \"identify new segments or expansion opportunities\", or \"run the 30/60/90-day review\". Executes the PMA Grow phase: 12 steps covering learning agenda, KPI measurement, adoption analysis, VOC synthesis, message-market fit, funnel diagnosis, onboarding optimization, segment expansion, product feedback, proof collection, enablement refresh, and post-launch reviews with traffic-light decisions and quarterly updates to the Context Document.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 

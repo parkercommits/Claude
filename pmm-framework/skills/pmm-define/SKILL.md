@@ -2,7 +2,7 @@
 name: pmm-define
 description: "This skill should be used when the user wants to \"build the positioning for [company/product]\", \"write the messaging framework\", \"help me define the product story\", \"run the Define phase\", \"create a messaging house\", \"build the value proposition\", \"help me with positioning and messaging\", \"write the product narrative\", \"define our use cases\", or \"build the differentiation framework\". Executes the PMA Define phase: 14 steps covering product type and comparator, positioning statement, messaging architecture, personas, use cases, differentiation, proof points, perceptions, product narrative, message validation, and governance.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 

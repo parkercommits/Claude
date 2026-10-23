@@ -2,7 +2,7 @@
 name: pmm-director
 description: "This skill should be used when the user wants to \"act as a Product Marketing Director\", \"run the PMM framework\", \"help me with product marketing\", \"what can you help with\", \"what should I do next\", \"what phase should I start with\", \"I'm doing product marketing for [company]\", \"orient me to the PMM framework\", or any general product marketing request that doesn't map to a specific phase skill. Use this as the entry point: it offers a menu of jobs, checks for a company profile (routing first-time teams to pmm-setup), runs engagement intake, and routes to the right phase. Built on the PMA 5-phase framework, refined with MKT1 operating practices.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 
@@ -96,6 +96,8 @@ For new engagements, always recommend starting with **Discover** unless the user
 - Discover: audience, ecosystem, and product research from public sources
 - Light Strategize: Workstream 1 only — revenue levers, marketing advantages, working positioning and perceptions
 - Define: final positioning, perceptions, the one-page summary, and a homepage hero audit with a proposed rewrite
+
+With MKT1 tools connected, job hunt mode can add: `mkt1_job_description_and_scorecard` (build the scorecard the hiring manager is likely using from the job posting, then map the user's evidence to it), `mkt1_interview_questions` (likely questions for the role), and `mkt1_incognito_competitive_research` with the candidate's or buyer's lens. At offer stage: `mkt1_marketing_comp_checker`, `mkt1_salary_lookup`, and `mkt1_startup_equity_evaluator`.
 
 ## Company profile vs. Context Document
 
