@@ -99,7 +99,7 @@ Read what they share. Summarize it into the profile; don't paste whole documents
 
 ## Step 6 — Connect tools
 
-Run the connection check in `skills/pmm-director/references/connections.md`: say what's already connected, and suggest only the two or three missing tool categories that would add the most given their answers. Never block on a connection.
+Run the connection check in `skills/pmm-director/references/connections.md`: say what's already connected, and suggest only the two or three missing tool categories that would add the most given their answers. Never block on a connection. If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`.
 
 ## Step 7 — Build the company profile
 

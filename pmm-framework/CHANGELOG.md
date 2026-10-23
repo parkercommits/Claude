@@ -2,6 +2,24 @@
 
 All notable changes to the PMM Framework plugin. Versions follow [semantic versioning](https://semver.org): minor versions add or expand skills; patch versions fix wording or errors.
 
+## [0.5.0] — Unreleased
+
+Uses the MKT1 MCP's tools when a team has them connected, and aligns the plugin's MKT1 vocabulary with them. Every step still works without MKT1.
+
+### Added
+- **`skills/pmm-director/references/mkt1-tools.md`**: how to detect MKT1 tools (`mkt1_*`), which twelve plugin steps hand off to which tool, the pattern for a handed-off step (feed it the Context Document, follow its rules, write the confirmed result back), surface limits, and distribution rules (tool and template names only; no MKT1 URLs or tool text in the plugin).
+- **Framework library** connection category in `connections.md`. MKT1 is never listed as a missing connection.
+- Context Document strategy sections now use MKT1's section names (COMPANY OVERVIEW, ICPs BY MATURITY, POSITIONING STATEMENT, PERCEPTIONS, REVENUE LEVERS, and others).
+
+### Changed
+- **Director**: reads `mkt1-tools.md` when MKT1 tools are present; a connected MKT1 tool outranks the plugin's description of the same MKT1 practice; new "MKT1 tools" mode setting; intake records whether MKT1 is connected.
+- **All phases**: point to `mkt1-tools.md` alongside the connection check.
+- **Perceptions** (Strategize, Define, Grow, company profile): 3–4 perceptions forming a story stack; categories market / company / product / community; status strong / emerging / not yet driven; a short internal label for each.
+- **Revenue levers** (Strategize, Get Set): MKT1's four names exactly, ranked with no ties by marketing's impact over the next 6–12 months.
+- **GTM motion** (Strategize, company profile): five buckets from pure self-serve to pure sales-led; partner-led is a growth engine, not a motion.
+- **Marketing advantages** (Strategize): rated on strength today, potential, and maturity (nascent / testing / scaled), prioritized high / medium / low, focused on 1–3.
+- **Market type** (Discover, company profile): established category, new category, or vertical.
+
 ## [0.4.0] — 2026-10-21
 
 Makes the plugin easy for teams who didn't build it: a guided setup, a reusable company profile, and plain-language entry points.

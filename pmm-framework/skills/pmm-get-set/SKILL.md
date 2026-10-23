@@ -84,7 +84,7 @@ A Tier 3 release should take about a day of PMM effort, not twelve steps.
 
 ## Inputs and connections
 
-Start from the **Engagement setup**, "Strategy on a page," and Define's one-page summary in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+Start from the **Engagement setup**, "Strategy on a page," and Define's one-page summary in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing. If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`.
 
 ### Company profile and existing work (build mode)
 
@@ -392,10 +392,10 @@ PMM acts as the final quality-control layer across message consistency and custo
 A launch is not ready if you cannot measure whether it worked. Measurement setup belongs in Get Set, not after launch.
 
 **Tie metrics to the revenue lever the launch is meant to move** (from Strategize):
-- *Core-audience top of funnel* → qualified pipeline and win rate in Core ICPs
-- *New audience* → top-of-funnel growth and early pipeline in the new ICP
-- *Customer value* → adoption, expansion revenue, retention
-- *Efficiency* → conversion rates, sales velocity, cost per acquisition
+- *Grow TOF with existing audience* → qualified pipeline and win rate in Core ICPs
+- *Grow TOF with new audience* → top-of-funnel growth and early pipeline in the new ICP
+- *Increase value per customer* → adoption, expansion revenue, retention
+- *Improve efficiency* → conversion rates, sales velocity, cost per acquisition
 
 Make sure the GACCS brief's goal and these metrics match, and that marketing, product, and sales agreed on them before launch.
 

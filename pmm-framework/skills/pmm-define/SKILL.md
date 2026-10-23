@@ -66,7 +66,7 @@ Product positioning is also a subset of the company story, not the whole of it. 
 
 ## Inputs and connections
 
-Start from the **Engagement setup**, the Discover section, and "Strategy on a page" in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+Start from the **Engagement setup**, the Discover section, and "Strategy on a page" in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing. If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`.
 
 ### Company profile and existing work (build mode)
 
@@ -411,12 +411,14 @@ Messaging cannot exist in a vacuum — how an offer is packaged shapes how it sh
 
 ### Step 11 — Define perceptions (the company story layer)
 
-Product positioning covers the product. **Perceptions** cover the whole company story: the 3–5 beliefs you want your audience to hold and repeat back to you (MKT1). They sit above product positioning; the product story, launches, and most content should support at least one of them. Without them, every launch tells a separate story.
+Product positioning covers the product. **Perceptions** cover the whole company story: the 3–4 beliefs you want your audience to hold and repeat back to you (MKT1). Together they make up the **story stack**. They sit above product positioning; the product story, launches, and most content should support at least one of them. Without them, every launch tells a separate story.
 
-**Write 3–5 perceptions, each:**
+**Write 3–4 perceptions, each:**
 - Written from the **audience's point of view**, as a belief they'd say out loud ("Brand is measurable," not "We measure brand")
-- Tagged with a category: **company**, **audience**, **market**, or **product** insight
-- Given a status: **established** (already believed), **emerging** (some evidence), or **new** (we must create it)
+- One short sentence the audience could say to a peer
+- Tagged with a category: **market**, **company**, **product**, or **community**. The categories are prompts to cover the whole story, not boxes to fill; several product perceptions usually collapse into one
+- Given a short internal label (2–4 words, in the company's voice) the team uses to refer to it
+- Given a status: **strong** (already driven), **emerging** (some evidence), or **not yet driven**
 - Backed by supporting evidence — customer quotes, data, trends — that content can later use
 - Durable for roughly 6–12 months
 
@@ -427,9 +429,9 @@ Product positioning covers the product. **Perceptions** cover the whole company 
 - Check that the master positioning reinforces at least one product perception
 - For each perception, sketch the content, campaigns, or proof that would drive it (handed to Get Set and Grow)
 
-**Templates:** Perceptions worksheet (perception, POV, category, status, evidence, programs that drive it).
+**Templates:** Perceptions worksheet (perception, label, category, status, evidence, programs that drive it).
 
-**Key outputs:** 3–5 approved perceptions with status and supporting evidence.
+**Key outputs:** 3–4 approved perceptions (the story stack) with status and supporting evidence.
 
 **Good:** Perceptions are specific, audience-voiced, and distinctive; teams can say which perception a piece of content supports.
 **Weak:** Perceptions read like company values or taglines; written in "we" voice; generic enough that any competitor could claim them.
@@ -520,7 +522,7 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 - Primary audience (and ICP tier)
 - Product type and comparator
 - Master positioning: who it's for / what it is / why it's better
-- Perceptions (3–5)
+- Perceptions (3–4)
 - Top-level messaging blocks: problem / solution / who / why better
 - Three value pillars, each with its strongest proof point
 - Land use case
@@ -559,7 +561,7 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 
 **Messaging:**
 - [ ] Master positioning written as three answers (who / what / why better)?
-- [ ] 3–5 perceptions defined, audience-voiced, with status?
+- [ ] 3–4 perceptions defined, audience-voiced, with status?
 - [ ] Land use case named?
 - [ ] One-page summary exists?
 - [ ] Value pillars created with supporting proof?
@@ -668,7 +670,7 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 
 The Define outputs power everything in Get Set:
 - **PMM Get Set** — uses the one-page summary, messaging framework, positioning statement, persona guides, land use case, use-case narratives, and product story to build: sales decks, battlecards, launch emails, demo talk tracks, onboarding copy, website copy, campaign briefs. Launch messaging must support at least one perception.
-- **PMM Grow** — uses messaging as the baseline to measure adoption and message pull-through post-launch, and tracks whether perceptions are moving from new → emerging → established
+- **PMM Grow** — uses messaging as the baseline to measure adoption and message pull-through post-launch, and tracks whether perceptions are moving from not yet driven → emerging → strong
 
 Define also writes back to the Discover Context Document if positioning work changes the primary audience, primary problem, or comparator.
 

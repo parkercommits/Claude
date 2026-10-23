@@ -100,6 +100,7 @@ If the user picks deep dive, check whether a deep research capability is availab
    - Research depth (job hunt) or initiative and stakeholders (build)
    - Links provided, existing material, known competitors, user hypotheses
    - Connected tools by category, and tools the user chose not to connect
+   - Whether MKT1 tools are connected (and so which steps will use them)
    - Open questions and things the user asked not to be used
    - Date
 3. Route to the first phase.

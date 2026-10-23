@@ -152,7 +152,7 @@ Run independent searches in parallel where the environment allows. Stop a pillar
 
 Deep research also suits the market, competitor, and ecosystem research in build mode — use the same brief and the same verification step. Internal data comes from connected tools.
 
-Check which tool categories are connected (see `skills/pmm-director/references/connections.md`). Pull scoped samples, not everything:
+Check which tool categories are connected (see `skills/pmm-director/references/connections.md`). If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`. Pull scoped samples, not everything:
 
 | Category | What to pull for Discover |
 |---|---|
@@ -283,6 +283,7 @@ Goal: assess whether the opportunity is real beyond a few anecdotes.
 
 **What to learn:**
 - Market trends shaping demand
+- Market type — established category (buyers search for it by name), new category (no search demand yet), or vertical (a horizontal job built for one industry); this shapes positioning and channel fit later
 - Category maturity
 - Segment attractiveness
 - Buying behavior shifts

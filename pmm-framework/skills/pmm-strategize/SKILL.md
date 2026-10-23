@@ -67,7 +67,7 @@ You can't copy another company's strategy, because its audience, model, and adva
 
 ## Inputs and connections
 
-Start from the **Engagement setup** and the Discover section of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+Start from the **Engagement setup** and the Discover section of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing. If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`.
 
 ### Company profile and existing work (build mode)
 
@@ -116,14 +116,14 @@ Before building a GTM plan, turn research into a clear strategic recommendation.
 
 #### 1A. Rank the four revenue levers (MKT1)
 
-Make "where to focus" concrete. Stack-rank, 1–4, by importance to the business right now:
+Make "where to focus" concrete. Stack-rank, 1–4, no ties, by where marketing can have the biggest impact in the next 6–12 months. Use these four names exactly; MKT1's tools and templates use them:
 
 | Lever | What it means | Current maturity (investing / starting / nothing yet) |
 |---|---|---|
-| **Grow top of funnel with the core audience** | More market share in Core-tier ICPs | |
-| **Grow top of funnel with a new audience** | Expand to a Scaling or Testing ICP | |
-| **Increase customer value** | Pricing, upsell, expansion, retention, moving upmarket | |
-| **Increase efficiency** | Better conversion, lower acquisition cost, less waste | |
+| **Grow TOF with existing audience** | More market share with Core-tier ICPs | |
+| **Grow TOF with new audience** | Reach new segments, channels, geographies, or use cases (Scaling or Testing ICPs) | |
+| **Increase value per customer** | Pricing, upsell, expansion, retention, moving upmarket | |
+| **Improve efficiency** | Better conversion, lower acquisition cost, faster cycles, less waste | |
 
 For the top one or two levers, state how this initiative moves them. Levers ranked 3–4 become explicit non-goals unless the initiative clearly serves them. Relying only on top-of-funnel volume gets harder as the TAM saturates.
 
@@ -133,10 +133,10 @@ Marketing advantages are strengths or positive dynamics in the business, product
 
 **Run the exercise** (start from Discover's candidate advantages):
 1. List the advantages.
-2. Rate each: **potential strength** if fully leveraged vs. **current strength** today.
+2. Rate each: **strength today**, **potential strength** if fully used (low / medium / high), and **maturity** — nascent (not yet used in marketing), testing (campaigns running), or scaled (a proven, repeatable growth driver).
 3. Check competitors: do they have the same advantage, and use it the same way? If everyone has it, it isn't an advantage.
 4. Note combinations — advantages that reinforce each other.
-5. Prioritize: which to start on, which to double down on.
+5. Prioritize each high / medium / low, and keep the 1–3 that could change the growth trajectory; several listed advantages often collapse into one compound advantage.
 6. Name the projects that would accelerate each priority advantage (these feed big bets in Workstream 2).
 
 **Watch-outs:** an advantage doesn't drive growth on its own — it needs investment. Some need company-wide buy-in (product for network effects; GTM teams for ecosystem). Some can be built deliberately (a free plan, a vertical wedge); others, like a compelling story, are hard to force. If the company has no advantages, say so — it signals a product, business, or GTM problem, not a marketing one.
@@ -146,7 +146,7 @@ Marketing advantages are strengths or positive dynamics in the business, product
 Strategy choices rest on a view of how the product wins, so draft one now; Define tests and finalizes it.
 
 - **Positioning hypothesis:** product type (vertical solution / new way / 10x better / buy vs. build), one comparator, and the three answers — who it's for, what it is, why it's better than the comparator. Start from Discover's candidate comparators and primary audience. Optionally add a "one year out" version.
-- **Working perceptions:** 2–5 beliefs you want the audience to repeat back, written in their voice, each tagged company / audience / market / product and established / emerging / new. These anchor the big bets in Workstream 2.
+- **Working perceptions:** 3–4 beliefs you want the audience to repeat back, written in their voice, each tagged market / company / product / community and strong / emerging / not yet driven. These anchor the big bets in Workstream 2.
 
 Keep both short and mark them **working drafts**. Define (Steps 3, 4, and 11) owns the final versions and logs what changed.
 
@@ -216,10 +216,13 @@ Start from Discover's ICP tiers rather than re-deriving segments:
 
 #### 3C. Route-to-market
 Choose the motion based on ACV, implementation complexity, buyer education needs, urgency, and internal sales capacity:
-- **Self-serve / Product-led** — low ACV, high volume, users discover value themselves
-- **Sales-led** — higher ACV, complex buying committee, needs human touchpoints
-- **Partner-led** — reach via channel, reseller, or ecosystem
-- **Hybrid** — PLG for initial adoption + sales overlay for expansion
+- **Pure self-serve** — low ACV, high volume; buyers sign up, try, and buy without talking to anyone
+- **Self-serve dominant hybrid** — most revenue self-serve, with a sales-assisted tier for bigger deals
+- **Balanced hybrid** — meaningful revenue from both; marketing needs scale and precision
+- **Sales-led dominant hybrid** — most revenue through sales, with a free or low-cost entry point feeding pipeline
+- **Pure sales-led** — every deal goes through sales; higher ACV, buying committee, knowable target accounts
+
+Partner-led reach (channel, reseller, ecosystem) sits on top of any of these as a growth engine (3D), not a separate motion.
 
 **Check that marketing fits the motion (MKT1):** e.g., gated content and demo-only CTAs fight an easy-to-adopt self-serve product; pure self-serve content won't carry a six-figure, committee-led deal. If changing the motion is on the table, estimate the company-wide impact (billing, RevOps, onboarding) before recommending it.
 

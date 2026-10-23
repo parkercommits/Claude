@@ -62,7 +62,7 @@ This skill executes the **Grow phase of the PMA Product Marketing Framework.**
 
 ## Inputs and connections
 
-Start from the **Engagement setup**, the Get Set section (GACCS brief, momentum plan, baseline), and earlier sections of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`). Grow depends on data more than any other phase — say plainly which analyses can't be done without a connection.
+Start from the **Engagement setup**, the Get Set section (GACCS brief, momentum plan, baseline), and earlier sections of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`). If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`. Grow depends on data more than any other phase — say plainly which analyses can't be done without a connection.
 
 ### Company profile and existing work (build mode)
 
@@ -228,9 +228,9 @@ Clarity, relevance, distinctiveness, credibility, motivation.
 **Sales call review analysis — identify:**
 Where prospects lean in, what they ask about, what they misunderstand, what language reps actually use successfully.
 
-**Track perceptions (MKT1).** Define set 3–5 perceptions with a status (new / emerging / established). Check each one:
+**Track perceptions (MKT1).** Define set 3–4 perceptions with a status (not yet driven / emerging / strong). Check each one:
 - Are prospects, customers, analysts, and partners repeating it back — in calls, reviews, social posts, community threads?
-- Is its status moving (new → emerging → established)? Update the status with evidence.
+- Is its status moving (not yet driven → emerging → strong)? Update the status with evidence.
 - Which perception is lagging, and what content or campaign would move it?
 - Is content still laddering up to the perceptions, or drifting?
 

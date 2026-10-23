@@ -16,6 +16,7 @@ Companies use different tools, so this plugin refers to tools by **category**, w
 | **Web and marketing analytics** | Google Analytics, HubSpot marketing, ad platforms | Traffic, conversion by page, campaign performance, pricing-page behavior | Define (homepage test), Grow |
 | **Sales enablement** | Highspot, Seismic, Guru | Existing decks, battlecards, content usage | Get Set, Grow |
 | **Design and presentation** | Figma, Gamma, Canva | Producing visual assets and decks from finished work | Define, Get Set |
+| **Framework library** | MKT1 MCP (`mkt1_*` tools) | Current versions of MKT1 exercises (ICPs, positioning, perceptions, levers, advantages, channels, big bets, KPO goals, GACCS, competitive research, homepage review), templates, and benchmark data | Every phase — see `mkt1-tools.md` |
 
 ## Checking what's connected
 
@@ -24,6 +25,7 @@ Companies use different tools, so this plugin refers to tools by **category**, w
 3. **Suggest only the two or three most valuable missing categories** for the phases ahead. If the environment can search for and suggest connectors, use it; otherwise tell the user which tool to connect in their Claude settings.
 4. **Never block on connections.** If the user doesn't connect something, continue with what's available and note the gap in the Context Document.
 5. **Re-check at the start of each phase** — the user may have connected something since intake.
+6. **Framework library is different.** If `mkt1_*` tools are present, follow `mkt1-tools.md` for the steps that use them. If they aren't, don't list MKT1 as a missing connection; the plugin's own methods cover those steps.
 
 ## Guardrails
 
