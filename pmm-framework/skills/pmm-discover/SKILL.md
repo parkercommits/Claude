@@ -59,6 +59,10 @@ Before executing, confirm which mode applies:
 
 **Start from the Engagement setup** at the top of the Context Document (written by the Director's intake): mode, goal, deliverable, timeline, links provided, known competitors, hypotheses, research depth, and connected tools. If intake was skipped, ask only for what's missing below — never the whole list.
 
+### MKT1 tools (either mode)
+
+If MKT1 tools (`mkt1_*`) are connected, follow `skills/pmm-director/references/mkt1-tools.md`. In Discover they take over two steps: ICP tiering (2B, `mkt1_icp_prioritization`) and the competitor dataset (2C, `mkt1_competitive_research`). `mkt1_incognito_competitive_research` adds an outside view, and `mkt1_general_research`, `mkt1_state_of_b2b_marketing_data`, and `mkt1_vetted_b2b_startup_list` support any sweep across many companies. Without them, run every step as written below.
+
 ### Company profile and existing work (build mode)
 
 If the team has a company profile (created by `pmm-setup`), read sections 2 (Audiences and ICP tiers), 6 (Competitors and ecosystem), 9 (Customer voice), and 1 (Company and product) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
@@ -92,7 +96,7 @@ The aim is research that is efficient but deep: start from the best sources, cov
 | **Product** | Primary problem, top use cases | Full features → use cases → benefits map, changelog trends |
 | **Outputs** | Discovery summary, hypotheses, interview questions | Full Context Document with candidate comparators and advantages |
 
-**3. Build the source list before researching.** Combine the user's links with canonical URLs for the company and each competitor (homepage, pricing, careers, docs, review pages) — never guessed from names (see the research reliability rules in Step 2).
+**3. Build the source list before researching.** Combine the user's links with canonical URLs for the company and each competitor (homepage, pricing, careers, docs, review pages) — never guessed from names (see the research reliability rules in Step 2). With MKT1 tools, `mkt1_competitive_research` builds and checks this URL list as its first step.
 
 **4. Read the job posting first.** It is often the most candid public document: note the problems the team is hiring to solve, metrics mentioned, segments or products named, tools listed, and the seniority of the role. Turn these into hypotheses for Step 1.
 
@@ -152,7 +156,7 @@ Run independent searches in parallel where the environment allows. Stop a pillar
 
 Deep research also suits the market, competitor, and ecosystem research in build mode — use the same brief and the same verification step. Internal data comes from connected tools.
 
-Check which tool categories are connected (see `skills/pmm-director/references/connections.md`). If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`. Pull scoped samples, not everything:
+Check which tool categories are connected (see `skills/pmm-director/references/connections.md`). Pull scoped samples, not everything:
 
 | Category | What to pull for Discover |
 |---|---|
@@ -214,6 +218,7 @@ Errors compound: one bad data point flows into the matrix, the insights, and the
 - **Cite a source for every data point** — URL plus date accessed — so findings can be rechecked.
 - **Spot-check before scaling.** When researching more than ~5 companies, verify the first few rows and every outlier by hand before completing the rest.
 - **Watch for empty pages.** Pages that render with JavaScript can look blank to fetch tools; if a page returns little content, say so rather than concluding the information doesn't exist.
+- **Blocked is not absent.** A page that returns 401 or 403 exists (login or bot block) — save the URL and flag it. Only a 404 means there's no page.
 - **Drop the hard data point.** If one attribute is far harder to collect than the rest, cut it rather than building fragile workarounds.
 
 ---
@@ -290,7 +295,7 @@ Goal: assess whether the opportunity is real beyond a few anecdotes.
 - Macro risks and tailwinds
 - Where the company can differentiate commercially
 
-**TAM mapping (MKT1 coverage approach):** Rather than an analyst-style TAM/SAM/SOM number, map the total addressable market by company type and role, and mark which segments the company can credibly target **now** versus **later**. This produces a usable targeting map rather than a size estimate. If a top-down market-size figure is needed for the business case, add it as a single sourced number in Step 5 — don't build SAM/SOM layers.
+**TAM mapping (MKT1 coverage approach):** Rather than an analyst-style TAM/SAM/SOM number, map the total addressable market by company type and role, and mark which segments the company can credibly target **now** versus **later**. This produces a usable targeting map rather than a size estimate. For each segment, record industry, company size range, geography, revenue range, what sets it apart, and an **estimated company count** (sourced, or ❓). Also list the segments you considered and ruled **outside the TAM**, so the boundary is explicit. If a top-down market-size figure is needed for the business case, add it as a single sourced number in Step 5 — don't build SAM/SOM layers.
 
 **ICP prioritization — required output.** Tier every ICP identified:
 
@@ -303,10 +308,18 @@ Goal: assess whether the opportunity is real beyond a few anecdotes.
 
 Name **one primary audience** — go narrow. In job hunt mode, tier from public evidence (case studies, logos, job postings, pricing pages) and mark the tiers as hypotheses.
 
+How to tier well:
+- **Each ICP is a role plus a company type**, specific enough to build a list of real companies and people ("VP of Operations at mid-size regional utilities," not "utilities").
+- **Tier by evidence, not aspiration** — win rate, sales cycle, number of customers. Most companies have one or two Core ICPs; if there are more, push for the evidence.
+- **Name at least one "Not a priority today" ICP.** It keeps that audience from creeping back into plans.
+- **Record time allocation today** (build mode): the rough share of marketing's time and budget each ICP actually gets now, from the team or campaign data. Shares should add to about 100%. Flag mismatches — a Testing ICP taking a large share, or a Core ICP getting little because "it runs itself." These feed the effort-by-tier choice in Strategize. In job hunt mode, skip this or infer it from public activity and mark it as a hypothesis.
+
+**With MKT1 tools:** run `mkt1_icp_prioritization`. It covers role, company type, description, maturity, and time allocation, and flags the common mistakes. Its fourth tier, "Future," maps to "Not a priority today." Write the result to the **ICPs BY MATURITY** section of the Context Document.
+
 **Templates:**
 - Market landscape template (trends, segment dynamics, demand drivers, barriers, opportunity implications)
-- TAM coverage map (company type × role, now vs later)
-- ICP tiering table (Core / Scaling / Testing / Not a priority today)
+- TAM coverage map (company type × role, now vs later; segment details, estimated count, segments outside the TAM)
+- ICP tiering table (role, company type, description, tier, time allocation today)
 - Segment attractiveness scorecard
 - Trend analysis summary
 - Opportunity assessment template
@@ -335,6 +348,10 @@ Non-negotiable in Discover. A PMM must know not just who competitors are, but ho
 - Ideal customer profile focus
 - Common reasons they win or lose
 
+**With MKT1 tools:** run `mkt1_competitive_research` for the competitor dataset instead of filling the matrix below by hand. Beyond the matrix, it finds comparison and alternatives pages (including competitors who position against this company but not the reverse), customer logos and case-study customers (shared customers are a direct competitive signal), compliance badges, review-site ratings and themes, activity signals, and AI-search accessibility, then works through "why we win / why we lose" with the user. Choose its column groups to match the research depth: a quick scan needs identity, URLs, positioning, and pricing; a deep dive takes all of them. Keep a status-quo row, which the tool doesn't add. Where it can't run its raw-HTML checks (no terminal in this environment), say which columns are blank and why. Write the result to the **COMPETITIVE RESEARCH** section of the Context Document, and map its findings into the matrix rows below so Define and Get Set find them in the usual place.
+
+**Outside view:** `mkt1_incognito_competitive_research` compares companies through one audience's eyes — buyer, candidate, partner, investor — using only the public web. Use it in job hunt mode (the candidate and buyer lenses), and pass its findability notes to Grow's AI-search check.
+
 **Competitive Intelligence Matrix** — populate for 3–5 competitors (always include "status quo / do nothing / spreadsheets" as a row):
 
 | Activity | [Company] | Competitor 1 | Competitor 2 | Competitor 3 |
@@ -357,8 +374,14 @@ Non-negotiable in Discover. A PMM must know not just who competitors are, but ho
 | Perceived strengths | | | | |
 | Perceived weaknesses | | | | |
 | How they solve the audience's problem | | | | |
+| Comparison or alternatives pages, and who they target | | | | |
+| Customer overlap (shared logos or case-study customers) | | | | |
+| Marketing approach (website, search, paid, social reach, events) | | | | |
+| Sales and customer success approach (sales team, SDRs, onboarding) | | | | |
 
 Every cell follows the research reliability rules: sourced, dated, or blank and flagged ❓.
+
+**Positioning spectrums (optional visual).** Pick 3–4 attributes that matter to the primary audience (e.g., low cost ↔ premium, built for end users ↔ built for executives, single product ↔ platform) and place the company and each competitor along each line. It shows at a glance where there's open ground.
 
 ##### Complements and frenemies (ecosystem map)
 
@@ -369,11 +392,20 @@ Know your complements like you know your competitors. Map the players who share 
 
 Discovery prompts: What are the audience's source-of-truth platforms? Who influences their buying decisions? Who do they already pay for adjacent work? Who has data, reputation, or reach the company lacks?
 
-| Player | Type (complement / frenemy) | Category | Size (L/M/S) | Audience overlap | Potential value exchange | Risks or costs |
-|---|---|---|---|---|---|---|
-| | | | | | | |
+| Player | Type (complement / frenemy) | Category | Size (L/M/S) | Relationship today | Composition / coverage | Value for us / them / shared audience | Money exchanged | Risks or costs |
+|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | |
 
 Map 5–10 of the most relevant players. Quality over quantity — a few strong partners beat many transactional ones.
+
+For each player worth pursuing, add:
+- **Category:** influencer, existing community, analyst, customer to co-market with, integration partner, complementary business, channel partner, affiliate, or referrer
+- **Relationship today:** none, some, or strong; and the kind you'd want (transactional, short-term, long-term)
+- **Composition vs. coverage:** composition = the share of the partner's audience that fits your ICP; coverage = the share of your TAM the partner reaches. High composition with low coverage is a niche partner; the reverse is broad reach with waste.
+- **Value exchange on three sides:** what it gives you, what it gives the partner, and what it gives your shared audience. If the partner side is empty, the partnership won't last.
+- **Money exchanged:** none, referral fee or revenue share, or pay-to-play
+
+For partner programs, also summarize by type (integration, channel, affiliate and referral, marketing partners): current status, plans for this quarter, and candidate partners.
 
 **Templates:**
 - Competitor profile template (target audience, positioning, messaging, strengths, weaknesses, pricing clues)
@@ -496,6 +528,9 @@ One sentence, in the customer's language.
 *What makes this market interesting:*
 2–3 observations about the opportunity (size, growth, timing, underserved need).
 
+*Market type:*
+Established category, new category, or vertical — with the evidence. Strategize uses this to choose growth engines; Define uses it with the product type.
+
 *Competitive whitespace:*
 Where competitors are weak or absent relative to this audience's most important needs.
 
@@ -559,7 +594,7 @@ The final step of Discover is not "here's what we learned." It's "here's what we
 Compile all outputs into a single document titled:
 `[Company] — PMM Context`
 
-If the Director already created it at intake, add the Discover section beneath the **Engagement setup** rather than creating a new document. If intake was skipped, create it now and start it with a short Engagement setup (mode, goal, deliverable, timeline, connected tools).
+If the Director already created it at intake, add the Discover section beneath the **Engagement setup** rather than creating a new document. Discover writes the **ICPs BY MATURITY** and **COMPETITIVE RESEARCH** sections, plus its other findings. If intake was skipped, create it now and start it with a short Engagement setup (mode, goal, deliverable, timeline, connected tools).
 
 **If Google Drive is connected:**
 Create a Google Doc with this title. Structure with clear headers per section. Share the link.
@@ -636,17 +671,19 @@ A weak Discover phase looks like:
 | Customer interview guide | Background, problem exploration, buying journey, alternatives, language capture |
 | Win-loss interview guide | Trigger, shortlist, selection criteria, perceived pros/cons, decision drivers |
 | Persona template | Role, buyer role, goals, pains, motivations, objections, behavior (info sources, communities, tools, content preferences) |
-| TAM coverage map | Company type × role, targetable now vs later |
-| ICP tiering table | Core / Scaling / Testing / Not a priority today; primary audience |
+| TAM coverage map | Company type × role, targetable now vs later; segment details, estimated count, segments outside the TAM |
+| ICP tiering table | Role, company type, description, tier (Core / Scaling / Testing / Not a priority today), time allocation today; primary audience |
 | Market analysis template | Market trends, segment dynamics, demand drivers, barriers, opportunity implications |
-| Competitor profile template | Target audience, positioning, messaging, business model, stage, GTM motion, content, strengths, weaknesses, pricing clues |
-| Ecosystem map | Player, complement/frenemy, category, size, audience overlap, value exchange, risks/costs |
+| Competitor profile template | Target audience, positioning, messaging, business model, stage, GTM motion, content, comparison pages, customer overlap, marketing and sales approach, strengths, weaknesses, pricing clues |
+| Ecosystem map | Player, complement/frenemy, category, size, relationship today, composition and coverage, three-sided value exchange, money exchanged, risks/costs |
 | Product analysis | Primary problem, features → use cases → benefits → ICP, differences vs alternatives |
 | Messaging audit template | Current claims, audience fit, proof points, inconsistencies, gaps |
 | Insight synthesis template | Key findings, evidence, implications, recommended action |
 | Business case template | Opportunity, target segment, customer problem, strategic fit, market potential, competitive advantage, risks, recommendation |
 
 PMA Coda template library: coda.io/@product-marketing-alliance-pma
+
+With MKT1 tools connected, `mkt1_templates` returns the current MKT1 templates for this phase: Audience analysis & mapping, Competitive research, Ecosystem mapping, and Product marketing strategy review.
 
 ---
 
@@ -661,6 +698,7 @@ PMA Coda template library: coda.io/@product-marketing-alliance-pma
 - Do not leave ICPs unranked — every ICP gets a tier, and one is named primary
 - Do not build SAM/SOM layers — map TAM coverage instead
 - Do not guess data — blank and flag anything you can't source
+- Do not treat a blocked page as a missing one — 401/403 means it exists
 - Do not write positioning in Discover — hand Define the candidate comparators instead
 
 ---
@@ -670,7 +708,7 @@ PMA Coda template library: coda.io/@product-marketing-alliance-pma
 The Context Document is read by:
 - **PMM Define** — uses JTBD canvas, persona profiles, ICP tiers, primary problem, product analysis, candidate comparators, and competitive whitespace
 - **PMM Strategize** — uses ICP tiers, TAM coverage map, audience behavior, ecosystem map (partner and channel options), competitive matrix, and business case
-- **PMM Get Set** — uses competitive matrix, persona profiles, and features → use cases → benefits map for sales enablement
+- **PMM Get Set** — uses competitive matrix (and the MKT1 competitive dataset, if run), persona profiles, and features → use cases → benefits map for sales enablement and battlecards
 - **PMM Grow** — uses JTBD outcomes as post-launch success criteria
 
 ---
@@ -693,4 +731,6 @@ The Context Document is read by:
   - Complements and frenemies (MKT1 Guide to Ecosystem Marketing)
   - Audience behavior beyond firmographics (MKT1, How to build your growth marketing strategy)
   - Research reliability rules (MKT1, The Claude Code research playbook behind the State of Marketing Reports)
+  - Templates: Audience analysis & mapping (TAM segments and ICP prioritization), Competitive research (including positioning spectrums), Ecosystem mapping (composition and coverage), Product marketing strategy review
+  - MKT1 MCP tools, when connected: `mkt1_icp_prioritization`, `mkt1_competitive_research`, `mkt1_incognito_competitive_research`, `mkt1_general_research`, `mkt1_state_of_b2b_marketing_data`, `mkt1_vetted_b2b_startup_list`
 - SVPG / Martina Lauchengco (Loved) — PMM's role in product/market fit from the market side
