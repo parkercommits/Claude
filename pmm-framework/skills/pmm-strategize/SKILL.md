@@ -69,6 +69,8 @@ You can't copy another company's strategy, because its audience, model, and adva
 
 Start from the **Engagement setup** and the Discover section of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing. If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`.
 
+**MKT1 tools in Strategize:** `mkt1_revenue_levers` (1A), `mkt1_marketing_advantages` (1B), `mkt1_big_bets` and `mkt1_kpo_goals` (Workstream 2), and `mkt1_channel_strategy` (3D). Run them in that order: levers and advantages feed the big bets, and big bets become the project goals. Each step below says what to keep from the plugin's own method alongside the tool.
+
 ### Company profile and existing work (build mode)
 
 If the team has a company profile (created by `pmm-setup`), read sections 7 (GTM plan), 5 (Pricing and packaging), 2 (Audiences and ICP tiers), and 8 (Teams, tools, and processes) before starting, and skip any question they already answer. If section 8 lists frameworks or experts the team has adopted for this kind of work, use their structure and vocabulary, mapped onto this phase's steps (see "When sources disagree" in the Director).
@@ -125,11 +127,27 @@ Make "where to focus" concrete. Stack-rank, 1–4, no ties, by where marketing c
 | **Increase value per customer** | Pricing, upsell, expansion, retention, moving upmarket | |
 | **Improve efficiency** | Better conversion, lower acquisition cost, faster cycles, less waste | |
 
-For the top one or two levers, state how this initiative moves them. Levers ranked 3–4 become explicit non-goals unless the initiative clearly serves them. Relying only on top-of-funnel volume gets harder as the TAM saturates.
+For each lever, write one or two sentences on **why it ranks there** and a directional **what to focus on**. For the top one or two levers, state how this initiative moves them. Levers ranked 3–4 become explicit non-goals unless the initiative clearly serves them. Relying only on top-of-funnel volume gets harder as the TAM saturates.
+
+**Connect levers to ICP tiers.** The existing-audience lever is about Core ICPs; the new-audience lever is about Scaling or Testing ICPs. Say which.
+
+**Typical patterns** (starting points, not answers): an early-stage company still proving fit usually leads with the existing audience, then efficiency. One whose Core audience is saturated leads with the new audience. High churn puts value per customer first. Plenty of pipeline with weak conversion puts efficiency first. A new product that opens a new audience puts that audience first.
+
+**Name the trap** — the most likely way this team misallocates effort given its ranking. Common ones: ranking efficiency first without enough volume to optimize; ignoring value per customer because marketing "only does acquisition"; ranking by what sales can do rather than what marketing can move.
+
+**With MKT1 tools:** run `mkt1_revenue_levers` and write the result to **REVENUE LEVERS**. Keep the maturity column above and the line on how this initiative moves the top levers; the tool doesn't add them.
 
 #### 1B. Identify and prioritize marketing advantages (MKT1)
 
 Marketing advantages are strengths or positive dynamics in the business, product, team, or story that accelerate growth — tailwinds. Examples: network effects, a free plan or free tool, integrations and an ecosystem, a strong community, a compelling founder or company story, market timing (a new regulation or shift), a clear vertical wedge, unusual customer love. Most successful later-stage companies leverage two or more.
+
+**Look across four kinds of advantage** so the list isn't only product features. Use these as prompts, not boxes to fill; a company's real advantage often combines several, or fits none of them:
+- **Product-driven:** virality or network effects; a free plan or trial with a fast first-value moment; an obvious, major differentiator; integrations that create lock-in or distribution
+- **Ecosystem-driven:** partners with a real incentive to recommend or resell; an audience that seeks a community; market tailwinds such as a new regulation or technology shift
+- **Fuel-driven (content and creative):** a company or founder story the ICP finds credible; an audience hungry for education where the company has a distinct point of view; raw material no one else has — customer love, proprietary data, a contrarian take
+- **Engine-driven (distribution):** a narrow wedge with a path to expand; a channel already working at a viable acquisition cost beyond founder effort; an audience that seeks live or in-person experiences
+
+**The test:** an advantage changes what you'd do in go-to-market. If it doesn't, or if competitors have the same thing, it's a requirement, not an advantage.
 
 **Run the exercise** (start from Discover's candidate advantages):
 1. List the advantages.
@@ -138,6 +156,8 @@ Marketing advantages are strengths or positive dynamics in the business, product
 4. Note combinations — advantages that reinforce each other.
 5. Prioritize each high / medium / low, and keep the 1–3 that could change the growth trajectory; several listed advantages often collapse into one compound advantage.
 6. Name the projects that would accelerate each priority advantage (these feed big bets in Workstream 2).
+
+**With MKT1 tools:** run `mkt1_marketing_advantages` — its identify mode works through discovery questions with the user; its review mode pressure-tests a list the team already has. Write the confirmed 1–3 advantages to **MARKETING ADVANTAGES**, and keep step 6 above (the projects that would accelerate each), which feeds the big bets.
 
 **Watch-outs:** an advantage doesn't drive growth on its own — it needs investment. Some need company-wide buy-in (product for network effects; GTM teams for ecosystem). Some can be built deliberately (a free plan, a vertical wedge); others, like a compelling story, are hard to force. If the company has no advantages, say so — it signals a product, business, or GTM problem, not a marketing one.
 
@@ -148,7 +168,7 @@ Strategy choices rest on a view of how the product wins, so draft one now; Defin
 - **Positioning hypothesis:** product type (vertical solution / new way / 10x better / buy vs. build), one comparator, and the three answers — who it's for, what it is, why it's better than the comparator. Start from Discover's candidate comparators and primary audience. Optionally add a "one year out" version.
 - **Working perceptions:** 3–4 beliefs you want the audience to repeat back, written in their voice, each tagged market / company / product / community and strong / emerging / not yet driven. These anchor the big bets in Workstream 2.
 
-Keep both short and mark them **working drafts**. Define (Steps 3, 4, and 11) owns the final versions and logs what changed.
+Keep both short and mark them **working drafts**. Define (Steps 3, 4, and 11) owns the final versions and logs what changed — and, when MKT1 tools are connected, runs `mkt1_positioning` and `mkt1_perceptions` for them. Here, a light draft from Discover's inputs is enough.
 
 **Templates:** Strategic recommendation memo, Revenue lever stack-rank, Marketing advantages worksheet, Working positioning hypothesis, Working perceptions, Opportunity assessment, Segment prioritization framework, Use-case prioritization matrix, Risk and dependency log, Executive strategy brief
 
@@ -187,7 +207,22 @@ Pipeline created, qualified demand from target segment, trial starts / demo requ
 
 Also list **non-goals** (what this initiative deliberately won't do), plus dependencies and risks. Without projects and ops goals, growth stays linear.
 
-**Templates:** GTM objectives framework, KPO goals sheet (KPIs / Projects / Ops / non-goals), Big bet brief, KPI tree, Launch scorecard, Stage-gate checklist, Metric definitions document, Success criteria worksheet
+**Keep the goal set small and connected.** Five to eight goals in total — usually two or three KPIs, two or three projects (the big bets), and one or two ops goals. Tag each goal with the marketing advantage, perception, and revenue lever it supports; if a goal connects to none, ask why it's a goal. Targets nobody has set stay "TBD," never invented.
+
+**Make each big bet a real campaign.** A big bet combines **fuel** (a specific content or creative idea), an **engine** (a named distribution channel), and a **specific audience** (a Core or Scaling ICP). It should connect to at least three of: an advantage it accelerates, the ICP it targets, a perception it reinforces, and a top-two revenue lever. Then score each bet:
+
+| Check | Question |
+|---|---|
+| Big enough? | Could it change the growth trajectory, or compound if it works? A one-off is a tactic. |
+| All components? | Is the fuel specific, the engine named, the audience specific? |
+| Fits the model? | Does the engine fit the GTM motion? For events, outbound, or partner bets, are there tiered target accounts? |
+| Aligns with strategy? | Which advantage, ICP, perception, and lever does it connect to? |
+
+Mark each ✅ or ⚠️, and for each ⚠️ ask the question that would fix it rather than dismissing the idea. For events and partner bets, measure **account-stage progression** for target accounts (unaware → engaged → evaluating), not just sourced pipeline — these channels are rarely the first or last touch.
+
+**With MKT1 tools:** run `mkt1_big_bets` (write to **BIG BET CAMPAIGNS**), then `mkt1_kpo_goals` (write to **KPO GOALS**). Keep the non-goals, dependencies, and risks, and each big bet's content needs and success criteria; the tools don't add them.
+
+**Templates:** GTM objectives framework, KPO goals sheet (KPIs / Projects / Ops / non-goals; MKT1's Marketing goals tracker is a good base), Big bet brief and scorecard, KPI tree, Launch scorecard, Stage-gate checklist, Metric definitions document, Success criteria worksheet
 
 **Key output:** A measurement framework with business goal, KPIs, targets, owners, reporting cadence, and stage gates — plus 1–3 big bets, ops goals, and non-goals.
 
@@ -207,6 +242,9 @@ Start from Discover's ICP tiers rather than re-deriving segments:
 - Buyer vs. user focus
 - Priority personas and buying committee roles
 - **Expansion path** — the plan to move Scaling and Testing ICPs up a tier after initial traction
+- **Compare with time allocation today** (from Discover's ICP tiers) and say what shifts
+- **Playbook by tier** — which content types and engines each tier gets, so lower tiers don't get the full treatment. A simple grid works: content and channels down the side, tiers across the top.
+- **Per-segment message notes** for each priority segment: what the product replaces for them, what it is, and why it's better for them, plus the discovery questions and timing signals (funding, a new GTM push, a regulation date) that tell sales a prospect is ready. Define Step 6 and Get Set Step 4 build on these.
 
 #### 3B. Use-case strategy
 - Lead use case and use-case hierarchy
@@ -223,6 +261,17 @@ Choose the motion based on ACV, implementation complexity, buyer education needs
 - **Pure sales-led** — every deal goes through sales; higher ACV, buying committee, knowable target accounts
 
 Partner-led reach (channel, reseller, ecosystem) sits on top of any of these as a growth engine (3D), not a separate motion.
+
+**Classify from what you can observe**, especially in job hunt mode:
+
+| Signal | Self-serve leaning | Hybrid | Sales-led leaning |
+|---|---|---|---|
+| Deal size and time to close | Lower; fast sign-up | Wide range | Higher; longer cycle |
+| Plans and pricing | Free and paid plans shown | Range of plans | Paid, often "contact us" |
+| Adoption | Bottom-up, by users | Both | Top-down, by an executive |
+| Homepage call to action | Sign up | Both | Request a demo |
+| Marketing KPIs | Sign-ups, product-qualified leads | All | Qualified pipeline |
+| Team mix | Marketing larger than sales | Similar | Sales larger than marketing |
 
 **Check that marketing fits the motion (MKT1):** e.g., gated content and demo-only CTAs fight an easy-to-adopt self-serve product; pure self-serve content won't carry a six-figure, committee-led deal. If changing the motion is on the table, estimate the company-wide impact (billing, RevOps, onboarding) before recommending it.
 
@@ -244,6 +293,17 @@ Don't list every channel. Group channels into engines and choose a focused set:
 - **Don't invest in virality or outbound before the product supports it**
 - Don't silo engines between teams (e.g., marketing's inbound and sales' outbound sending prospects conflicting messages)
 
+**Score each engine 1–5 for fit** — 5 means several drivers point to it; 1 means they point away. It isn't a stack rank; several engines can share a score. Layer three lenses:
+- **GTM motion:** self-serve needs scale (inbound, product virality); sales-led needs precision against a knowable list of accounts (outbound, events, ecosystem); hybrids need both.
+- **Market type** (from Discover): a **new category** has little search demand, so inbound is weak and events and product experience do the educating; a **vertical** has a bounded, knowable audience, so outbound, ecosystem, and events lead and virality rarely compounds; a **free plan or trial** favors inbound and virality over outbound.
+- **Marketing advantages:** each advantage speeds certain engines — integrations favor ecosystem; a credible founder story favors inbound thought leadership and events; a regulatory or market deadline favors inbound education, events, and urgency in outbound.
+
+**Senior buyers and rip-and-replace purchases:** when the buyer is a C-level executive, or buying means replacing a core system, trust comes from experiences and recommendations. Events and ecosystem lead; outbound's job is to get target accounts into them.
+
+For each engine scored 3 or more, name two to four specific tactics and why they fit. Recommend one or two **engine pairings** that reinforce each other (for example, outbound inviting target accounts to an event, or co-hosted events with a partner), each with a concrete example for this company. For sales-led motions, track account stages and campaign influence at the account level, not just leads.
+
+**With MKT1 tools:** run `mkt1_channel_strategy` and write the result to **CHANNEL STRATEGY**. Keep the per-engine details below; the tool doesn't add resourcing or risks.
+
 For each chosen engine, define: audience fit, expected role in the buyer journey, resource requirements (including the content it needs — see Workstream 8), message implications, risks.
 
 #### 3E. Conversion and onboarding strategy
@@ -263,7 +323,7 @@ Strategize is not just top-of-funnel:
 
 **Useful frameworks:** STP (Segmentation / Targeting / Positioning), Bowling pin strategy (one segment/use case first, then expand), MKT1 ICP tiers, MKT1 growth engines, GTM motion design, Customer journey mapping, Persona × engine mapping, Barrier analysis (awareness / credibility / adoption / switching barriers).
 
-**Templates:** GTM strategy template, Audience and segment plan, Buyer journey map, Channel strategy worksheet, Route-to-market decision framework, Internal communication plan, Dependency tracker, Risk register, Launch workback plan.
+**Templates:** GTM strategy template, Audience and segment plan (with a playbook by tier), Buyer journey map, Channel strategy worksheet (engine fit scores, tactics, pairings), Route-to-market decision framework, Internal communication plan, Dependency tracker, Risk register, Launch workback plan.
 
 **Key output:** A documented GTM strategy defining who you're targeting, which problem/use case you lead with, which motion you use, which channels you prioritize, how buyers move from awareness to value realization, and what internal orchestration is required.
 
@@ -403,7 +463,7 @@ Strategy without feasibility is aspiration. Ensure the GTM plan is resourced and
 
 **Useful frameworks:** Scenario planning, Impact vs. effort prioritization, Must/Should/Could, Budget-to-outcome planning, Decision memo structure.
 
-**Templates:** GTM budget planner, Resource plan, Scenario planning worksheet, Executive decision memo, Prioritization matrix.
+**Templates:** GTM budget planner (MKT1's Marketing budget & efficiency metrics sheet includes a budget calculator), Fuel and engine balance exercise, Resource plan, Scenario planning worksheet, Executive decision memo, Prioritization matrix.
 
 **Key output:** An approved resourcing and budget plan.
 
@@ -427,7 +487,7 @@ These eight documents are usually enough to move cleanly into Define and launch 
 | 7 | Launch plan + RACI | Milestones and ownership |
 | 8 | Risk/dependency log | What could derail execution |
 
-**Write "Strategy on a page" into the Context Document** (a Strategize section beneath Discover's) so Define, Get Set, and Grow read the same inputs.
+**Write "Strategy on a page" into the Context Document** (a Strategize section beneath Discover's) so Define, Get Set, and Grow read the same inputs. Put the strategy inputs under their section names — **REVENUE LEVERS**, **MARKETING ADVANTAGES**, **BIG BET CAMPAIGNS**, **KPO GOALS**, **CHANNEL STRATEGY** — so they match MKT1's tools and templates.
 
 ---
 
@@ -445,7 +505,8 @@ These eight documents are usually enough to move cleanly into Define and launch 
 - Establish KPO goals: KPIs, big bets, ops goals, non-goals
 - Choose GTM motion and check marketing fits it
 - Map buyer journey
-- Choose growth engines
+- Score growth engines for fit; choose engines and pairings
+- Design and score big bets
 - Identify onboarding and retention implications
 
 **Week 3 — Shape commercial mechanics**
@@ -481,7 +542,7 @@ When reviewing the strategy, these are the most important questions:
 | **Advantages** | Which marketing advantages does this plan accelerate? Are they real advantages, or things every competitor has? |
 | **Focus** | Which revenue levers does this move? What are the explicit non-goals? |
 | **Motion** | Is the route to market appropriate for deal size and complexity? Can our current teams support this motion? Does the marketing fit it? |
-| **Engines** | Are engines chosen from audience behavior, motion, and advantages — or copied from habit? Is there content capacity for each? |
+| **Engines** | Are engines scored against motion, market type, and advantages — or copied from habit? Is there content capacity for each? |
 | **Readiness** | Is the product mature enough? Can sales, CS, and support deliver a good experience? |
 | **Economics** | Does pricing reflect value and fit buyer expectations? Is the plan feasible with available budget? |
 | **Measurement** | What metrics will tell us early if this is working? What would trigger an adjustment? |
@@ -502,6 +563,7 @@ When reviewing the strategy, these are the most important questions:
 10. **KPIs without projects** — setting targets with no big bets or ops work to reach them
 11. **Fuel and engine out of balance** — channels with nothing to say, or content nothing distributes
 12. **Hiding prices by default** — pushing sticker shock into sales calls instead of deciding pricing transparency deliberately
+13. **Too many big bets** — five "big bets" means none; keep one to three
 
 ---
 
@@ -560,4 +622,6 @@ The Strategize outputs (particularly Strategy on a page, the GTM strategy doc, K
   - Marketing advantages exercise, GTM motion alignment (Marketing strategy exercises to kick off your annual planning process; Find & accelerate your marketing advantages)
   - Strategy file structure: ICP priorities, perceptions, positioning, revenue levers, big bets (How to build your marketing strategy in Claude)
   - Plans and pricing pages (Why all B2B startups need plans & pricing pages); usage-based pricing trend (State of B2B Marketing Report 2026, Part 2)
+  - Templates: Rank the 4 revenue levers, Marketing advantages checklist & exercise, Market prioritization/segmentation (playbook by tier), Channel <> strategy fit, Select marketing tactics that fit your strategy, Marketing goals tracker, Marketing decision dashboard, Marketing budget & efficiency metrics, Exercise to balance fuel & engine
+  - MKT1 MCP tools, when connected: `mkt1_revenue_levers`, `mkt1_marketing_advantages`, `mkt1_big_bets`, `mkt1_kpo_goals`, `mkt1_channel_strategy`
 - SVPG / Martina Lauchengco (Loved) — GTM as equal partner to product discovery
