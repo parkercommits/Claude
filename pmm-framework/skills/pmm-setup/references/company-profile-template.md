@@ -28,7 +28,8 @@ Latest scores by area (1–4), date run, top three first moves, and status of ea
 Owner: · Last updated:
 - What the company does, in one sentence
 - Products and plans
-- Business model, typical deal size, sales motion (self-serve / sales-led / hybrid / partner)
+- Business model, typical deal size, GTM motion (pure self-serve / self-serve dominant hybrid / balanced hybrid / sales-led dominant hybrid / pure sales-led), partner channels
+- Market type: established category, new category, or vertical
 - Stage, size, key milestones
 - Product-market fit signals (from the health check)
 
@@ -43,7 +44,7 @@ Owner: · Last updated:
 Owner: · Last updated:
 - Product type and comparator
 - Positioning: who it's for / what it is / why it's better
-- Perceptions (3–5) with status (established / emerging / new)
+- Perceptions (3–4) with status (strong / emerging / not yet driven)
 - Value pillars and strongest proof points
 - Land use case
 - Source docs: [names or links]

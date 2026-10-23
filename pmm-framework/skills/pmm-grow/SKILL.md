@@ -2,7 +2,7 @@
 name: pmm-grow
 description: "This skill should be used when the user wants to \"analyze the post-launch performance\", \"run the Grow phase\", \"help me understand what's driving adoption\", \"build the post-launch review\", \"what's working / not working since launch\", \"diagnose our funnel performance\", \"collect and synthesize customer feedback\", \"refresh our enablement based on what we've learned\", \"identify new segments or expansion opportunities\", or \"run the 30/60/90-day review\". Executes the PMA Grow phase: 12 steps covering learning agenda, KPI measurement, adoption analysis, VOC synthesis, message-market fit, funnel diagnosis, onboarding optimization, segment expansion, product feedback, proof collection, enablement refresh, and post-launch reviews with traffic-light decisions and quarterly updates to the Context Document.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 
@@ -62,7 +62,9 @@ This skill executes the **Grow phase of the PMA Product Marketing Framework.**
 
 ## Inputs and connections
 
-Start from the **Engagement setup**, the Get Set section (GACCS brief, momentum plan, baseline), and earlier sections of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`). Grow depends on data more than any other phase — say plainly which analyses can't be done without a connection.
+Start from the **Engagement setup**, the Get Set section (GACCS brief, momentum plan, baseline), and earlier sections of the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`). If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`. Grow depends on data more than any other phase — say plainly which analyses can't be done without a connection.
+
+**MKT1 tools in Grow:** `mkt1_aeo_audit` checks how AI answer engines find and describe the company (Step 5); `mkt1_incognito_competitive_research` repeats the outside view from Discover; `mkt1_linkedin_posts_analysis_beta` analyzes a LinkedIn account's own analytics export (Step 11). Grow doesn't hand a whole step to a tool — it uses these as inputs.
 
 ### Company profile and existing work (build mode)
 
@@ -148,12 +150,14 @@ Revenue, pipeline, win rate, retention, expansion, churn, NRR, customer lifetime
 - **Report inbound and outbound separately** — they move through the funnel differently
 - **Don't label pipeline "marketing-sourced" vs. "sales-sourced"** — use neutral stage names and focus on what moves deals
 - Use several views (first touch, last touch before qualification, campaign influence); a complex multi-touch model is usually overkill at early stages
+- **Account-stage progression for events and partner campaigns** — these are rarely the first or last touch, so measure whether target accounts moved (unaware → engaged → evaluating → in pipeline), not just sourced pipeline
+- **Conversion by source at every stage** — a funnel that leaks between stages wastes the top of it; track conversion goals by source from first touch to closed-won
 
 **Efficiency metrics** — when the launch targeted the efficiency lever, track the three MKT1 efficiency metrics: **CAC ratio, payback period, LTV:CAC**. Agree on standard definitions with finance first.
 
 **Report to sales in their terms:** pipeline, meetings, win rate, deal velocity — not impressions or MQLs.
 
-**Templates:** Growth KPI dashboard, Campaign influence report, Lifecycle stage report, Blended CAC and efficiency metrics sheet, Post-launch scorecard, Cohort analysis template, Funnel performance tracker, Segment performance review deck.
+**Templates:** Growth KPI dashboard, Campaign influence report, Lifecycle stage report, Account-stage progression report, Full-funnel conversion calculator, Blended CAC and efficiency metrics sheet (MKT1's Marketing budget & efficiency metrics), Bottom-up forecast (by accounts or leads), Marketing ops checklist (the tracking needed for full-funnel reporting), Post-launch scorecard, Cohort analysis template, Funnel performance tracker, Segment performance review deck.
 
 **Key outputs:** Performance dashboard, Post-launch metrics review, Leading/lagging indicator analysis, Segment and cohort insights.
 
@@ -228,11 +232,13 @@ Clarity, relevance, distinctiveness, credibility, motivation.
 **Sales call review analysis — identify:**
 Where prospects lean in, what they ask about, what they misunderstand, what language reps actually use successfully.
 
-**Track perceptions (MKT1).** Define set 3–5 perceptions with a status (new / emerging / established). Check each one:
+**Track perceptions (MKT1).** Define set 3–4 perceptions with a status (not yet driven / emerging / strong). Check each one:
 - Are prospects, customers, analysts, and partners repeating it back — in calls, reviews, social posts, community threads?
-- Is its status moving (new → emerging → established)? Update the status with evidence.
+- Is its status moving (not yet driven → emerging → strong)? Update the status with evidence.
 - Which perception is lagging, and what content or campaign would move it?
 - Is content still laddering up to the perceptions, or drifting?
+
+**Check what AI answer engines say.** More buyers now ask an AI assistant before they visit a website. Ask the major assistants the questions the primary audience asks ("best tools for…", "[company] vs [competitor]") and note whether the company appears, how it's described, and which outside pages the answers draw on. Check basics that hide a site from AI crawlers: hero copy that only appears after JavaScript runs, missing structured data, and crawler blocks. Re-check after every significant web change. **With MKT1 tools:** run `mkt1_aeo_audit` for the full technical pass and a prioritized fix list.
 
 **Key questions:**
 - Are customers repeating our language back to us?
@@ -242,7 +248,7 @@ Where prospects lean in, what they ask about, what they misunderstand, what lang
 - Is the category framing working?
 - Are we overleading with features or under-explaining outcomes?
 
-**Templates:** Message performance scorecard, Messaging test plan, Objection frequency tracker, Sales call messaging analysis sheet, Website/campaign copy test brief.
+**Templates:** Message performance scorecard, AI answer-engine check, Messaging test plan, Objection frequency tracker, Sales call messaging analysis sheet, Website/campaign copy test brief.
 
 **Key outputs:** Messaging effectiveness review, Message optimization recommendations, Updated pillars/proof/audience angles, Narrative risk areas.
 
@@ -392,6 +398,7 @@ Grow is not just analysis — it produces improvements in the field. Once PMM id
 - **Repurpose each hit** into more formats (a report → blog posts, social threads, a webinar, a template), each with its **own distribution plan**
 - **Make more of what works** before inventing something new
 - **Reinforce the perceptions** — keep reusing the core perceptions, frameworks, and concepts across formats. Repetition strengthens the story, even when it feels like a broken record.
+- **Plan content against the perceptions** — a content calendar that lists the perceptions and content pillars, then themes by quarter, makes it easy to see which perception is under-served (MKT1's Content strategy & annual planning calendar and Content roadmap). For LinkedIn, use the account's own analytics export to see which hooks, formats, and topics work (`mkt1_linkedin_posts_analysis_beta` when connected).
 
 **Templates:** Enablement update brief, Sales play refresh template, Lifecycle optimization plan, Updated FAQ and objection tracker, Demo narrative revision template, PMA Sales Confidence Survey Questions (to measure impact of updates).
 
@@ -420,7 +427,7 @@ A mature Grow phase always includes a formal learning loop. Without it, the same
 | 🟡 Yellow | Close to working | The most — this is where effort moves results | **Improve** |
 | 🔴 Red | Not working | The least — reds rarely turn green | **Pause** or **stop** |
 
-The common mistake is spending most energy trying to fix the reds. Every item leaves the review with one call — scale, improve, pause, or stop — and an owner.
+The common mistake is spending most energy trying to fix the reds. For the list itself, a stop / start / continue sheet with fields for owner, effort, and impact works well (MKT1's Prioritization list & stop/start/continue exercise). Every item leaves the review with one call — scale, improve, pause, or stop — and an owner.
 
 **Strong review structure:**
 1. Launch objective recap (GACCS goal, revenue lever, big bet success criteria)
@@ -435,14 +442,15 @@ The common mistake is spending most energy trying to fix the reds. Every item le
 10. Implications for future launches
 
 **Quarterly Context Document update (MKT1 strategy review).** Write what Grow learned back into the shared Context Document, each change dated "last verified":
-- **ICP tiers** — move ICPs between Core / Scaling / Testing / Not a priority
-- **Revenue levers** — re-rank if priorities shifted
-- **Marketing advantages** — re-rate current strength; add or drop advantages
+- **ICPs BY MATURITY** — move ICPs between Core / Scaling / Testing / Not a priority; update time allocation today
+- **REVENUE LEVERS** — re-rank if priorities shifted
+- **MARKETING ADVANTAGES** — re-rate strength today and maturity; add or drop advantages
+- **CHANNEL STRATEGY** — re-score engines the traffic-light review moved
 - **Ecosystem** — new competitors, complements, or frenemies; partner performance
-- **Perceptions** — update each status with evidence
-- **Positioning** — flag whether it needs revisiting (e.g., the comparator shifts from the old way to named competitors as the market matures)
+- **PERCEPTIONS** — update each status with evidence
+- **POSITIONING STATEMENT** — flag whether it needs revisiting (e.g., the comparator shifts from the old way to named competitors as the market matures)
 
-These updates are what Discover, Strategize, and Define read on the next cycle.
+These updates are what Discover, Strategize, and Define read on the next cycle. With MKT1 tools connected, re-run the matching tool for any section that changed a lot, rather than editing it by hand.
 
 **If the team has a company profile**, also propose the matching profile updates to each section owner (sections 2, 3, 6, 7, and 9 most often), and re-run the health check from `pmm-setup` so section 0 shows whether the PMM function is improving. Offer to schedule this quarterly review if it isn't already.
 
@@ -563,8 +571,10 @@ These updates are what Discover, Strategize, and Define read on the next cycle.
 **Essential:**
 - Post-launch learning agenda
 - Growth KPI dashboard
-- Campaign influence and lifecycle stage reports
-- Traffic-light review sheet
+- Campaign influence, lifecycle stage, and account-stage progression reports
+- Full-funnel conversion calculator and marketing ops checklist
+- AI answer-engine check
+- Traffic-light review sheet (stop / start / continue)
 - Customer library (searchable proof)
 - Context Document update log
 - Post-launch scorecard
@@ -594,6 +604,8 @@ These updates are what Discover, Strategize, and Define read on the next cycle.
 - Reference customer pipeline
 - Revenue impact scoring framework
 - Market signal tracker for adjacent segments
+- Content calendar mapped to perceptions
+- Bottom-up forecast
 
 ---
 
@@ -628,4 +640,6 @@ The Grow phase feeds back into all upstream phases — it is a continuous loop. 
   - Repurpose and reinforce (MKT1 Field Guide to B2B Startup Marketing, Part 2)
   - Strategy review cadence (Marketing strategy exercises to kick off your annual planning process)
   - Making the cut-vs-scale call (I analyzed 1,100+ marketing job posts)
+  - Templates: Full-funnel conversion calculator, Marketing ops checklist, Bottom-up forecasting sheet, Marketing budget & efficiency metrics, Prioritization list & stop/start/continue, Content strategy & annual planning calendar, Content roadmap
+  - MKT1 MCP tools, when connected: `mkt1_aeo_audit`, `mkt1_incognito_competitive_research`, `mkt1_linkedin_posts_analysis_beta`
 - SVPG / Martina Lauchengco (Loved) — post-launch learning as a shared PM/PMM responsibility for reaching sustained product/market fit

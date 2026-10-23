@@ -2,7 +2,7 @@
 name: pmm-get-set
 description: "This skill should be used when the user wants to \"help me plan the launch for [product/feature]\", \"build the launch plan\", \"run the Get Set phase\", \"create the sales enablement for [launch]\", \"build launch readiness\", \"write the battlecard / objection handling / sales deck\", \"what do we need before we can launch\", \"set up the go/no-go process\", or \"operationalize the launch\". Executes the PMA Get Set phase: 12 steps covering launch tiering and GACCS launch brief, planning and ecosystem amplification, asset briefs, sales enablement, CS readiness, commercial mechanics, internal comms, governance, QA, measurement setup, readiness review, and launch handoff with a post-launch momentum plan.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 
@@ -84,7 +84,9 @@ A Tier 3 release should take about a day of PMM effort, not twelve steps.
 
 ## Inputs and connections
 
-Start from the **Engagement setup**, "Strategy on a page," and Define's one-page summary in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+Start from the **Engagement setup**, "Strategy on a page," and Define's one-page summary in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing. If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`.
+
+**MKT1 tools in Get Set:** `mkt1_gaccs` builds the launch brief (Step 1), and the battle card from `mkt1_competitive_research` supports Step 4. `mkt1_website_examples` shows launch-page and social-proof patterns for Step 3.
 
 ### Company profile and existing work (build mode)
 
@@ -129,11 +131,17 @@ Before building anything, confirm the scale of the launch and define what "ready
 
 | | Contents |
 |---|---|
-| **G — Goal** | The KPI or big bet it serves, the revenue lever it moves, and how success is measured — agreed across marketing, product, and sales |
-| **A — Audience** | Primary ICP and tier; secondary audiences |
-| **C — Creative** | The perception it drives; launch positioning (what the audience uses today, who it's for, what it is, why it's better); format; unique point of view |
-| **C — Channels** | Growth engines, including ecosystem amplification |
-| **S — Stakeholders** | The single DRI, contributors, reviewers, and approvers |
+| **G — Goal** | The KPI or big bet it serves, the revenue lever it moves, the marketing advantage it accelerates, and how success is measured — agreed across marketing, product, and sales. For a launch, favor adoption measures (sign-ups, activation, feature use) over awareness alone. Add what would make it unsuccessful, and what it is not trying to do |
+| **A — Audience** | Primary ICP and tier; prospects, customers, or both; funnel stage and awareness level; secondary audiences |
+| **C — Creative** | The perception it drives; launch positioning (what the audience uses today, who it's for, what it is, why it's better); a clear before and after; format; unique point of view; proof points; existing assets to reuse |
+| **C — Channels** | Growth engines, including ecosystem amplification; where the main content lives; in-product, changelog, and email to existing users; sales enablement |
+| **S — Stakeholders** | The single DRI, contributors, reviewer, and approvers; product and engineering hand-offs; schedule, budget, and dependencies |
+
+**Size the brief to the launch.** Ask the impact (high / medium / low) and effort (high / medium / low). High on either means a full brief; medium on both means a standard brief in tight bullets; low means a quick brief short enough for a chat message or task description. Tier 1 launches get the full brief.
+
+**Fill in only what has been decided.** If the team has notes, a thread, or an old brief, map them onto GACCS and leave the gaps visibly empty, then ask for each one. Never infer the audience's awareness level, funnel stage, or segmentation from how leads behave or which channel they came through — ask, or take it from Define. A brief with a known gap beats a brief with a guess in it.
+
+**With MKT1 tools:** run `mkt1_gaccs` with the launch context and any existing notes, and answer its questions from the Context Document (big bet, lever, advantage, perception, ICP) before asking the user. Write the brief to **GACCS LAUNCH BRIEF**.
 
 Get ICP input before the launch where possible: customer calls, beta feedback, validation calls, message tests.
 
@@ -145,7 +153,7 @@ Get ICP input before the launch where possible: customer calls, beta feedback, v
 - Customer readiness
 - Measurement readiness
 
-**Templates:** Launch tiering framework, GACCS launch brief, Readiness criteria checklist, Stage-gate framework, PMA Launch Tiers (coda.io/@product-marketing-alliance-pma).
+**Templates:** Launch tiering framework, GACCS launch brief (MKT1's GACCS brief, and its extended Campaign brief for Tier 1), Readiness criteria checklist, Stage-gate framework, PMA Launch Tiers (coda.io/@product-marketing-alliance-pma).
 
 **Key outputs:** Launch-or-not decision, Launch tier recommendation, GACCS launch brief, Readiness definition, Stage-gate criteria.
 
@@ -165,9 +173,12 @@ Product, web/content, demand gen, sales enablement, CS/support, lifecycle/custom
 - Pick the creators, customers, partners, and community members whose audiences overlap most with the primary ICP
 - Give them **early access** and an **amplification kit** (key messages, visuals, short demo, suggested angles) so they can talk about the launch in their own words
 - Make the ask easy to fulfill — e.g., a calendar invite for the moment to post
+- For paid creator or LinkedIn sponsored posts, send a short creator brief: goals, key messages and copy notes, example posts, and audience background
 - Treat press as one channel among several, not the plan
 
 **Pair the launch with other moments (MKT1).** Look for moments that amplify the story: a data report that frames the problem before the feature arrives, an event, a fundraise, a rebrand. Bundle stories and content, not just features — and use the launch as a forcing function for related initiatives.
+
+**Events in the launch plan.** Before committing to an in-person event (hosted or sponsored), run it through a go / no-go rubric — audience fit, the specific attendees, cost against expected pipeline or relationships, and follow-up capacity. If it passes, it gets its own GACCS brief; invites to target accounts matter more than public promotion.
 
 **Explicit milestone categories:**
 - Strategy frozen
@@ -179,7 +190,7 @@ Product, web/content, demand gen, sales enablement, CS/support, lifecycle/custom
 
 **Workback sequencing from launch date:** asset deadlines → review cycles → training date → QA/compliance signoff → web deployment date → pricing/SKU readiness → CRM/reporting configuration.
 
-**Templates:** Launch project plan, Workback schedule, Cross-functional launch tracker, Dependency tracker, RACI/DACI, Decision log, PMA Launch Checklist (coda.io/@product-marketing-alliance-pma), PMA Internal Roadmap Template.
+**Templates:** Launch project plan (MKT1's Campaign launch plan builds from the GACCS brief to launch day), Campaign roadmap (to weigh the launch against other campaigns), In-person events rubric, Creator brief, Workback schedule, Cross-functional launch tracker, Dependency tracker, RACI/DACI, Decision log, PMA Launch Checklist (coda.io/@product-marketing-alliance-pma), PMA Internal Roadmap Template.
 
 **Key outputs:** Integrated launch plan, Workback timeline, Cross-functional ownership map, Dependency and escalation tracker.
 
@@ -199,8 +210,10 @@ Positioning doesn't automatically become usable assets — teams need structured
 - Message pillar it supports
 - Proof point it demonstrates
 - CTA
-- **Distribution plan, set up front** (MKT1): primary channel, gated or ungated, expected reach (high / medium / low) — don't make distribution an afterthought
+- **Distribution plan, set up front** (MKT1): primary channel, gated or ungated, expected reach (high / medium / low), and **distribution tier** — don't make distribution an afterthought
 - Owner and deadline
+
+**Use content distribution tiers.** Set a standing playbook for each tier so every asset gets the right amount of distribution without re-deciding it each time — for example, a top-tier asset gets the blog, newsletter, company and executive social posts, a paid boost, partner shares, and a sales email; a bottom-tier asset gets the blog and one social post. MKT1's Content launch tiers sheet is a starting point.
 
 **Typical assets to scope by tier:**
 
@@ -210,7 +223,7 @@ Positioning doesn't automatically become usable assets — teams need structured
 *Customer-facing:* customer FAQs, release notes, customer communications, onboarding materials.
 *Internal:* internal FAQ, executive talking points, PR/analyst brief (if relevant).
 
-**Templates:** Content brief template, Message-to-asset mapping worksheet, Asset prioritization list, Web page brief, Campaign brief, Customer communications brief, Executive narrative brief.
+**Templates:** Content brief template, Content launch tiers, Message-to-asset mapping worksheet, Asset prioritization list, Web page brief, Campaign brief, Customer communications brief, Executive narrative brief.
 
 **Key outputs:** Prioritized asset list, Content and creative briefs, Message-to-asset map, Copy guidance and source language.
 
@@ -250,7 +263,13 @@ A launch is not ready because a deck exists. It is ready when the field can conf
 - **Speak sales' language.** Frame the launch's value and results in pipeline, meetings, and closed deals, not impressions or MQLs.
 - **Set rules for launch-generated leads.** Who follows up, within what window, and the automated nurture fallback if the window passes. Agree ownership of the CRM fields and stages involved.
 
-**Templates:** Sales enablement plan, Readiness checklist, Sales play template, Launch lead rules of engagement, PMA Battlecard Template (coda.io/@product-marketing-alliance-pma), Objection handling framework (PMA Objection Handling Script), Demo talk track template, Discovery question guide, FAQ template, Certification/knowledge-check template, PMA Sales Playbook Template, PMA Sales One-Pager.
+**Battlecards that reps use.** Build from Discover's competitor research, one card for a few competitors side by side. Keep only what reps need: entry price; who it's for, what it is (in the competitor's words), and why they claim it's better; their pitch; where they win; the objections their reps raise; and what our reps say back. Brainstorm likely objections from the competitor's comparison pages and positioning, have sales confirm the real ones (keep two to four per competitor), then capture each answer in the rep's own words — don't polish them. Refresh on a schedule, and flag at the top when a competitor's angle changes.
+
+**With MKT1 tools:** if `mkt1_competitive_research` ran in Discover, its battle card option builds this card from that dataset with the same confirm-then-capture steps, and can refresh it on a schedule.
+
+**Map follow-up rules on the funnel.** Draw the stages from first touch through closed-won, renewal, and expansion, and note who may contact a prospect or customer at each stage and what triggers a hand-off. For account-based motions, add the buying signals that trigger outreach (MKT1's Funnel maps and Account-driven rules of engagement & signals sheets).
+
+**Templates:** Sales enablement plan, Readiness checklist, Sales play template, Launch lead rules of engagement, Funnel map, PMA Battlecard Template (coda.io/@product-marketing-alliance-pma), Objection handling framework (PMA Objection Handling Script), Demo talk track template, Discovery question guide, FAQ template, Certification/knowledge-check template, PMA Sales Playbook Template, PMA Sales One-Pager.
 
 **Key outputs:** Field enablement plan, Sales readiness assets, Training sessions, Readiness completion status, FAQ/objection handling set.
 
@@ -392,10 +411,10 @@ PMM acts as the final quality-control layer across message consistency and custo
 A launch is not ready if you cannot measure whether it worked. Measurement setup belongs in Get Set, not after launch.
 
 **Tie metrics to the revenue lever the launch is meant to move** (from Strategize):
-- *Core-audience top of funnel* → qualified pipeline and win rate in Core ICPs
-- *New audience* → top-of-funnel growth and early pipeline in the new ICP
-- *Customer value* → adoption, expansion revenue, retention
-- *Efficiency* → conversion rates, sales velocity, cost per acquisition
+- *Grow TOF with existing audience* → qualified pipeline and win rate in Core ICPs
+- *Grow TOF with new audience* → top-of-funnel growth and early pipeline in the new ICP
+- *Increase value per customer* → adoption, expansion revenue, retention
+- *Improve efficiency* → conversion rates, sales velocity, cost per acquisition
 
 Make sure the GACCS brief's goal and these metrics match, and that marketing, product, and sales agreed on them before launch.
 
@@ -602,9 +621,11 @@ For Tier 2 and 3 launches, the GACCS brief plus the relevant sections is enough.
 - Workback plan / integrated project plan
 - Cross-functional RACI or DACI
 - Dependency tracker
-- Content brief template, Message-to-asset mapping worksheet
+- Content brief template, Message-to-asset mapping worksheet, Content launch tiers
+- Campaign roadmap and campaign launch plan
+- Funnel map with rules of engagement
 - Sales enablement plan
-- PMA Battlecard Template, Objection Handling Script, Sales Playbook Template, Sales One-Pager
+- PMA Battlecard Template (or the MKT1 battle card from competitive research), Objection Handling Script, Sales Playbook Template, Sales One-Pager
 - FAQ template
 - Customer communications brief
 - Internal communications plan
@@ -619,6 +640,8 @@ For Tier 2 and 3 launches, the GACCS brief plus the relevant sections is enough.
 
 **Optional but valuable:**
 - Certification quiz/knowledge check
+- In-person events rubric
+- Creator brief for sponsored posts
 - Demo narrative template
 - Support macro guide
 - Executive briefing doc
@@ -656,4 +679,6 @@ Get Set outputs directly enable:
   - Campaign framework and GACCS brief (MKT1 Field Guide to B2B Startup Marketing, Part 1; Dear Marketers, Episode 2; The GACC Marketing Brief)
   - Distribution planned up front (Stop making content distribution an afterthought)
   - Working with sales, rules of engagement for leads (Dear Marketers, Episode 5: How can sales and marketing actually work together?)
+  - Templates: GACCS brief, Campaign brief, Campaign launch plan, Campaign roadmap, Content launch tiers, In-person events rubric, Funnel maps, Account-driven rules of engagement & signals, Creator campaign brief
+  - MKT1 MCP tools, when connected: `mkt1_gaccs`, `mkt1_competitive_research` (battle card), `mkt1_website_examples`
 - SVPG / Martina Lauchengco (Loved) — launch readiness as a shared PMM/PM accountability, not a handoff

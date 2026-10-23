@@ -2,7 +2,7 @@
 name: pmm-define
 description: "This skill should be used when the user wants to \"build the positioning for [company/product]\", \"write the messaging framework\", \"help me define the product story\", \"run the Define phase\", \"create a messaging house\", \"build the value proposition\", \"help me with positioning and messaging\", \"write the product narrative\", \"define our use cases\", or \"build the differentiation framework\". Executes the PMA Define phase: 14 steps covering product type and comparator, positioning statement, messaging architecture, personas, use cases, differentiation, proof points, perceptions, product narrative, message validation, and governance.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 
@@ -66,7 +66,9 @@ Product positioning is also a subset of the company story, not the whole of it. 
 
 ## Inputs and connections
 
-Start from the **Engagement setup**, the Discover section, and "Strategy on a page" in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing.
+Start from the **Engagement setup**, the Discover section, and "Strategy on a page" in the Context Document. Re-check which tools are connected (see `skills/pmm-director/references/connections.md`); ask only for what's missing. If MKT1 tools (`mkt1_*`) are connected, use them for the steps that name one, following `skills/pmm-director/references/mkt1-tools.md`.
+
+**MKT1 tools in Define:** `mkt1_positioning` (Steps 3–4), `mkt1_perceptions` (Step 11), and `mkt1_homepage_positioning` (Step 13); `mkt1_website_examples` shows homepage, social-proof, and comparison-page patterns from other B2B companies. Each step says what to keep from the plugin's method alongside the tool.
 
 ### Company profile and existing work (build mode)
 
@@ -166,6 +168,8 @@ Customers understand new offers by comparing them to something they already know
 - Clarify what you are, what you are not, and how buyers describe the space — align to buyer language, not internal preference
 - Map the full set of substitutes (direct competitors, status quo, manual workaround, internal build, adjacent tools) so Step 8 can address them
 
+**With MKT1 tools:** Steps 3 and 4 run as one pass of `mkt1_positioning` — see Step 4.
+
 **Templates:** Product type and comparator worksheet, Competitive alternatives map, "What are we?" decision memo.
 
 **Key outputs:** Product type, chosen comparator (with rationale and runners-up), Competitive alternatives map, Category language guidance.
@@ -201,19 +205,24 @@ We [differ in specific, credible ways]
 Because [proof / reasons to believe]
 ```
 
+**Set the audience's awareness level.** Decide whether the primary audience is **problem-aware** (knows there's a problem), **solution-aware** (knows solutions exist), or **product-aware** (already knows this product — usually only later-stage companies). Problem-aware audiences need "what is it" explained very plainly; solution-aware audiences need the comparison to be sharp. The product type is a clue: buyers of a "10x better" product are usually solution-aware; buyers of a new way, vertical solution, or buy-vs-build product often aren't.
+
 **Actions:**
 - Build a positioning statement covering: target audience, need/problem, product/solution definition, key value, differentiation, proof/credibility
 - Test it: is it specific? Is it distinct from competitors? Is it focused on outcomes? Is it credible and supportable? Simple enough to remember, strong enough to scale?
 - Compare against the Strategize positioning hypothesis: record what changed and why
+- Record the "why it's better" options you considered and rejected, and why, so the decision isn't re-argued later
 
 **Refinements (only where needed):**
 - **Segment-level positioning** for a Scaling-tier ICP whose who / why-better genuinely differs
 - **Feature- or product-level positioning** for a distinct product line
 - **Today vs. future positioning** — what you can credibly claim now, versus where the product is heading. Never let future positioning leak into today's copy.
 
-**Templates:** Three-question positioning template, Positioning statement template (PMA: coda.io/@product-marketing-alliance-pma), Geoffrey Moore-style positioning framework, Internal positioning canvas.
+**With MKT1 tools:** run `mkt1_positioning` for Steps 3 and 4. Give it Discover's candidate comparators and the Strategize hypothesis so it starts from evidence, not a blank page. It returns product type, comparator, and the three answers for today and one year out; write them to **POSITIONING STATEMENT**. Then do the rest here: awareness level, long-form statement, rejected options, refinements, and the change log.
 
-**Key outputs:** Master positioning (three answers), Long-form internal positioning statement, Positioning change log vs. the Strategize hypothesis, Approved market-facing positioning direction.
+**Templates:** Three-question positioning template, Positioning statement template (PMA: coda.io/@product-marketing-alliance-pma; MKT1's Positioning statement template adds a summary of decisions), Geoffrey Moore-style positioning framework, Internal positioning canvas.
+
+**Key outputs:** Master positioning (three answers), Audience awareness level, Long-form internal positioning statement, Positioning change log vs. the Strategize hypothesis, Approved market-facing positioning direction.
 
 **Good:** Specific, audience-centered, outcome-focused, distinct from competitors, credible and scalable.
 **Weak:** Generic "single pane of glass / end-to-end / seamless / innovative" language; could apply to any competitor; no clear difference from status quo; too broad to be useful.
@@ -270,6 +279,7 @@ Define is where PMM sharpens personas into messaging-ready audience profiles —
 - Refine buyer personas and user personas
 - Identify buying committee roles and map: goals, pain points, triggers, priorities, objections, decision criteria, preferred proof
 - Differentiate between: champion, decision-maker, user, blocker, evaluator
+- For each priority segment, write the discovery questions sales can ask and the timing signals that show a prospect is ready (start from Strategize's per-segment notes, 3A)
 
 **Buyer committee mapping (B2B):**
 - Who feels the pain?
@@ -286,7 +296,7 @@ Define is where PMM sharpens personas into messaging-ready audience profiles —
 
 **Templates:** PMA B2B Buyer Persona Template (coda.io/@product-marketing-alliance-pma), PMA B2C Buyer Persona Example, PMA B2B User Persona Template, PMA B2B Persona Questions, Buyer committee map, Persona messaging brief, Objection and priority matrix.
 
-**Key outputs:** Refined personas, Buyer committee map, Persona-specific priorities and messaging guidance.
+**Key outputs:** Refined personas, Buyer committee map, Persona-specific priorities and messaging guidance, Discovery questions and timing signals by segment.
 
 **Good:** Personas influence actual messaging and asset creation; team understands buyer vs. user needs; objections and proof needs are specific by audience.
 **Weak:** Personas are demographic posters with no strategic utility; internal teams cannot use them in real work; buyer/user/approver blended together.
@@ -411,25 +421,33 @@ Messaging cannot exist in a vacuum — how an offer is packaged shapes how it sh
 
 ### Step 11 — Define perceptions (the company story layer)
 
-Product positioning covers the product. **Perceptions** cover the whole company story: the 3–5 beliefs you want your audience to hold and repeat back to you (MKT1). They sit above product positioning; the product story, launches, and most content should support at least one of them. Without them, every launch tells a separate story.
+Product positioning covers the product. **Perceptions** cover the whole company story: the 3–4 beliefs you want your audience to hold and repeat back to you (MKT1). Together they make up the **story stack**. They sit above product positioning; the product story, launches, and most content should support at least one of them. Without them, every launch tells a separate story.
 
-**Write 3–5 perceptions, each:**
+**Write 3–4 perceptions, each:**
 - Written from the **audience's point of view**, as a belief they'd say out loud ("Brand is measurable," not "We measure brand")
-- Tagged with a category: **company**, **audience**, **market**, or **product** insight
-- Given a status: **established** (already believed), **emerging** (some evidence), or **new** (we must create it)
+- One short sentence the audience could say to a peer
+- Tagged with a category: **market**, **company**, **product**, or **community**. The categories are prompts to cover the whole story, not boxes to fill; several product perceptions usually collapse into one
+- Given a short internal label (2–4 words, in the company's voice) the team uses to refer to it
+- Given a status: **strong** (already driven), **emerging** (some evidence), or **not yet driven**
 - Backed by supporting evidence — customer quotes, data, trends — that content can later use
 - Durable for roughly 6–12 months
 
-**Test:** No other company could credibly claim the same combination of perceptions. If a competitor could, sharpen them.
+**Tests:**
+- No other company could credibly claim the same combination of perceptions. If a competitor could, sharpen them.
+- Read together, the set covers the whole story — market, company, product — not four product claims.
+- A market perception should take a side; one everyone agrees with isn't doing its job. Product perceptions can be plain and direct.
+- Take the last ten pieces of content: each should support at least one perception. If many don't, the content is off-strategy or a perception is missing.
 
 **Actions:**
 - Start from Strategize's working perceptions; refine them cross-functionally (product, sales, CS, leadership), grounded in Discover research, and log what changed — big bets planned in Strategize may need updating if a perception changes
 - Check that the master positioning reinforces at least one product perception
 - For each perception, sketch the content, campaigns, or proof that would drive it (handed to Get Set and Grow)
 
-**Templates:** Perceptions worksheet (perception, POV, category, status, evidence, programs that drive it).
+**With MKT1 tools:** run `mkt1_perceptions`, starting from Strategize's working perceptions. Its content-audit path reads existing content (homepage, posts, blog) and shows which perceptions it already builds — useful in job hunt mode too. Write the result to **PERCEPTIONS**; keep the evidence and the content, campaign, or proof sketches for each perception, which the tool doesn't add.
 
-**Key outputs:** 3–5 approved perceptions with status and supporting evidence.
+**Templates:** Perceptions worksheet (perception, label, category, status, evidence, programs that drive it).
+
+**Key outputs:** 3–4 approved perceptions (the story stack) with status and supporting evidence.
 
 **Good:** Perceptions are specific, audience-voiced, and distinctive; teams can say which perception a piece of content supports.
 **Weak:** Perceptions read like company values or taglines; written in "we" voice; generic enough that any competitor could claim them.
@@ -473,14 +491,24 @@ PMMs should not assume the first draft is correct because internal stakeholders 
 
 **What to test:** clarity, relevance, differentiation, believability, emotional resonance, recall.
 
-**Homepage hero test (MKT1):** Visitors give a homepage a few seconds. Show the hero (or a draft of it) to someone in the primary audience for about five seconds, then ask: Who is this for? What is it? Why is it better than what you use now? If they can't answer all three, the copy failed — fix messaging before writing more assets. In job hunt mode, run this audit on the company's current homepage and propose a rewrite.
+**Homepage hero test (MKT1):** Visitors give a homepage a few seconds. Show the hero (or a draft of it) to someone in the primary audience for about five seconds, then ask: Who is this for? What is it? Why is it better than what you use now? If they can't answer all three, the copy failed — fix messaging before writing more assets.
+
+**Homepage review.** Use it to audit the current homepage (always in job hunt mode) or a draft:
+- **Confirm it's a real homepage first.** A login screen, a parked or for-sale domain, a "coming soon" page, or an empty page can't be graded — say what it is and ask for the right URL or a screenshot. Describe only what's on the page, never what you already know about the company, and label copy pulled by a web fetch as approximate.
+- **Grade the hero and the full page separately.** For each of who it's for, what it is, and why it's better, rate clear / partly clear / unclear, and say whether the comparator is obvious. Early-stage companies need the hero to do this work; well-known companies can lead with brand, but the full page still has to.
+- **Check fit with the product type.** A vertical solution should name its vertical; a new way should position against the old way, not a named competitor.
+- **Check calls to action.** One clear primary action in the hero, a secondary that looks secondary, a next step at the end of each section, and a distinct call to action in the navigation.
+- **Check the common messaging mistakes** (Step 14's copy guardrails): generic outcomes, features without benefits, claims without proof, trying to speak to every audience or use case at once.
+- **Propose a rewrite:** a short headline, and a one-sentence subheadline that carries the context, comparator, or proof the headline can't.
+
+**With MKT1 tools:** run `mkt1_homepage_positioning` for the review; it returns letter grades for the hero and full page, the gaps, and a suggested hero. Write it to **HOMEPAGE REVIEW**, then check the suggested hero against the final positioning from Step 4. For examples of how other companies handle a pattern, use `mkt1_website_examples`.
 
 **Qualitative testing:** interviews to explore what resonates, what confuses, what feels unique, what sounds generic.
 **Quantitative testing:** surveys or experiments to measure preference, comprehension, perceived differentiation, and intent.
 
 **Templates:** Message testing guide, Concept test interview script, Sales feedback form, A/B messaging experiment brief.
 
-**Key outputs:** Messaging validation summary, Revised positioning and message recommendations, Known message risks.
+**Key outputs:** Messaging validation summary, Homepage review with a proposed hero, Revised positioning and message recommendations, Known message risks.
 
 **Good:** PMM uses customer and field feedback to improve the narrative; messaging gets sharper before campaign build starts; evidence that the message lands.
 **Weak:** Messaging approved internally only; revision driven by HIPPOs not market response; teams learn messaging is weak after launch.
@@ -518,9 +546,9 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 
 **Page 1 — Positioning & messaging on a page:**
 - Primary audience (and ICP tier)
-- Product type and comparator
+- Product type, comparator, and audience awareness level
 - Master positioning: who it's for / what it is / why it's better
-- Perceptions (3–5)
+- Perceptions (3–4)
 - Top-level messaging blocks: problem / solution / who / why better
 - Three value pillars, each with its strongest proof point
 - Land use case
@@ -533,7 +561,7 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 | A. Audience definition | Primary segment, buyer personas, user personas, buying roles |
 | B. Customer problem | Core pain, current-state friction, business impact, why now |
 | C. Value proposition | Core value thesis, desired outcomes, promise to customer |
-| D. Frame of reference | Product type rationale, comparator runners-up, full alternatives map |
+| D. Frame of reference | Product type rationale, comparator runners-up, "why better" options rejected, full alternatives map |
 | E. Long-form positioning | Full internal positioning statement; segment, feature, and future positioning if any |
 | F. Messaging architecture | Core message, value pillars, support points, proof points |
 | G. Persona & use-case adaptations | What each audience cares about, objections, tailored value emphasis |
@@ -555,11 +583,12 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 - [ ] Customer problem clearly articulated?
 - [ ] Desired customer outcome defined?
 - [ ] Product type identified and one comparator chosen?
+- [ ] Audience awareness level set?
 - [ ] Strategize positioning hypothesis tested and changes logged?
 
 **Messaging:**
 - [ ] Master positioning written as three answers (who / what / why better)?
-- [ ] 3–5 perceptions defined, audience-voiced, with status?
+- [ ] 3–4 perceptions defined, audience-voiced, with status?
 - [ ] Land use case named?
 - [ ] One-page summary exists?
 - [ ] Value pillars created with supporting proof?
@@ -582,7 +611,7 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 
 **Validation and governance:**
 - [ ] Messaging tested externally or with the field?
-- [ ] Homepage hero passes the who / what / why-better test?
+- [ ] Homepage hero passes the who / what / why-better test, and hero and full page have been reviewed separately?
 - [ ] One approved source of truth exists?
 - [ ] Teams know what language to use and avoid?
 
@@ -651,7 +680,8 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 - Differentiation framework
 - Claims-to-proof matrix
 - Product story / narrative outline (PMA Storytelling Framework)
-- Message testing guide, including the homepage hero test
+- Message testing guide, including the homepage hero test and homepage review
+- Homepage messaging & copy (MKT1): turns positioning into messaging by audience and section
 - Terminology and governance guide, including voice and tone
 
 **Optional but valuable:**
@@ -668,7 +698,7 @@ Lead with a **one-page summary** that most teams can work from on its own. Every
 
 The Define outputs power everything in Get Set:
 - **PMM Get Set** — uses the one-page summary, messaging framework, positioning statement, persona guides, land use case, use-case narratives, and product story to build: sales decks, battlecards, launch emails, demo talk tracks, onboarding copy, website copy, campaign briefs. Launch messaging must support at least one perception.
-- **PMM Grow** — uses messaging as the baseline to measure adoption and message pull-through post-launch, and tracks whether perceptions are moving from new → emerging → established
+- **PMM Grow** — uses messaging as the baseline to measure adoption and message pull-through post-launch, and tracks whether perceptions are moving from not yet driven → emerging → strong
 
 Define also writes back to the Discover Context Document if positioning work changes the primary audience, primary problem, or comparator.
 
@@ -693,4 +723,6 @@ Define also writes back to the Discover Context Document if positioning work cha
   - Messaging building blocks, messaging vs. copy (How to create a more effective homepage)
   - Perceptions (Perceptions: Our favorite marketing strategy exercise; How to build your marketing strategy in Claude)
   - Common messaging mistakes, brand personality (guest post by Allyson Letteri)
+  - Templates: Writing a positioning statement, Homepage messaging & copy, Web screenshots and copy library
+  - MKT1 MCP tools, when connected: `mkt1_positioning`, `mkt1_perceptions`, `mkt1_homepage_positioning`, `mkt1_website_examples`
 - SVPG / Martina Lauchengco (Loved) — messaging as the market side of product/market fit

@@ -2,6 +2,68 @@
 
 All notable changes to the PMM Framework plugin. Versions follow [semantic versioning](https://semver.org): minor versions add or expand skills; patch versions fix wording or errors.
 
+## [0.5.0] — 2026-10-23
+
+Uses the MKT1 MCP's tools when a team has them connected, aligns the plugin's MKT1 vocabulary with them, and adds MKT1 methods the plugin was missing. Every step still works without MKT1.
+
+### Added — shared
+- **`skills/pmm-director/references/mkt1-tools.md`**: how to detect MKT1 tools (`mkt1_*`); which twelve plugin steps hand off to which tool; supporting tools; the pattern for a handed-off step (feed it the Context Document, follow its rules, write the confirmed result back, fall back to the plugin's method if it fails); surface limits; a monthly changelog check for maintainers; distribution rules (tool and template names only, no MKT1 URLs or tool text in the plugin).
+- **Framework library** connection category in `connections.md`. MKT1 is never listed as a missing connection.
+- Context Document strategy sections use MKT1's section names (COMPANY OVERVIEW, ICPs BY MATURITY, COMPETITIVE RESEARCH, MARKETING ADVANTAGES, REVENUE LEVERS, CHANNEL STRATEGY, BIG BET CAMPAIGNS, KPO GOALS, POSITIONING STATEMENT, PERCEPTIONS, HOMEPAGE REVIEW, GACCS LAUNCH BRIEF).
+
+### Changed — `pmm-director`
+- Reads `mkt1-tools.md` when MKT1 tools are present; a connected MKT1 tool outranks the plugin's description of the same practice; new "MKT1 tools" mode setting; intake records whether MKT1 is connected.
+- Job hunt mode lists the MKT1 scorecard, interview question, outside-view, and offer tools.
+
+### Changed — `pmm-discover`
+- **ICP tiering** hands off to `mkt1_icp_prioritization`; adds tiering rules (role plus company type, tier by evidence, name a "Not a priority today" ICP) and **time allocation today** with mismatch flags.
+- **TAM coverage** adds segment details, an estimated company count, and segments ruled outside the TAM.
+- **Competitor research** hands off to `mkt1_competitive_research`; the plugin's own matrix adds comparison pages, customer overlap, marketing approach, and sales approach rows, plus optional positioning spectrums. `mkt1_incognito_competitive_research` adds an outside view.
+- **Ecosystem map** adds relationship today, composition vs. coverage, three-sided value exchange, money exchanged, and a partner-program summary.
+- New research rule: a blocked page (401/403) is not a missing one. Market type joins the Discovery Summary.
+
+### Changed — `pmm-strategize`
+- Hands off revenue levers, marketing advantages, big bets, KPO goals, and growth engines to the matching MKT1 tools.
+- **Revenue levers**: why-this-rank and focus per lever, typical ranking patterns, levers mapped to ICP tiers, and the trap to avoid.
+- **Marketing advantages**: four kinds of advantage as prompts (product, ecosystem, fuel, engine) and the "does it change GTM?" test.
+- **Goals and big bets**: five to eight goals tagged to advantage, perception, and lever; big bets defined as fuel + engine + audience and scored (big enough / all components / fits the model / aligns), with account-stage measurement for events and partner bets.
+- **Audience strategy**: compare with time allocation today; playbook by tier; per-segment message notes, discovery questions, and timing signals.
+- **GTM motion**: classify from observable signals (deal size, pricing, adoption, homepage CTA, KPIs, team mix).
+- **Growth engines**: 1–5 fit scores across motion, market type, and advantages; the senior-buyer and rip-and-replace rule; tactics per engine; engine pairings.
+
+### Changed — `pmm-define`
+- Hands off positioning (Steps 3–4), perceptions (Step 11), and the homepage review (Step 13) to the matching MKT1 tools.
+- Adds **audience awareness level** (problem / solution / product aware) and a record of "why better" options rejected.
+- Persona work adds discovery questions and timing signals by segment.
+- Perception tests add whole-story coverage, an opinionated market perception, and a ten-piece content check.
+- New **homepage review**: confirm it's a real homepage, grade hero and full page separately, check fit with product type and calls to action, and propose a rewrite.
+
+### Changed — `pmm-get-set`
+- Launch brief hands off to `mkt1_gaccs`; GACCS fields expanded; brief depth sized by impact and effort; no inferring audience awareness, funnel stage, or segmentation.
+- Content distribution tiers; events go/no-go rubric; creator brief for sponsored posts.
+- Battlecards built from Discover's research with objections confirmed by sales and answers in reps' own words; MKT1 battle card when connected; follow-up rules mapped on a funnel.
+
+### Changed — `pmm-grow`
+- Measurement adds account-stage progression for events and partner campaigns, and conversion by source at every stage.
+- New AI answer-engine check (with `mkt1_aeo_audit` when connected).
+- Content calendar mapped to perceptions; stop / start / continue sheet for the traffic-light review.
+- Quarterly Context Document update uses MKT1 section names and re-runs MKT1 tools for sections that changed a lot.
+
+### Changed — `pmm-setup` and company profile
+- Company snapshot hands off to `mkt1_company_overview`; the snapshot adds buyers and how they evaluate, market type, GTM motion details, and brand and voice references.
+- Optional MKT1 strategy progress view in the health check report.
+
+### Changed — vocabulary (all skills)
+- **Perceptions**: 3–4 forming a story stack; categories market / company / product / community; status strong / emerging / not yet driven; a short internal label for each.
+- **Revenue levers**: MKT1's four names exactly, ranked with no ties by marketing's impact over the next 6–12 months.
+- **GTM motion**: five buckets from pure self-serve to pure sales-led; partner-led is a growth engine, not a motion.
+- **Marketing advantages**: strength today, potential, maturity (nascent / testing / scaled), priority; focus on 1–3.
+- **Market type**: established category, new category, or vertical.
+- "Not a priority today" stays as the fourth ICP tier (MKT1's tool calls it "Future").
+
+### Changed — README and manifest
+- README adds "If your team uses MKT1" and the framework library row; version 0.5.0 throughout.
+
 ## [0.4.0] — 2026-10-21
 
 Makes the plugin easy for teams who didn't build it: a guided setup, a reusable company profile, and plain-language entry points.

@@ -2,7 +2,7 @@
 name: pmm-director
 description: "This skill should be used when the user wants to \"act as a Product Marketing Director\", \"run the PMM framework\", \"help me with product marketing\", \"what can you help with\", \"what should I do next\", \"what phase should I start with\", \"I'm doing product marketing for [company]\", \"orient me to the PMM framework\", or any general product marketing request that doesn't map to a specific phase skill. Use this as the entry point: it offers a menu of jobs, checks for a company profile (routing first-time teams to pmm-setup), runs engagement intake, and routes to the right phase. Built on the PMA 5-phase framework, refined with MKT1 operating practices.\n"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   author: "Parker Lyons"
 ---
 
@@ -45,7 +45,7 @@ There are two layers of context. Check for both before routing:
 
 ## Engagement intake
 
-Good inputs decide the quality of everything downstream, so the Director runs a short intake once per engagement. The full question bank is in `references/intake.md`; tool categories and guardrails are in `references/connections.md`. Read both before starting intake.
+Good inputs decide the quality of everything downstream, so the Director runs a short intake once per engagement. The full question bank is in `references/intake.md`; tool categories and guardrails are in `references/connections.md`. Read both before starting intake. If `mkt1_*` tools are in the session, also read `references/mkt1-tools.md`.
 
 **Round 1 — every engagement** (ask together, with choices where possible):
 1. Company and product (URL if possible)
@@ -58,7 +58,7 @@ Good inputs decide the quality of everything downstream, so the Director runs a 
 - **Job hunt mode:** the job posting link; interview stage and any presentation prompt; links to start research from (homepage, pricing, blog, changelog, help docs, case studies, review sites, news, industry reports); competitors and alternatives the user knows; what they've heard from their network; their own hypotheses; and research depth — **quick scan** (regular, targeted research) or **deep dive** (deep research for the broad landscape plus targeted research for precise details; check it's available, and tell the user if they need to turn it on). Optionally, with permission, the user's own email, meeting notes, or docs (recruiter threads, earlier interview notes, prep notes).
 - **Build mode:** the initiative and stakeholders; what's decided vs. open; links to existing material (positioning, personas, strategy, past launches, win/loss); the company's tools by category; and anything Claude should not read or copy into shared documents. **If a company profile exists, ask only about this initiative** — the profile already covers materials, tools, and boundaries.
 
-**Round 3 — build mode: check connections.** Match the tools available in this session to the categories in `references/connections.md`, tell the user what's connected, and suggest only the two or three most valuable missing ones for the phases ahead. Never block on a connection — continue with what's available and note the gap.
+**Round 3 — build mode: check connections.** Match the tools available in this session to the categories in `references/connections.md`, tell the user what's connected, and suggest only the two or three most valuable missing ones for the phases ahead. Never block on a connection — continue with what's available and note the gap. In either mode, check for MKT1 tools (`mkt1_*`); if they're there, say once which steps will use them (`references/mkt1-tools.md`).
 
 **Then:**
 1. Summarize the setup back in a few lines and confirm
@@ -97,6 +97,8 @@ For new engagements, always recommend starting with **Discover** unless the user
 - Light Strategize: Workstream 1 only — revenue levers, marketing advantages, working positioning and perceptions
 - Define: final positioning, perceptions, the one-page summary, and a homepage hero audit with a proposed rewrite
 
+With MKT1 tools connected, job hunt mode can add: `mkt1_job_description_and_scorecard` (build the scorecard the hiring manager is likely using from the job posting, then map the user's evidence to it), `mkt1_interview_questions` (likely questions for the role), and `mkt1_incognito_competitive_research` with the candidate's or buyer's lens. At offer stage: `mkt1_marketing_comp_checker`, `mkt1_salary_lookup`, and `mkt1_startup_equity_evaluator`.
+
 ## Company profile vs. Context Document
 
 | | Company profile | Context Document |
@@ -114,6 +116,7 @@ When an engagement produces something durable — a new ICP tier, final position
 The **Context Document** is the shared memory across all phases of one engagement. It is created at intake (or by Discover, if intake was skipped), titled `[Company] — PMM Context`, in Google Drive if connected (Markdown otherwise). It is a **living document**:
 - It opens with the **Engagement setup** from intake: mode, goal, deliverable, timeline, links, known competitors, connected tools, and exclusions
 - Each phase adds its own section (Discover findings; Strategize's "Strategy on a page"; Define's one-page summary; Get Set's GACCS launch brief; Grow's quarterly updates)
+- Strategy inputs use MKT1's section names, so they read the same whether the plugin or an MKT1 tool produced them: **COMPANY OVERVIEW**, **ICPs BY MATURITY**, **COMPETITIVE RESEARCH**, **MARKETING ADVANTAGES**, **REVENUE LEVERS**, **CHANNEL STRATEGY**, **BIG BET CAMPAIGNS**, **KPO GOALS**, **POSITIONING STATEMENT**, **PERCEPTIONS**, **HOMEPAGE REVIEW**, **GACCS LAUNCH BRIEF**. Each phase writes its own; when a section is updated, replace only that section
 - Each section carries a "Last verified" date and its sources
 - Grow's quarterly review writes back ICP tier moves, re-ranked revenue levers, re-rated advantages, ecosystem changes, perception statuses, and positioning flags
 
@@ -126,7 +129,7 @@ The plugin draws on several sources. When they point in different directions, ap
 1. **Evidence beats frameworks.** Research about this company, audience, and market outranks any framework's default.
 2. **The team's adopted frameworks come next.** If the company profile (section 8) or the user names frameworks, experts, or internal playbooks the team follows — a positioning method, a launch process, a messaging format — use their structure and vocabulary for the matching deliverable, and map them onto the plugin's steps so nothing important is dropped. If a plugin step covers something the team's framework doesn't, include it and say why in one line. If you don't know the framework well, research it, summarize it in your own words, and cite the source; never reproduce paid or copyrighted material.
 3. **PMA sets the structure** — the five phases, their sequence, the steps, gates, and artifacts.
-4. **MKT1 sets operating practice inside those steps** where it is more specific — e.g., TAM coverage mapping, ICP tiers, the product type → comparator method, three-question positioning, perceptions, growth engines, launch tiering by campaign value, campaign influence reporting, traffic-light reviews.
+4. **MKT1 sets operating practice inside those steps** where it is more specific — e.g., TAM coverage mapping, ICP tiers, the product type → comparator method, three-question positioning, perceptions, growth engines, launch tiering by campaign value, campaign influence reporting, traffic-light reviews. **When MKT1 tools are connected, they are the current version of that practice and outrank this plugin's description of it** (`references/mkt1-tools.md`).
 5. **Where the skills have already chosen, follow the skill** — unless rule 2 applies. Known choices: TAM coverage mapping over TAM/SAM/SOM; three-question master positioning with the Moore-style statement as the long form; growth engines over a flat channel list; a GACCS brief as the launch charter.
 6. **Flag, don't blend.** If a real conflict isn't resolved by rules 1–5, tell the user what each source recommends and ask which to follow, rather than mixing them silently.
 7. **New sources follow the same pattern.** Any future source built into the plugin is added as practice inside PMA steps, cited in the skill's references, and must state which existing guidance it replaces.
@@ -142,6 +145,7 @@ Maintain these settings across the session. Ask to confirm on first use:
 | Coach mode | on / off | From the company profile; otherwise on if the user is new to PMM, off otherwise |
 | Research depth (job hunt) | quick scan / deep dive | Ask at intake |
 | Connected tools | By category (see `references/connections.md`) | Checked at intake and at the start of each phase |
+| MKT1 tools | connected / not connected (see `references/mkt1-tools.md`) | Detected with the other tools |
 | Autonomy | wait-for-direction / auto-proceed | wait-for-direction |
 | Output format | Where the team works (profile section 8), else Google Doc / Markdown | Google Doc if Drive connected |
 
@@ -172,7 +176,7 @@ Keep coaching out of the deliverables themselves, so outputs stay clean enough t
 **Primary framework:** PMA Product Marketing Framework (5 phases) + PMA Coda template library (coda.io/@product-marketing-alliance-pma)
 
 **Operating practices and philosophical lens:**
-- **MKT1 / Emily Kramer** — audience-first product marketing (start with *who* before *what*), plus the operating practices listed under "When sources disagree." Each phase skill cites the specific MKT1 sources it uses.
+- **MKT1 / Emily Kramer** — audience-first product marketing (start with *who* before *what*), plus the operating practices listed under "When sources disagree." Each phase skill cites the specific MKT1 sources it uses, and uses the MKT1 tools directly when a team has them connected.
 - **SVPG / Martina Lauchengco (Loved)** — PMM as the market side of product/market fit
 - **PMM-GPT (PMA, 2026)** — best practice guidance for each phase
 

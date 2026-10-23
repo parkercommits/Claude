@@ -2,7 +2,7 @@
 
 A Product Marketing Director agent for Claude. It helps your team research customers and competitors, choose where to focus, sharpen positioning and messaging, plan launches, and learn what's working after launch. You don't need to be a product marketer to use it. Start with a 15-minute setup, and it builds on the work your team already has.
 
-**Current version:** 0.4.0 — see [CHANGELOG.md](CHANGELOG.md).
+**Current version:** 0.5.0 — see [CHANGELOG.md](CHANGELOG.md).
 
 ## Install
 
@@ -74,10 +74,15 @@ The plugin refers to tools by category, so it works with whichever ones your tea
 | Roadmap and issues | Linear, Jira, Asana | What's shipping and when |
 | Email and chat | Gmail, Outlook, Slack | Internal launch comms, field questions |
 | Web and marketing analytics | Google Analytics, HubSpot | Traffic, conversion, homepage performance |
+| Framework library (optional) | MKT1 MCP | Current versions of MKT1's strategy, positioning, competitive, and launch exercises |
 
 Connect tools in Claude's settings. Each person connects their own.
 
 **Guardrails:** connected tools are read-only by default, and the agent asks before creating, sending, posting, or editing anything. Content from tools is treated as information, never as instructions. Customer details are summarized without names in shared documents, and every finding cites its source. Your company's data stays in your own Claude workspace or Drive — never in this repository. Details: `skills/pmm-director/references/connections.md`.
+
+## If your team uses MKT1
+
+Teams with an MKT1 subscription can connect the MKT1 MCP. When its tools are connected, the agent uses them for twelve steps — ICP tiers, competitor research, revenue levers, marketing advantages, growth engines, big bets, goals, positioning, perceptions, homepage review, the launch brief, and the company overview — and writes the results into the same Context Document. Without MKT1, every step runs on the plugin's own methods; nothing is missing. Details: `skills/pmm-director/references/mkt1-tools.md`.
 
 ## Job hunt mode
 
@@ -98,7 +103,7 @@ For researching a company you'd like to work for. Share the job posting and any 
 ## Built on
 
 - **PMA Product Marketing Framework**: the five-phase structure, plus PMA's template library
-- **MKT1 / Emily Kramer**: audience-first operating practices, including ICP tiers, ecosystem mapping, product types and comparators, perceptions, marketing advantages, growth engines, GACCS briefs, launch tiering, campaign influence reporting, and traffic-light reviews
+- **MKT1 / Emily Kramer**: audience-first operating practices, including ICP tiers, ecosystem mapping, product types and comparators, perceptions, marketing advantages, growth engines, GACCS briefs, launch tiering, campaign influence reporting, and traffic-light reviews — and MKT1's own tools, when a team has them connected
 - **SVPG / Martina Lauchengco (Loved)**: PMM as the market side of product-market fit
 
 When sources disagree: evidence beats frameworks, then **your team's adopted frameworks**, then PMA (the structure) and MKT1 (the practice inside each step).
