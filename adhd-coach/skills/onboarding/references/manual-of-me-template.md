@@ -198,6 +198,12 @@
 | Near the threshold | |
 | Over the threshold | |
 
+**Where I feel it in my body first:**
+
+**My soothing list** (things that calm my senses: a drink, a scent, a sound, a place):
+
+**Phrases I can actually believe** (small and true):
+
 **Anchor phrases and data points:**
 
 ---
