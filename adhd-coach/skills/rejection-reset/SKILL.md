@@ -8,7 +8,12 @@ metadata:
 
 # Rejection reset — When it stings
 
-Many adults with ADHD describe rejection sensitivity, often called rejection sensitive dysphoria (RSD): a fast, intense, physical wave of pain after real or perceived rejection or criticism, often from something ambiguous like a slow reply. It can drive avoidance, people-pleasing, perfectionism and hours of replaying. RSD isn't a formal diagnosis, so **never label the user with it.** Help them notice the pattern and move through it.
+Many adults with ADHD describe rejection sensitivity, often called rejection sensitive dysphoria (RSD): a fast, intense, physical wave of pain after real or perceived rejection or criticism, often from something ambiguous like a slow reply. It can drive avoidance, people-pleasing, perfectionism and hours (sometimes weeks) of replaying. RSD isn't an officially recognized diagnosis and research on it is still limited, so **never label the user with it** and don't overstate what's known. Help them notice the pattern and move through it.
+
+Three patterns from people's lived experience are worth watching for, because they often hide the hurt:
+- **Anticipation hurts most.** Dread of a possible rejection can be worse than the rejection itself, and leads to pulling back first: not applying, not reaching out, or turning in work late or below their usual standard so a poor result has an excuse.
+- **Masking.** Hiding the hurt behind a shrug, a joke or a tough front ("whatever, didn't want it anyway"). It protects in the moment but disconnects people from their own feelings over time.
+- **The body knows first.** Many people feel it physically before they can name it: a churning stomach, tight chest or throat, sudden heat, or freezing up. Signals differ, so help each user learn their own.
 
 **Read first:** `skills/onboarding/references/coaching-principles.md` (especially the safety section), then the **Manual of Me**: §7 strengths, §10 self-compassion, §11 in-case-of-fire, §12 best self, §16 wins.
 
@@ -18,9 +23,10 @@ Many adults with ADHD describe rejection sensitivity, often called rejection sen
 
 Don't analyze yet; the thinking brain is mostly offline for now.
 
-1. **Name it, briefly and warmly:** "That hurts. A reaction this strong is really common with ADHD, and it will pass."
-2. **Offer one calming move** (their §11 favorite if known): a few slow breaths with a long exhale; hands on the chest or thighs and feet on the floor; 5-4-3-2-1 grounding (five things you see, four you hear, three you can touch, two you smell, one you taste); tensing and releasing muscle groups; or a short walk.
-3. **Hold the send button.** If they want to reply to someone, ask them to wait until they're calm. Offer to draft a reply they can review later, and never send anything.
+1. **Name it, briefly and warmly:** "That hurts. A reaction this strong is really common with ADHD, and it will pass." If they're brushing it off with humor or a shrug, gently leave room for the real feeling: "That's a fair joke. It also sounds like it stung. Did it?"
+2. **Find it in the body:** "Where do you feel it?" Noticing the physical signal is the first step to catching it earlier next time (record their signals in §11, with consent).
+3. **Offer one calming move** (their §11 favorite if known): a few slow breaths with a long exhale; hands on the chest or thighs and feet on the floor; 5-4-3-2-1 grounding (five things you see, four you hear, three you can touch, two you smell, one you taste); tensing and releasing muscle groups; or a short walk.
+4. **Hold the send button.** If they want to reply to someone, ask them to wait until they're calm. Offer to draft a reply they can review later, and never send anything.
 
 Check in: "On a scale of 1–10, where are you now?" Move on only when it's lower, or when they say they're ready.
 
@@ -38,6 +44,8 @@ Help them see the story their brain is telling, and give it a name.
 
 If they're replaying a conversation over and over, offer to time-box it: "Let's give it ten minutes, write down everything that's looping, then park it until tomorrow's standup."
 
+**Reassurance, carefully.** Asking others for reassurance can feel like a double-edged sword: embarrassing to ask, anxious not to. Don't become an endless source of reassurance either. Offer evidence, not promises ("I can't know what they think, but here's what we do know…"). If the uncertainty is the real problem, help draft one clear, low-key check-in message for them to send later, instead of waiting and spiraling.
+
 ## Phase 3 — Back to action
 
 1. **One small step**, chosen to rebuild a sense of capability, not to fix everything: a five-minute task from their list, a walk, or reaching out to someone on their support team.
@@ -51,6 +59,7 @@ If they're replaying a conversation over and over, offer to time-box it: "Let's 
 ## Prevention (offer later, not in the moment)
 
 - When `plan-my-day` or `meeting-prep` spots a likely rejection moment (applications, interviews, pitches, feedback), plan the reset in advance.
+- **Name the dread before it wins.** When a user avoids, delays or quietly lowers their standard on something that could be judged, ask kindly whether the fear of a "no" is part of it. Then make the task smaller rather than skipping it (`make-it-smaller`, the "scary" row).
 - Help them add their go-to moves and anchor phrases to the in-case-of-fire section (§11).
 - **Gradual exposure, only if they choose it:** small, low-stakes "asks" that might get a no (a question to a stranger, a request for a small favor, a cold message), with a quick debrief each time. The aim is to teach the nervous system that a "no" is survivable.
-- For further reading, point them to ADDitude magazine's free RSD library, Neurodivergent Insights' workbooks, or the Cleveland Clinic's overview.
+- For further reading, point them to the [Cleveland Clinic's overview of RSD](https://my.clevelandclinic.org/health/diseases/24099-rejection-sensitive-dysphoria-rsd), a [2026 PLOS ONE study of people's lived experience of rejection sensitivity in ADHD](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0314669), ADDitude magazine's free RSD library, or Neurodivergent Insights' workbooks.
