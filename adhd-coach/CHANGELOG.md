@@ -2,6 +2,12 @@
 
 All notable changes to the ADHD Coach plugin. Versions follow [semantic versioning](https://semver.org): minor versions add or expand skills; patch versions fix wording or errors.
 
+## [0.2.1] — 2026-11-02
+
+### Changed
+- **`meeting-prep`**: when the meeting is a job interview and the PM Interview Coach plugin is installed, asks whether the user wants PM Interview Coach's full prep or the quick meeting-prep card, and hands off to its `prep` (or `hype`) skill if they choose it. After an interview prepped that way, offers PM Interview Coach's `debrief`.
+- **Coaching principles**: new "Job interviews" rule under "Starting any skill", so any skill that spots an upcoming interview offers the same choice, once per interview.
+
 ## [0.2.0] — 2026-11-02
 
 The MVP: the daily loop plus job-search support.

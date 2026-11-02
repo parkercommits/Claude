@@ -4,7 +4,7 @@
     "name": "Parker Lyons",
     "url": "https://github.com/parkercommits"
   },
-  "description": "Claude plugins by Parker Lyons. Includes PMM Framework, a Product Marketing Director agent, and ADHD Coach, a pocket ADHD coach.",
+  "description": "Claude plugins by Parker Lyons. Includes PMM Framework, a Product Marketing Director agent; ADHD Coach, a pocket ADHD coach; and PM Interview Coach, an adaptive job-interview coach.",
   "plugins": [
     {
       "name": "pmm-framework",
@@ -33,6 +33,20 @@
         "executive-function",
         "productivity",
         "self-compassion"
+      ]
+    },
+    {
+      "name": "pm-interview-coach",
+      "displayName": "PM Interview Coach",
+      "source": "./pm-interview-coach",
+      "description": "An adaptive interview coach: prep briefs with interviewer research, five-dimension scoring of transcripts and practice, a storybank with earned secrets, mocks, debriefs and offer negotiation, with a private Coaching State that carries across chats.",
+      "category": "productivity",
+      "tags": [
+        "interview",
+        "job-search",
+        "product-management",
+        "coaching",
+        "career"
       ]
     }
   ]

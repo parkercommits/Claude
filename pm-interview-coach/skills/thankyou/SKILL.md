@@ -1,0 +1,72 @@
+---
+name: thankyou
+description: "This skill should be used after an interview to write follow-ups, for example \"thank-you note\", \"write a thank-you email to my interviewer\", \"follow up with the recruiter\", or \"they haven't gotten back to me\". It advises on timing and drafts short, specific notes for each interviewer with a callback to the conversation."
+metadata:
+  version: "0.1.0"
+  author: "Parker Lyons"
+---
+
+# thankyou — Follow-Up Workflow
+
+**Before you start:** read `skills/interview-coach/SKILL.md` (session protocol, operating rules, rubric, coaching voice) and load the user's Coaching State. Also read `skills/interview-coach/references/cross-cutting.md`. Save changes to the Coaching State as `skills/interview-coach/references/saving-the-state.md` describes.
+
+### Coaching State Integration
+
+Before drafting, check the Coaching State for data that strengthens the thank-you:
+- **Interview Loops**: Pull interviewer names, round context, stories used, and signals observed from the most recent `debrief` entry.
+- **Interviewer Intelligence**: If interviewer profiles were researched during `prep`, reference shared interests or background to personalize the note.
+- **Storybank**: If `debrief` logged which stories were used and how they landed, use positive-signal stories as callback material ("I especially enjoyed discussing [topic from the story that landed well]").
+
+If no coaching state exists, ask the candidate for the callback material directly.
+
+### Timing Guidance
+
+Before drafting, advise on timing:
+- **Same day** (within 2-4 hours): Standard best practice for most companies. Shows enthusiasm without being desperate.
+- **Next morning**: Acceptable if the interview was late in the day. Can feel more thoughtful.
+- **Never wait more than 24 hours**: After that, you've missed the window.
+- **If you haven't heard back** (after expected timeline): Wait until 1-2 business days past the stated timeline, then send a brief check-in. Don't follow up more than twice.
+
+### Interview-Specific Callbacks
+
+A generic "thanks for your time" is forgettable. A strong thank-you references a specific moment from the conversation:
+- Pull from `analyze` or `mock` data if available: "I especially enjoyed our discussion about [specific topic from transcript]."
+- If the candidate remembers a particular exchange, weave it in: "Your question about [X] got me thinking further about [Y]."
+- If the interviewer shared something personal or professional, acknowledge it: "I appreciated you sharing your perspective on [topic]."
+- Keep it brief — one specific callback, not a recap of the entire interview.
+
+### Multi-Interviewer Handling
+
+If the candidate met multiple interviewers in the same round, generate **separate drafts for each person**:
+- Each note should reference something specific to that interviewer's questions or conversation.
+- Vary the tone slightly — don't send identical notes (interviewers compare).
+- The core message can be similar, but the callback and angle should differ.
+- Ask the candidate: "Who did you meet with? What stood out from each conversation?"
+
+### Output Schema
+
+```markdown
+## Timing
+- Recommended send time:
+- Follow-up if no response by: [date]
+
+## Thank-You Draft: [Interviewer Name] (<120 words)
+[draft with specific interview callback]
+
+## Thank-You Draft: [Interviewer 2 Name] (if applicable, <120 words)
+[draft with different callback]
+
+## Alternate Tone (optional)
+[draft]
+
+## If Rejected: Learning Questions
+1.
+2.
+
+## If Advancing: Reinforcement Points
+1.
+2.
+3.
+
+**Next commands**: `debrief` (if not already done), `analyze` (if transcript available), `prep [company]` (for next round), `progress`
+```

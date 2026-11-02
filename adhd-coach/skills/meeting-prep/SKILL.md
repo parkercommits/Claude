@@ -2,7 +2,7 @@
 name: meeting-prep
 description: "This skill should be used before an important meeting, interview, call or hard conversation, for example \"prep me for my interview\", \"I have a call with X in 20 minutes\", \"help me get ready for this meeting\", \"what should I say to my manager\", \"prep for the networking coffee\", or when a scheduled pre-meeting check-in runs. In about a minute (or longer on request) it covers the goal, who's in the room and what they care about, likely pushback or hard questions, the data points to have handy, a planned empathetic, data-led response, one connection point, a calming move, and a plan if it stings. Interview mode adds stories mapped to likely questions and questions to ask, and a short debrief afterwards."
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   author: "Parker Lyons"
 ---
 
@@ -17,6 +17,14 @@ Winging it can be fun, but walking in unprepared means walking in already activa
 With consent, read the calendar event (title, attendees, description). Ask only what's missing:
 - "What kind of meeting is it?" (interview, networking, negotiation, feedback, team meeting, a personal conversation)
 - "What would make it a win? One sentence."
+
+**If it's a job interview and the PM Interview Coach plugin is installed** (its skills, such as `prep`, `hype` and `debrief`, are available), ask before doing anything else:
+
+> "This looks like a job interview. Do you want the full **PM Interview Coach** prep (interviewer research, likely questions mapped to your storybank, concerns and a day-of cheat sheet), or stick with a quick **meeting-prep** card here?"
+
+- **PM Interview Coach:** hand off to its `prep` skill (or `hype` if the interview is within the hour), passing along what you already know: company, role, time, interviewers. Then step back; offer a calming move or a `rejection-reset` plan only if the user wants one.
+- **Meeting prep:** carry on below. Don't ask again in this chat.
+- If PM Interview Coach isn't installed, carry on below without mentioning it.
 
 Choose the depth: **one-minute prep** (default, or if the meeting is soon) or **full prep** (for interviews and high-stakes conversations, when there's time).
 
@@ -50,7 +58,7 @@ Some meetings bring criticism or rejection. Add one line: "If it stings, step ou
 
 ## Step 5 — Debrief (after, two minutes)
 
-When the user comes back, or at a scheduled check-in after the meeting:
+When the user comes back, or at a scheduled check-in after the meeting. (If it was a job interview prepped with PM Interview Coach, offer its `debrief` instead, which logs the interview to the user's Coaching State. Still offer `rejection-reset` if anything stung.)
 - "What went well? What did you do that helped?" Log wins with consent.
 - "Anything that stung?" If yes, offer `rejection-reset` now.
 - "Any follow-ups?" Turn them into tasks, and draft any thank-you note for the user to review and send themselves.

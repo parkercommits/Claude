@@ -2,7 +2,7 @@
 
 A pocket ADHD coach for Claude. It learns how you work (your challenges, strengths, values, energy and the systems you've tried), then helps you at the moment you get stuck: deciding what to do next, planning your day around your energy, breaking down tasks you've been avoiding, and being kinder to yourself when things go sideways.
 
-**Current version:** 0.2.0, the MVP. See [CHANGELOG.md](CHANGELOG.md) and the roadmap below.
+**Current version:** 0.2.1, the MVP plus a hand-off to PM Interview Coach. See [CHANGELOG.md](CHANGELOG.md) and the roadmap below.
 
 > ADHD Coach is a coaching tool, not medical or mental-health care. It doesn't diagnose, and it doesn't give medication or treatment advice. If you're in crisis, contact someone you trust or a crisis line (in the US, call or text 988).
 
@@ -32,7 +32,7 @@ Anything can be skipped or left for the coach to fill in. Come back any time wit
 | "Brain dump" (or a photo of your list) | `brain-dump` sorts everything and hands back one thing |
 | "I can't start this" | `make-it-smaller` finds what's in the way and gets you going in five minutes |
 | "End of day" | `shutdown`: a strengths-based retro that logs wins and closes loops |
-| "Prep me for my interview" | `meeting-prep`: a one-minute card, or full interview prep |
+| "Prep me for my interview" | `meeting-prep`: a one-minute card, or full interview prep (or, if PM Interview Coach is installed, your choice of its full prep) |
 | "I didn't get the job" / "I'm spiraling" | `rejection-reset`: settle, catch the story, get back to action |
 
 ## What onboarding builds: your Manual of Me
