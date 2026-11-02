@@ -1,0 +1,19 @@
+{
+  "name": "adhd-coach",
+  "displayName": "ADHD Coach",
+  "version": "0.1.0",
+  "description": "A pocket ADHD coach for adults. A strengths-first onboarding builds a private \"manual of me\" (challenges, what has and hasn't worked, strengths, values, processing modalities, energy patterns, motivators and coaching preferences) that every coaching skill reads, so help arrives tailored to how you work, at the moment you get stuck. Not a substitute for medical or mental-health care.",
+  "author": {
+    "name": "Parker Lyons"
+  },
+  "keywords": [
+    "adhd",
+    "coaching",
+    "executive-function",
+    "productivity",
+    "self-compassion",
+    "focus"
+  ],
+  "homepage": "https://github.com/parkercommits/Claude/tree/main/adhd-coach",
+  "repository": "https://github.com/parkercommits/Claude"
+}
