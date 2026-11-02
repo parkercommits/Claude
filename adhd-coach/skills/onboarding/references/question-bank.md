@@ -11,6 +11,7 @@ Paraphrase freely and match the user's vocabulary. The goal is a conversation, n
 1. What made you want coaching support now? What's going on?
 2. What are you working on at the moment: projects, deadlines, things hanging over you? Which feel urgent, and which feel important?
 3. Where do you most want help first: work or job search, habits and routines, relationships, health, home, something else?
+   - If they aren't sure, offer a quick **wheel of life**: rate satisfaction from 1 to 10 in eight areas (career, money, health, relationships, family and friends, fun, personal growth, environment and home). The lowest-rated area that they also care about is a good first focus.
 4. What would you like to have made progress on in the next 60 days? By when?
 5. Who's already on your support team: people, professionals, communities? What does each help with?
 

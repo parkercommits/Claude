@@ -27,7 +27,13 @@
 |---|---|---|
 | | | |
 
-**My support team** (people, professionals, communities, and what each helps with):
+**Wheel of life** (optional, satisfaction 1–10):
+
+| Career | Money | Health | Relationships | Family and friends | Fun | Growth | Home |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
+**My support team** (people, professionals, communities, and the habits, tools and software that support me too):
 
 ---
 

@@ -37,3 +37,4 @@ If the Claude desktop app links this chat to the user's computer and they prefer
 - Skills propose updates; the user approves; the change log records each one.
 - The weekly review proposes edits based on experiments.
 - Offer a fuller refresh every three months, including a Self-Compassion Test retake if the user took it.
+- **Blind refresh:** for the refresh, have the user answer the Module 1 and Module 6 questions again *without* looking at their earlier answers, then compare the two side by side. What changed is often the most useful thing to talk about.

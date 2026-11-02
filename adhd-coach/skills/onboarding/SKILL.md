@@ -90,7 +90,11 @@ The coach is proactive. Using the user's answers in Manual §14:
 2. Ask for a yes, then create each check-in as a **scheduled task** with the session's scheduling tools. Each task's prompt must stand alone: tell it to read the Manual of Me (and where it lives), run the matching skill (e.g., `plan-my-day` for the standup, `shutdown` for the retro), keep it short, and respect quiet hours.
 3. If scheduling isn't available here, say so plainly and give the user the schedule to set as phone reminders instead.
 
-Skills that a check-in calls may not exist yet in this version. If so, have the check-in run a short coach-led version: standup = "What are the three things that matter most today, and why? Who can you lean on?"; retro = "What worked today and why? How did you contribute to your wins? What did you try, and what did you learn?"
+Skills that a check-in calls may not exist yet in this version. If so, have the check-in run a short coach-led version that takes about a minute:
+- **Standup:** What did you get done yesterday (including small things)? What are your top three intentions today, each as a short user story with why it matters and a rough time estimate ("I want to ___ so that ___, about 45 min")? What do you need help with, and who can you lean on? Plan to well under a full day, leaving room for interruptions.
+- **Retro:** What worked well today, and why? How did you contribute to your wins, even by accident? What did you try differently, and what did you learn? How did your energy flow, and did your tasks match it? What do you need to plan for tomorrow? (Carry that answer into the next standup.)
+
+**Make the routine survive real life.** Check-ins should take a minute, pre-fill what they can (calendar, yesterday's retro), and never scold. Offer a lighter **travel mode** (one check-in a day) and, after any gap, restart without guilt: "Welcome back. Here's one thing for today." Routines like this often fade within a week; the coach's job is to make restarting easy.
 
 ## Step 6 — Save the manual
 
