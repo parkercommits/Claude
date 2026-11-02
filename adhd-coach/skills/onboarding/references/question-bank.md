@@ -28,6 +28,7 @@ Paraphrase freely and match the user's vocabulary. The goal is a conversation, n
 4. What systems, tools or habits have you tried? Which stuck, which didn't, and why do you think so?
 5. When in the day do you have the most energy and focus? When do you crash?
 6. Do you tend to see everything at once, the whole system, or think step by step?
+7. When you sense rejection or criticism (a "no", feedback, a slow reply), how big is the reaction, and how long does it last? What helps you recover? (Record their answer in §2 and any go-to moves in §11. Don't label it.)
 
 **Capture:** challenges in their words with where they show up, presentation, life changes, what worked and why, peak and low windows, chronotype, thinking style.
 

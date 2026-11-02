@@ -46,6 +46,7 @@
 - Executive function (starting, prioritizing, time, memory, follow-through):
 - Emotions and communication:
 - Self-talk and confidence:
+- Reactions to rejection or criticism (how big, how long, what helps):
 - Habits, sleep, routines:
 
 **Recent life changes raising the load:**
