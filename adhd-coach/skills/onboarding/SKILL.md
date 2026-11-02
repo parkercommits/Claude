@@ -2,7 +2,7 @@
 name: onboarding
 description: "This skill should be used when someone starts using ADHD Coach for the first time, or says things like \"set up my ADHD coach\", \"get to know me\", \"start onboarding\", \"build my manual of me\", \"finish my onboarding\", \"update my manual\", \"redo my profile\", or \"what can this coach do\". It runs a short, ADHD-friendly intake (a fast start in about 10 minutes, or six optional 5–10 minute modules, or a free-form voice brain dump) covering current priorities and goals, how ADHD shows up for them, what has and hasn't worked, energy patterns and types of rest, motivators, strengths and values, processing modalities, self-compassion, tools and connections, coaching preferences and check-in schedule, and the long view. It writes everything into a private Manual of Me that every other coaching skill reads, then ends with one concrete next step."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   author: "Parker Lyons"
 ---
 
@@ -90,7 +90,7 @@ The coach is proactive. Using the user's answers in Manual §14:
 2. Ask for a yes, then create each check-in as a **scheduled task** with the session's scheduling tools. Each task's prompt must stand alone: tell it to read the Manual of Me (and where it lives), run the matching skill (e.g., `plan-my-day` for the standup, `shutdown` for the retro), keep it short, and respect quiet hours.
 3. If scheduling isn't available here, say so plainly and give the user the schedule to set as phone reminders instead.
 
-Skills that a check-in calls may not exist yet in this version. If so, have the check-in run a short coach-led version that takes about a minute:
+Map check-ins to skills: morning standup → `plan-my-day`; midday nudge → `what-next`; before flagged meetings → `meeting-prep`; end-of-day retro → `shutdown`. If a skill isn't available, run this short coach-led version, which takes about a minute:
 - **Standup:** What did you get done yesterday (including small things)? What are your top three intentions today, each as a short user story with why it matters and a rough time estimate ("I want to ___ so that ___, about 45 min")? What do you need help with, and who can you lean on? Plan to well under a full day, leaving room for interruptions.
 - **Retro:** What worked well today, and why? How did you contribute to your wins, even by accident? What did you try differently, and what did you learn? How did your energy flow, and did your tasks match it? What do you need to plan for tomorrow? (Carry that answer into the next standup.)
 

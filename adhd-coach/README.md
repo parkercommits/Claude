@@ -2,7 +2,7 @@
 
 A pocket ADHD coach for Claude. It learns how you work (your challenges, strengths, values, energy and the systems you've tried), then helps you at the moment you get stuck: deciding what to do next, planning your day around your energy, breaking down tasks you've been avoiding, and being kinder to yourself when things go sideways.
 
-**Current version:** 0.1.0, onboarding only. See [CHANGELOG.md](CHANGELOG.md) and the roadmap below.
+**Current version:** 0.2.0, the MVP. See [CHANGELOG.md](CHANGELOG.md) and the roadmap below.
 
 > ADHD Coach is a coaching tool, not medical or mental-health care. It doesn't diagnose, and it doesn't give medication or treatment advice. If you're in crisis, contact someone you trust or a crisis line (in the US, call or text 988).
 
@@ -22,6 +22,18 @@ Pick a path:
 - **Just tell me**: tap the microphone and talk. The coach turns your brain dump into a draft for you to correct.
 
 Anything can be skipped or left for the coach to fill in. Come back any time with **"finish my onboarding."**
+
+## What you can say
+
+| Say | What happens |
+|---|---|
+| "What should I do now?" / "I have two hours" | `what-next` picks ONE task, with a five-minute first step |
+| "Plan my day" | `plan-my-day`: a one-minute standup with three intentions, placed around your energy |
+| "Brain dump" (or a photo of your list) | `brain-dump` sorts everything and hands back one thing |
+| "I can't start this" | `make-it-smaller` finds what's in the way and gets you going in five minutes |
+| "End of day" | `shutdown`: a strengths-based retro that logs wins and closes loops |
+| "Prep me for my interview" | `meeting-prep`: a one-minute card, or full interview prep |
+| "I didn't get the job" / "I'm spiraling" | `rejection-reset`: settle, catch the story, get back to action |
 
 ## What onboarding builds: your Manual of Me
 
@@ -44,7 +56,7 @@ It also sets up **proactive check-ins** (morning standup, midday nudge, before m
 
 | Release | Skills |
 |---|---|
-| **MVP** | `onboarding` ✓, `what-next`, `plan-my-day` (standup), `brain-dump`, `make-it-smaller`, `shutdown` (retro), `meeting-prep` |
+| **MVP** ✓ | `onboarding`, `what-next`, `plan-my-day` (standup), `brain-dump`, `make-it-smaller`, `shutdown` (retro), `meeting-prep`, `rejection-reset` |
 | **v1** | `pause-before-send`, `focus-sprint`, `overwhelm-reset`, `in-case-of-fire`, `leaving-checklist`, `wins-log`, `best-self`, `self-compassion`, `weekly-review` |
 | **v2** | `session-prep`, `support-map`, a visual dashboard |
 

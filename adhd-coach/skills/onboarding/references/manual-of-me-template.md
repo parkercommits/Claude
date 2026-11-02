@@ -46,6 +46,7 @@
 - Executive function (starting, prioritizing, time, memory, follow-through):
 - Emotions and communication:
 - Self-talk and confidence:
+- Reactions to rejection or criticism (how big, how long, what helps):
 - Habits, sleep, routines:
 
 **Recent life changes raising the load:**
@@ -196,6 +197,12 @@
 | Lowering my baseline (daily) | |
 | Near the threshold | |
 | Over the threshold | |
+
+**Where I feel it in my body first:**
+
+**My soothing list** (things that calm my senses: a drink, a scent, a sound, a place):
+
+**Phrases I can actually believe** (small and true):
 
 **Anchor phrases and data points:**
 
