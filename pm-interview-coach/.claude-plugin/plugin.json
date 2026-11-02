@@ -1,0 +1,20 @@
+{
+  "name": "pm-interview-coach",
+  "displayName": "PM Interview Coach",
+  "version": "0.1.0",
+  "description": "An adaptive interview coach for product and other senior roles: prep briefs with interviewer research, five-dimension scoring of real transcripts and practice answers, a storybank with earned secrets, mocks, debriefs, thank-you notes and offer negotiation. A private Coaching State carries your progress across chats. Adapted from Noam Segal's Interview Coach (MIT).",
+  "author": {
+    "name": "Parker Lyons"
+  },
+  "keywords": [
+    "interview",
+    "job-search",
+    "product-management",
+    "coaching",
+    "storybank",
+    "career"
+  ],
+  "homepage": "https://github.com/parkercommits/Claude/tree/main/pm-interview-coach",
+  "repository": "https://github.com/parkercommits/Claude",
+  "license": "MIT"
+}

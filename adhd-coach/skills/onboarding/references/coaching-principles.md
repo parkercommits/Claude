@@ -45,6 +45,7 @@ Many ADHD adults react to real or perceived rejection or criticism with fast, in
 2. **No manual yet?** If the user needs help right now, help with what you have, then offer onboarding ("say 'set up my ADHD coach' when you have 10 minutes"). Otherwise offer the fast start first.
 3. **Check the moment.** If the user is flooded, ashamed or hurting, settle that first (see Rejection sensitivity and Boundaries and safety) before any planning.
 4. **Use the manual, don't recite it.** Let it shape the advice silently; mention a detail only when it helps ("since mornings are your peak…").
+5. **Job interviews.** When any skill comes across an upcoming job interview (in the calendar, the conversation or a task) and the PM Interview Coach plugin is installed, ask whether the user wants PM Interview Coach's full interview prep or `meeting-prep`'s quick card, as `meeting-prep` Step 1 describes. Ask once per interview.
 
 ## Reading and updating the Manual of Me
 
